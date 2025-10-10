@@ -1,0 +1,83 @@
+#!/usr/bin/env php
+<?php
+
+use Illuminate\Foundation\Application;
+use Illuminate\Foundation\Console\Kernel;
+use Illuminate\Support\Facades\Facade;
+use Symfony\Component\Console\Input\ArgvInput;
+use Symfony\Component\Console\Output\ConsoleOutput;
+
+define('LARAVEL_START', microtime(true));
+
+/*
+|--------------------------------------------------------------------------
+| Check If The Application Is Under Maintenance
+|--------------------------------------------------------------------------
+|
+| If the application is in maintenance / demo mode via the "down" command
+| we will load this file so that any pre-rendered content can be shown
+| instead of starting the framework, which could cause an exception.
+|
+*/
+
+if (file_exists($maintenance = __DIR__.'/storage/framework/maintenance.php')) {
+    require $maintenance;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Register The Auto Loader
+|--------------------------------------------------------------------------
+|
+| Composer provides a convenient, automatically generated class loader for
+| this application. We just need to utilize it! We'll simply require it
+| into the script here so we don't need to manually load our classes.
+|
+*/
+
+require __DIR__.'/vendor/autoload.php';
+
+/*
+|--------------------------------------------------------------------------
+| Run The Artisan Application
+|--------------------------------------------------------------------------
+|
+| When we run the console application, the current CLI command will be
+| executed in this console kernel's handle method. Now we will boot
+| up the application so that we can resolve the console kernel.
+|
+*/
+
+$app = require __DIR__.'/bootstrap/app.php';
+
+$kernel = $app->make(Kernel::class);
+
+/*
+|--------------------------------------------------------------------------
+| Run The Console Command
+|--------------------------------------------------------------------------
+|
+| Now that we have the console kernel, we will run the command and get
+| the exit status. The exit status will be returned to the calling
+| command so that it can be used by other scripts that call this.
+|
+*/
+
+$status = $kernel->handle(
+    $input = new ArgvInput, new ConsoleOutput
+);
+
+/*
+|--------------------------------------------------------------------------
+| Shutdown The Application
+|--------------------------------------------------------------------------
+|
+| Once Artisan has finished running, we will fire off the shutdown events
+| so that any final work may be done by the application before we exit
+| with an integer status code that represents the command's outcome.
+|
+*/
+
+$kernel->terminate($input, $status);
+
+exit($status);

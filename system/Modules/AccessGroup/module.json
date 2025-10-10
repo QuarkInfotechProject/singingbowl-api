@@ -1,0 +1,11 @@
+{
+    "name": "AccessGroup",
+    "alias": "accessgroup",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\AccessGroup\\App\\Providers\\AccessGroupServiceProvider"
+    ],
+    "files": []
+}

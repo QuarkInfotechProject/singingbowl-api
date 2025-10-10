@@ -1,0 +1,113 @@
+FROM php:8.1.1-fpm-alpine3.14
+LABEL version="1.0" license="MIT" maintainer="Manoj Malakar <manoj@squarebx.com>" app.name="GadgetByte Base Image"
+
+ARG timezone
+ARG COMPOSER_VERSION=2.1.6
+ARG SWOOLE_VERSION=v4.8.6
+ARG REDIS_VERSION=5.3.4
+ARG AMQP_VERSION=v1.11.0beta
+ARG IMAGICK_VERSION=3.5.1
+
+ENV TIMEZONE=${timezone:-"Asia/Kathmandu"}
+
+#setup php extension
+RUN apk add --no-cache \
+      zip libzip-dev \
+      gmp-dev  \
+    && docker-php-ext-install gmp zip mysqli pdo_mysql \
+    # install swoole
+    && apk add --no-cache --virtual .build-deps $PHPIZE_DEPS curl-dev openssl-dev  \
+    && docker-php-ext-install sockets \
+    && docker-php-source extract \
+    && mkdir /usr/src/php/ext/swoole \
+    && wget -O swoole.tar.gz https://github.com/swoole/swoole-src/archive/${SWOOLE_VERSION}.tar.gz \
+    && tar xfz swoole.tar.gz --strip-components=1 -C /usr/src/php/ext/swoole \
+    && docker-php-ext-configure swoole \
+      --enable-mysqlnd \
+      --enable-openssl \
+      --enable-sockets \
+      --enable-swoole-curl \
+      --enable-swoole-json \
+    && docker-php-ext-install -j$(nproc) swoole \
+    && rm -f swoole.tar.gz \
+    && docker-php-source delete \
+    # install redis
+    && docker-php-source extract \
+    && mkdir /usr/src/php/ext/redis \
+    && wget -O redis.tar.gz https://github.com/phpredis/phpredis/archive/${REDIS_VERSION}.tar.gz \
+    && tar xfz redis.tar.gz --strip-components=1 -C /usr/src/php/ext/redis \
+    && docker-php-ext-configure redis \
+    && docker-php-ext-install -j$(nproc) redis \
+    && rm -f redis.tar.gz \
+    && docker-php-source delete \
+    # install amqp
+    && apk add --no-cache rabbitmq-c-dev \
+    && docker-php-source extract \
+    && mkdir /usr/src/php/ext/amqp \
+    && wget -O amqp.tar.gz  https://github.com/php-amqp/php-amqp/archive/${AMQP_VERSION}.tar.gz \
+    && tar xfz amqp.tar.gz --strip-components=1 -C /usr/src/php/ext/amqp \
+    && docker-php-ext-configure amqp \
+    && docker-php-ext-install -j$(nproc)  amqp \
+    && rm -f amqp.tar.gz \
+    && docker-php-source delete \
+    # install imagick
+    && apk add --no-cache imagemagick imagemagick-dev \
+    && docker-php-source extract \
+    && mkdir /usr/src/php/ext/imagick \
+    && wget -O imagick.tar.gz  https://codeload.github.com/Imagick/imagick/tar.gz/${IMAGICK_VERSION} \
+    && tar xfz imagick.tar.gz --strip-components=1 -C /usr/src/php/ext/imagick \
+    && docker-php-ext-configure imagick \
+    && docker-php-ext-install -j$(nproc)  imagick \
+    && rm -f imagick.tar.gz \
+    && docker-php-source delete
+
+#Setup nginx git supervisor composer
+RUN apk add --no-cache nginx bash git supervisor \
+    && mkdir -p /etc/supervisor.d/ \
+    && wget -nv -O /usr/local/bin/composer https://github.com/composer/composer/releases/download/${COMPOSER_VERSION}/composer.phar \
+    && chmod u+x /usr/local/bin/composer
+
+
+# Install PostgreSQL client libraries and pdo_pgsql extension
+RUN apk add --no-cache postgresql-dev \
+    && docker-php-ext-install pdo_pgsql
+
+
+#setup timezone
+RUN apk add tzdata \
+    && cd /usr/local/etc/php \
+    # - config PHP
+    && { \
+        echo "upload_max_filesize=100M"; \
+        echo "memory_limit=1024M"; \
+        echo "post_max_size=100M";\
+        echo "date.timezone=${TIMEZONE}"; \
+    } | tee conf.d/99_overrides.ini \
+    && ln -sf /usr/share/zoneinfo/${TIMEZONE} /etc/localtime \
+    && echo "${TIMEZONE}" > /etc/timezone
+
+# check php version
+RUN php -v \
+    && php -m \
+    && rm -rf /var/cache/apk/* /tmp/* /usr/share/man \
+    && docker-php-source delete \
+    #&& apk del .build-deps \
+    && echo -e "\033[42;37m Build Completed :).\033[0m\n"
+
+RUN addgroup -g 1000 -S gbn
+RUN adduser -u 1000 -S -G gbn gbn
+
+# Configure php-fpm & nginx
+RUN mkdir -p /run/php/ \
+    && touch /run/php/php-fpm.sock \
+    && mkdir -p /run/nginx/ \
+    && touch /run/nginx/nginx.pid \
+    && ln -sf /dev/stdout /var/log/nginx/access.log \
+    && ln -sf /dev/stderr /var/log/nginx/error.log \
+    && rm /usr/local/etc/php-fpm.d/zz-docker.conf \
+    && chown -Rf gbn:gbn \
+    /run/nginx/nginx.pid \
+    /var/log/nginx \
+    /var/lib/nginx \
+    /run/php \
+    && chmod g+wx /var/log/

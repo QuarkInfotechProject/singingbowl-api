@@ -1,0 +1,47 @@
+[
+    {
+        "name": "Earbuds",
+        "searchable": 0,
+        "status": 1,
+        "isDisplayed": 1,
+        "logo": null,
+        "banner": null,
+        "url": "earbuds"
+    },
+    {
+        "name": "SmartWatch",
+        "searchable": 0,
+        "status": 1,
+        "isDisplayed": 1,
+        "logo": null,
+        "banner": null,
+        "url": "smartwatch"
+    },
+    {
+        "name": "Speaker",
+        "searchable": 0,
+        "status": 1,
+        "isDisplayed": 1,
+        "logo": null,
+        "banner": null,
+        "url": "speaker"
+    },
+    {
+        "name": "Neckband",
+        "searchable": 0,
+        "status": 1,
+        "isDisplayed": 1,
+        "logo": null,
+        "banner": null,
+        "url": "neckband"
+    },
+    {
+        "name": "Powerbank",
+        "searchable": 0,
+        "status": 1,
+        "isDisplayed": 1,
+        "logo": null,
+        "banner": null,
+        "url": "powerbank"
+    }
+]

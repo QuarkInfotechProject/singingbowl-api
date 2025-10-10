@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/corporateorder",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\CorporateOrder\\": "",
+            "Modules\\CorporateOrder\\App\\": "app/",
+            "Modules\\CorporateOrder\\Database\\Factories\\": "database/factories/",
+            "Modules\\CorporateOrder\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\CorporateOrder\\Tests\\": "tests/"
+        }
+    }
+}

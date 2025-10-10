@@ -1,0 +1,30 @@
+<?php
+
+namespace Modules\Menu\App\Http\Requests;
+
+use Illuminate\Foundation\Http\FormRequest;
+
+class MenuCreateRequest extends FormRequest
+{
+    /**
+     * Get the validation rules that apply to the request.
+     */
+    public function rules(): array
+    {
+        return [
+            'title' => ['required', 'string'],
+            'parent_id' => ['nullable', 'integer', 'exists:menu,id'],
+            'url' => ['nullable', 'string'],
+            'icon' => ['nullable', 'string'],
+            'sort_order' => ['nullable', 'integer'],
+        ];
+    }
+
+    /**
+     * Determine if the user is authorized to make this request.
+     */
+    public function authorize(): bool
+    {
+        return true;
+    }
+}

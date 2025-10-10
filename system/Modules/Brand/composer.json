@@ -1,0 +1,29 @@
+{
+    "name": "nwidart/brand",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Brand\\": "Modules/Brand/",
+            "Modules\\Brand\\App\\": "Modules/Brand/App/",
+            "Modules\\Brand\\Database\\Factories\\": "Modules/Brand/database/factories/",
+            "Modules\\Brand\\Database\\Seeders\\": "Modules/Brand/database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Brand\\Tests\\": "tests/"
+        }
+    }
+}

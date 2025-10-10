@@ -1,0 +1,1412 @@
+countries:
+  - name: Nepal
+    code: +977
+
+  #Province starts
+provinces:
+  - name: Bagmati Province
+    country_id: 1
+
+  - name: Gandaki Province
+    country_id: 1
+
+  - name: Karnali Province
+    country_id: 1
+
+  - name: Koshi Province
+    country_id: 1
+
+  - name: Lumbini Province
+    country_id: 1
+
+  - name: Madhesh Province
+    country_id: 1
+
+  - name: Sudurpaschim Province
+    country_id: 1
+
+  #Province 1 cities starts
+cities:
+  - name: Chitwan
+    province_id: 1
+
+  - name: Daman
+    province_id: 1
+
+  - name: Dhading
+    province_id: 1
+
+  - name: Dolalghat
+    province_id: 1
+
+  - name: Dolkha
+    province_id: 1
+
+  - name: Hetauda
+    province_id: 1
+
+  - name: Kathmandu Valley
+    province_id: 1
+
+  - name: Kavre
+    province_id: 1
+
+  - name: Kavrepalanchowk
+    province_id: 1
+
+  - name: Makwanpur
+    province_id: 1
+
+  - name: Manthali
+    province_id: 1
+
+  - name: Mugling
+    province_id: 1
+
+  - name: Nuwakot
+    province_id: 1
+
+  - name: Pharping
+    province_id: 1
+
+  - name: Rasuwa
+    province_id: 1
+
+  - name: Sindhuli
+    province_id: 1
+
+  #Province 2 cities starts
+  - name: Baglung
+    province_id: 2
+
+  - name: Bardaghat
+    province_id: 2
+
+  - name: Beni
+    province_id: 2
+
+  - name: Besisahar
+    province_id: 2
+
+  - name: Damauli
+    province_id: 2
+
+  - name: Dhulegauda
+    province_id: 2
+
+  - name: Gorkha
+    province_id: 2
+
+  - name: Kawasoti
+    province_id: 2
+
+  - name: Kushma
+    province_id: 2
+
+  - name: Lamjung
+    province_id: 2
+
+  - name: Manang
+    province_id: 2
+
+  - name: Myagdi
+    province_id: 2
+
+  - name: Pokhara
+    province_id: 2
+
+  - name: Syangja
+    province_id: 2
+
+  #Province 3 cities starts
+  - name: Dailekh
+    province_id: 3
+
+  - name: Dolpa
+    province_id: 3
+
+  - name: Simikot
+    province_id: 3
+
+  - name: Surkhet
+    province_id: 3
+
+  #Province 4 cities starts
+  - name: Bargachi
+    province_id: 4
+
+  - name: Beltar
+    province_id: 4
+
+  - name: Bhedatar
+    province_id: 4
+
+  - name: Bhojpur
+    province_id: 4
+
+  - name: Biratnagar
+    province_id: 4
+
+  - name: Birtamode
+    province_id: 4
+
+  - name: Damak
+    province_id: 4
+
+  - name: Dhankuta
+    province_id: 4
+
+  - name: Dharan
+    province_id: 4
+
+  - name: Durgapuri
+    province_id: 4
+
+  - name: Gaighat
+    province_id: 4
+
+  - name: Illam
+    province_id: 4
+
+  - name: Itahari
+    province_id: 4
+
+  - name: Khotang
+    province_id: 4
+
+  - name: Panchthar
+    province_id: 4
+
+  - name: Pashupatinagar
+    province_id: 4
+
+  - name: RatuwamaiSombare
+    province_id: 4
+
+  - name: Salleri
+    province_id: 4
+
+  - name: Sankhuwasabha
+    province_id: 4
+
+  - name: Taplejung
+    province_id: 4
+
+  #Province 5 cities starts
+  - name: Bardiya
+    province_id: 5
+
+  - name: Bhairahawa
+    province_id: 5
+
+  - name: Butwal
+    province_id: 5
+
+  - name: Dang
+    province_id: 5
+
+  - name: Gulariya
+    province_id: 5
+
+  - name: Gulmi
+    province_id: 5
+
+  - name: Kapilbastu
+    province_id: 5
+
+  - name: Kothihawa
+    province_id: 5
+
+  - name: Nepalgunj
+    province_id: 5
+
+  - name: Palpa
+    province_id: 5
+
+  #Province 6 cities starts
+  - name: Bardibas
+    province_id: 6
+
+  - name: Birgunj
+    province_id: 6
+
+  - name: Chandranigahapur (Rautahat)
+    province_id: 6
+
+  - name: Dhanusa
+    province_id: 6
+
+  - name: Gaur (Rautahat)
+    province_id: 6
+
+  - name: Janakpur
+    province_id: 6
+
+  - name: Rajbiraj
+    province_id: 6
+
+  - name: Sarlahi
+    province_id: 6
+
+  - name: Siraha
+    province_id: 6
+
+  #Province 7 cities starts
+  - name: Bajura
+    province_id: 7
+
+  - name: Bajhang
+    province_id: 7
+
+  - name: Doti
+    province_id: 7
+
+  - name: Achham
+    province_id: 7
+
+  - name: Darchula
+    province_id: 7
+
+  - name: Baitadi
+    province_id: 7
+
+  - name: Dadeldhura
+    province_id: 7
+
+  - name: Kanchanpur
+    province_id: 7
+
+  - name: Kailali
+    province_id: 7
+
+zones:
+  - name: Chitwan
+    city_id: 1
+
+  - name: Daman
+    city_id: 2
+
+  - name: Dhading
+    city_id: 3
+
+  - name: Dolalghat
+    city_id: 4
+
+  - name: Dolkha
+    city_id: 5
+
+  - name: Hetauda
+    city_id: 6
+
+  - name: Aarubari
+    city_id: 7
+
+  - name: Airport Area
+    city_id: 7
+
+  - name: Alok Nagar
+    city_id: 7
+
+  - name: Anamnagar
+    city_id: 7
+
+  - name: Ason
+    city_id: 7
+
+  - name: Babarmahal
+    city_id: 7
+
+  - name: Badegaun
+    city_id: 7
+
+  - name: Badikhel
+    city_id: 7
+
+  - name: Bafal
+    city_id: 7
+
+  - name: Bagbazar
+    city_id: 7
+
+  - name: Bagdol
+    city_id: 7
+
+  - name: Bakhundol
+    city_id: 7
+
+  - name: Balaju
+    city_id: 7
+
+  - name: Balambu
+    city_id: 7
+
+  - name: Balkhu
+    city_id: 7
+
+  - name: Balkot
+    city_id: 7
+
+  - name: Balkumari
+    city_id: 7
+
+  - name: Baluwatar
+    city_id: 7
+
+  - name: Banasthali
+    city_id: 7
+
+  - name: Baneshwor Height
+    city_id: 7
+
+  - name: Bangalamukhi
+    city_id: 7
+
+  - name: Baniyatar
+    city_id: 7
+
+  - name: Bansbari
+    city_id: 7
+
+  - name: Basantapur
+    city_id: 7
+
+  - name: Basundhara
+    city_id: 7
+
+  - name: Battishputali
+    city_id: 7
+
+  - name: Bhadrakali
+    city_id: 7
+
+  - name: Bhaisepati
+    city_id: 7
+
+  - name: Bhaktapur Durbar Square
+    city_id: 7
+
+  - name: Bhangal
+    city_id: 7
+
+  - name: Bhanimandal Chowk
+    city_id: 7
+
+  - name: Bhimsengola
+    city_id: 7
+
+  - name: BhoteBahal
+    city_id: 7
+
+  - name: Bhrikutimandap
+    city_id: 7
+
+  - name: Bijeshwori
+    city_id: 7
+
+  - name: Bijulibazar
+    city_id: 7
+
+  - name: Bisankhunarayan
+    city_id: 7
+
+  - name: Bishalnagar
+    city_id: 7
+
+  - name: Bode
+    city_id: 7
+
+  - name: Boudhha
+    city_id: 7
+
+  - name: Buddha Nagar
+    city_id: 7
+
+  - name: Budhanilkantha
+    city_id: 7
+
+  - name: Bungmati
+    city_id: 7
+
+  - name: Byasi
+    city_id: 7
+
+  - name: Chabahil
+    city_id: 7
+
+  - name: Chagal
+    city_id: 7
+
+  - name: Chakrapath
+    city_id: 7
+
+  - name: Chamati
+    city_id: 7
+
+  - name: Chandol
+    city_id: 7
+
+  - name: Chandragiri
+    city_id: 7
+
+  - name: Chagathali
+    city_id: 7
+
+  - name: Changunarayan
+    city_id: 7
+
+  - name: Chapagaun
+    city_id: 7
+
+  - name: Chapagaun Dobato
+    city_id: 7
+
+  - name: Chappal Karkhana
+    city_id: 7
+
+  - name: Chardobato
+    city_id: 7
+
+  - name: Chhauni
+    city_id: 7
+
+  - name: Chhetrapati
+    city_id: 7
+
+  - name: Chundevi
+    city_id: 7
+
+  - name: Chyamasingh
+    city_id: 7
+
+  - name: Chyasal
+    city_id: 7
+
+  - name: Dadhikot
+    city_id: 7
+
+  - name: Dolalghat
+    city_id: 7
+
+  - name: Dahachok
+    city_id: 7
+
+  - name: Dallu
+    city_id: 7
+
+  - name: Dhapakhel
+    city_id: 7
+
+  - name: Dharmasthali
+    city_id: 7
+
+  - name: Dhobighat
+    city_id: 7
+
+  - name: Dhumbarahi
+    city_id: 7
+
+  - name: Dhungeadda, Chandragiri
+    city_id: 7
+
+  - name: Dhungedhara (Chhauni)
+    city_id: 7
+
+  - name: Dillibazar
+    city_id: 7
+
+  - name: Durbarmarg
+    city_id: 7
+
+  - name: Duwakot
+    city_id: 7
+
+  - name: Ekantakuna
+    city_id: 7
+
+  - name: Gairidhara
+    city_id: 7
+
+  - name: Gairigaun
+    city_id: 7
+
+  - name: Gatthaghar
+    city_id: 7
+
+  - name: Gaurighat
+    city_id: 7
+
+  - name: Gausala
+    city_id: 7
+
+  - name: Ghattekulo
+    city_id: 7
+
+  - name: Godawari
+    city_id: 7
+
+  - name: Gokarneshwor
+    city_id: 7
+
+  - name: Gongabu
+    city_id: 7
+
+  - name: Gothaghar
+    city_id: 7
+
+  - name: Grande
+    city_id: 7
+
+  - name: Gurjudhara
+    city_id: 7
+
+  - name: Gwarko
+    city_id: 7
+
+  - name: Gyaneshwor
+    city_id: 7
+
+  - name: Hadigaun
+    city_id: 7
+
+  - name: Harisiddhi
+    city_id: 7
+
+  - name: Hattigauda
+    city_id: 7
+
+  - name: Hattisar
+    city_id: 7
+
+  - name: Imadol
+    city_id: 7
+
+  - name: Indrachok
+    city_id: 7
+
+  - name: Jadibuti
+    city_id: 7
+
+  - name: Jagati
+    city_id: 7
+
+  - name: Jamal
+    city_id: 7
+
+  - name: Jarankhu
+    city_id: 7
+
+  - name: Jawalakhel
+    city_id: 7
+
+  - name: Jhamsikhel
+    city_id: 7
+
+  - name: Jhaukhel
+    city_id: 7
+
+  - name: Jorpati
+    city_id: 7
+
+  - name: Kadaghari
+    city_id: 7
+
+  - name: Kageshwari Manohara
+    city_id: 7
+
+  - name: Kalanki
+    city_id: 7
+
+  - name: Kal Dhara
+    city_id: 7
+
+  - name: Kalimati
+    city_id: 7
+
+  - name: Kamaladi
+    city_id: 7
+
+  - name: KamalBinayak
+    city_id: 7
+
+  - name: Kamalpokhari
+    city_id: 7
+
+  - name: Kapan
+    city_id: 7
+
+  - name: Kapurdhara
+    city_id: 7
+
+  - name: Karya Binayak
+    city_id: 7
+
+  - name: Katunje
+    city_id: 7
+
+  - name: Kaushaltar
+    city_id: 7
+
+  - name: Kharibot(Kapan)
+    city_id: 7
+
+  - name: Khokana
+    city_id: 7
+
+  - name: Khumaltar
+    city_id: 7
+
+  - name: Khusibu
+    city_id: 7
+
+  - name: Kimdol
+    city_id: 7
+
+  - name: Koteshwor
+    city_id: 7
+
+  - name: Kirtipur
+    city_id: 7
+
+  - name: Kuleshwar
+    city_id: 7
+
+  - name: Kumaripati
+    city_id: 7
+
+  - name: Kupondole
+    city_id: 7
+
+  - name: Kusunti
+    city_id: 7
+
+  - name: Lagankhel
+    city_id: 7
+
+  - name: Lainchaur
+    city_id: 7
+
+  - name: Lamatar
+    city_id: 7
+
+  - name: Lazimpat
+    city_id: 7
+
+  - name: Lele
+    city_id: 7
+
+  - name: Lokanthali
+    city_id: 7
+
+  - name: Lubhu
+    city_id: 7
+
+  - name: Machchhegaun
+    city_id: 7
+
+  - name: Machhapokhari
+    city_id: 7
+
+  - name: Madhyapur Thimi
+    city_id: 7
+
+  - name: Mahaboudha
+    city_id: 7
+
+  - name: Mahalaxmi
+    city_id: 7
+
+  - name: Maharajgunj
+    city_id: 7
+
+  - name: Maitidevi
+    city_id: 7
+
+  - name: Maitighar
+    city_id: 7
+
+  - name: Manamaiju
+    city_id: 7
+
+  - name: Mhepi
+    city_id: 7
+
+  - name: Mid Baneshwar
+    city_id: 7
+
+  - name: Minbhawan
+    city_id: 7
+
+  - name: Mitrapark
+    city_id: 7
+
+  - name: Mulpani
+    city_id: 7
+
+  - name: Nagarjuna
+    city_id: 7
+
+  - name: Naikap
+    city_id: 7
+
+  - name: Nakhipot
+    city_id: 7
+
+  - name: Nakhu
+    city_id: 7
+
+  - name: Lele
+    city_id: 7
+
+  - name: Lokanthali
+    city_id: 7
+
+  - name: Lubhu
+    city_id: 7
+
+  - name: Machchhegaun
+    city_id: 7
+
+  - name: Machhapokhari
+    city_id: 7
+
+  - name: Madhyapur Thimi
+    city_id: 7
+
+  - name: Mahaboudha
+    city_id: 7
+
+  - name: Mahalaxmi
+    city_id: 7
+
+  - name: Maharajgunj
+    city_id: 7
+
+  - name: Maitidevi
+    city_id: 7
+
+  - name: Maitighar
+    city_id: 7
+
+  - name: Manamaiju
+    city_id: 7
+
+  - name: Mhepi
+    city_id: 7
+
+  - name: Mid Baneshwar
+    city_id: 7
+
+  - name: Minbhawan
+    city_id: 7
+
+  - name: Mitrapark
+    city_id: 7
+
+  - name: Mulpani
+    city_id: 7
+
+  - name: Nagarjuna
+    city_id: 7
+
+  - name: Naikap
+    city_id: 7
+
+  - name: Nakhipot
+    city_id: 7
+
+  - name: Nakhu
+    city_id: 7
+
+  - name: Nakhudol
+    city_id: 7
+
+  - name: Narayan Chaur
+    city_id: 7
+
+  - name: Narayangopal Chowk
+    city_id: 7
+
+  - name: Narayantar
+    city_id: 7
+
+  - name: Narayantar ktm
+    city_id: 7
+
+  - name: Naxal
+    city_id: 7
+
+  - name: Nayabazar
+    city_id: 7
+
+  - name: Nepaltar
+    city_id: 7
+
+  - name: New Baneshwar
+    city_id: 7
+
+  - name: New Road
+    city_id: 7
+
+  - name: Nyatapol
+    city_id: 7
+
+  - name: Old Baneshwar
+    city_id: 7
+
+  - name: Panipokhari
+    city_id: 7
+
+  - name: Paknajol
+    city_id: 7
+
+  - name: Pashupatinath
+    city_id: 7
+
+  - name: Patan
+    city_id: 7
+
+  - name: Pepsicola
+    city_id: 7
+
+  - name: Pulchowk
+    city_id: 7
+
+  - name: Purano Naikap
+    city_id: 7
+
+  - name: Putalisadak
+    city_id: 7
+
+  - name: Radhe Radhe
+    city_id: 7
+
+  - name: Ramhiti
+    city_id: 7
+
+  - name: Ravibhawan
+    city_id: 7
+
+  - name: Sainbu
+    city_id: 7
+
+  - name: Sallaghari
+    city_id: 7
+
+  - name: Samakhusi
+    city_id: 7
+
+  - name: Sanepa
+    city_id: 7
+
+  - name: Sankhu
+    city_id: 7
+
+  - name: Sano Bharyang
+    city_id: 7
+
+  - name: Sanogau
+    city_id: 7
+
+  - name: Sano Thimi
+    city_id: 7
+
+  - name: Satdobato
+    city_id: 7
+
+  - name: Satugal
+    city_id: 7
+
+  - name: Sesmati
+    city_id: 7
+
+  - name: Shankhamul
+    city_id: 7
+
+  - name: Shantinagar
+    city_id: 7
+
+  - name: Sinamangal
+    city_id: 7
+
+  - name: Singha Durbar
+    city_id: 7
+
+  - name: Single Tree
+    city_id: 7
+
+  - name: Sipadol
+    city_id: 7
+
+  - name: Siphal
+    city_id: 7
+
+  - name: Sirutar
+    city_id: 7
+
+  - name: Sitapaila
+    city_id: 7
+
+  - name: Soltimode
+    city_id: 7
+
+  - name: Sorakhutte
+    city_id: 7
+
+  - name: Srijana Nagar
+    city_id: 7
+
+  - name: Subidhanagar
+    city_id: 7
+
+  - name: Sukedhara
+    city_id: 7
+
+  - name: Sukuldhoka
+    city_id: 7
+
+  - name: Sunakothi
+    city_id: 7
+
+  - name: Sundarijal
+    city_id: 7
+
+  - name: Sundhara
+    city_id: 7
+
+  - name: Suryabinayak
+    city_id: 7
+
+  - name: Suryamadi, Bhaktapur
+    city_id: 7
+
+  - name: Swayambhu
+    city_id: 7
+
+  - name: Syuchatar
+    city_id: 7
+
+  - name: Tahachal
+    city_id: 7
+
+  - name: Tahakhel
+    city_id: 7
+
+  - name: Talchikhel
+    city_id: 7
+
+  - name: Tangal
+    city_id: 7
+
+  - name: Tarkeeshwor
+    city_id: 7
+
+  - name: Teku
+    city_id: 7
+
+  - name: Thaiba
+    city_id: 7
+
+  - name: Thali
+    city_id: 7
+
+  - name: Thamel
+    city_id: 7
+
+  - name: Thapagaun
+    city_id: 7
+
+  - name: Thapathali
+    city_id: 7
+
+  - name: Thasikhel
+    city_id: 7
+
+  - name: Thecho
+    city_id: 7
+
+  - name: Thulo Bharyang
+    city_id: 7
+
+  - name: Tikathali
+    city_id: 7
+
+  - name: Tinkune
+    city_id: 7
+
+  - name: Tokha
+    city_id: 7
+
+  - name: Tribhuwan University
+    city_id: 7
+
+  - name: Tripureshwor
+    city_id: 7
+
+  - name: Uttar Dhoka
+    city_id: 7
+
+  - name: Banepa
+    city_id: 8
+
+  - name: Dhulikhel
+    city_id: 8
+
+  - name: Kavrepalanchowk
+    city_id: 9
+
+  - name: Makwanpur
+    city_id: 10
+
+  - name: Manthali
+    city_id: 11
+
+  - name: Mugling
+    city_id: 12
+
+  - name: Nuwakot
+    city_id: 13
+
+  - name: Pharping
+    city_id: 14
+
+  - name: Rasuwa
+    city_id: 15
+
+  - name: Sindhuli
+    city_id: 16
+
+  - name: Baglung
+    city_id: 17
+
+  - name: Bardaghat
+    city_id: 18
+
+  - name: Beni
+    city_id: 19
+
+  - name: Besisahar
+    city_id: 20
+
+  - name: Damauli
+    city_id: 21
+
+  - name: Dhulegauda
+    city_id: 22
+
+  - name: Gorkha
+    city_id: 23
+
+  - name: Kawasoti
+    city_id: 24
+
+  - name: Kushma
+    city_id: 25
+
+  - name: Lamjung
+    city_id: 26
+
+  - name: Manang
+    city_id: 27
+
+  - name: Myagdi
+    city_id: 28
+
+  - name: Bagar (Pokhara)
+    city_id: 29
+
+  - name: Bagmara (Pokhara)
+    city_id: 29
+
+  - name: Chhorepatan
+    city_id: 29
+
+  - name: Hemja
+    city_id: 29
+
+  - name: Lakeside
+    city_id: 29
+
+  - name: Malepatan
+    city_id: 29
+
+  - name: Newroad (Pokhara)
+    city_id: 29
+
+  - name: Prithivi chowk
+    city_id: 29
+
+  - name: Srijana Chowk
+    city_id: 29
+
+  - name: Syangja
+    city_id: 30
+
+  - name: Dailekh
+    city_id: 31
+
+  - name: DailekhBazar
+    city_id: 31
+
+  - name: Dolpa
+    city_id: 32
+
+  - name: Simikot
+    city_id: 33
+
+  - name: Surkhet
+    city_id: 34
+
+  - name: Bargachi
+    city_id: 35
+
+  - name: Beltar
+    city_id: 36
+
+  - name: Bhedatar
+    city_id: 37
+
+  - name: Bhojpur
+    city_id: 38
+
+  - name: Biratnagar
+    city_id: 39
+
+  - name: Hatkhola
+    city_id: 39
+
+  - name: Rangeli
+    city_id: 39
+
+  - name: Birtamode
+    city_id: 40
+
+  - name: Damak
+    city_id: 41
+
+  - name: Dhankuta
+    city_id: 42
+
+  - name: Budasubba
+    city_id: 43
+
+  - name: Deurali
+    city_id: 43
+
+  - name: Dharan
+    city_id: 43
+
+  - name: Fusre
+    city_id: 43
+
+  - name: Panmara
+    city_id: 43
+
+  - name: Railway (Itahari)
+    city_id: 43
+
+  - name: Zero Point
+    city_id: 43
+
+  - name: Durgapuri
+    city_id: 44
+
+  - name: Gaighat
+    city_id: 45
+
+  - name: Illam
+    city_id: 46
+
+  - name: Belbari
+    city_id: 47
+
+  - name: Bhatbhateni (Itahari)
+    city_id: 47
+
+  - name: Biratchowk
+    city_id: 47
+
+  - name: Duhabi
+    city_id: 47
+
+  - name: Dulari chowk
+    city_id: 47
+
+  - name: Gachhiya
+    city_id: 47
+
+  - name: Halgada chowk
+    city_id: 47
+
+  - name: Itahari
+    city_id: 47
+
+  - name: Jhumka
+    city_id: 47
+
+  - name: khanar
+    city_id: 47
+
+  - name: khursane
+    city_id: 47
+
+  - name: Pakali
+    city_id: 47
+
+  - name: Pathri
+    city_id: 47
+
+  - name: Salakpur
+    city_id: 47
+
+  - name: Sonapur (Itahari)
+    city_id: 47
+
+  - name: Tarahara
+    city_id: 47
+
+  - name: Salakpur
+    city_id: 47
+
+  - name: Khotang
+    city_id: 48
+
+  - name: Panchthar
+    city_id: 49
+
+  - name: Pashupatinagar
+    city_id: 50
+
+  - name: RatuwamaiSombare
+    city_id: 51
+
+  - name: Salleri
+    city_id: 52
+
+  - name: Sankhuwasabha
+    city_id: 53
+
+  - name: Taplejung
+    city_id: 54
+
+  - name: Bardiya
+    city_id: 55
+
+  - name: Bhairahawa
+    city_id: 56
+
+  - name: Butwal
+    city_id: 57
+
+  - name: Dang
+    city_id: 58
+
+  - name: Gulariya
+    city_id: 59
+
+  - name: Gulmi
+    city_id: 60
+
+  - name: Kapilbastu
+    city_id: 61
+
+  - name: Kothihawa
+    city_id: 62
+
+  - name: Basngadhi
+    city_id: 63
+
+  - name: Bardiya Gulariya
+    city_id: 63
+
+  - name: Basgadhi
+    city_id: 63
+
+  - name: Belhari
+    city_id: 63
+
+  - name: Chisa Pani
+    city_id: 63
+
+  - name: Guleriya
+    city_id: 63
+
+  - name: Khajura
+    city_id: 63
+
+  - name: Khajuraa
+    city_id: 63
+
+  - name: Kohalpur
+    city_id: 63
+
+  - name: Manikpur
+    city_id: 63
+
+  - name: Sonapur (Nepalgunj)
+    city_id: 63
+
+  - name: Palpa
+    city_id: 64
+
+  - name: Bardibas
+    city_id: 65
+
+  - name: Birgunj
+    city_id: 66
+
+  - name: Chandranigahapur (Rautahat)
+    city_id: 67
+
+  - name: Bansi Chowk
+    city_id: 68
+
+  - name: Jaleshowr
+    city_id: 68
+
+  - name: Malpot
+    city_id: 68
+
+  - name: Mujheiya
+    city_id: 68
+
+  - name: Pipara
+    city_id: 68
+
+  - name: Railway Station
+    city_id: 68
+
+  - name: Ramdaiya
+    city_id: 68
+
+  - name: Zero Mile
+    city_id: 68
+
+  - name: Gaur (Rautahat)
+    city_id: 69
+
+  - name: Janakpur
+    city_id: 70
+
+  - name: Rajbiraj
+    city_id: 71
+
+  - name: Sarlahi
+    city_id: 72
+
+  - name: Siraha
+    city_id: 73
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

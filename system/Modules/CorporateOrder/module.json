@@ -1,0 +1,11 @@
+{
+    "name": "CorporateOrder",
+    "alias": "corporateorder",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\CorporateOrder\\App\\Providers\\CorporateOrderServiceProvider"
+    ],
+    "files": []
+}

@@ -1,0 +1,351 @@
+[
+    {
+        "title": "Dashboard",
+        "sort_order": 1,
+        "icon": "dashboard",
+        "url": "/",
+        "permission_name": "view_dashboard",
+        "status": 1
+    },
+    {
+        "title": "Activity Log",
+        "sort_order": 3,
+        "icon": "log",
+        "url":"/activity-logs",
+        "permission_name": "view_activity_logs",
+        "status": 1
+    },
+    {
+        "title": "Access Group",
+        "sort_order": 4,
+        "icon": "access",
+        "url": null,
+        "permission_name": "view_access_group",
+        "status": 1,
+        "children": [
+            {
+                "title": "Groups",
+                "sort_order": 1,
+                "icon": "roles",
+                "url": "/roles",
+                "permission_name": "view_roles",
+                "status": 1
+            }
+        ]
+    },
+    {
+        "title": "Admin Users",
+        "sort_order": 5,
+        "icon": "user",
+        "url": "/adminUser",
+        "permission_name": "view_admin_users",
+        "status": 1
+    },
+    {
+        "title": "Media Center",
+        "sort_order": 6,
+        "icon": "media",
+        "url": "/media",
+        "permission_name": "view_media_center",
+        "status": 1
+    },
+    {
+        "title": "System Configurations",
+        "sort_order": 7,
+        "icon": "system",
+        "url": null,
+        "permission_name": "view_system_configurations",
+        "status": 1,
+        "children": [
+            {
+                "title": "Menus",
+                "sort_order": 1,
+                "icon": "menu",
+                "url": "/menu",
+                "permission_name": "view_menus",
+                "status": 1
+            },
+            {
+                "title": "Email Templates",
+                "sort_order": 2,
+                "icon": "email",
+                "url": "/email-template",
+                "permission_name": "view_email_templates",
+                "status": 1
+            },
+            {
+                "title": "Settings",
+                "sort_order": 3,
+                "icon": "settings",
+                "url": "/settings",
+                "permission_name": "view_setting_configurations",
+                "status": 1
+            }
+        ]
+    },
+    {
+        "title": "Catalog",
+        "sort_order": 8,
+        "icon": "system",
+        "url": null,
+        "permission_name": "view_catalog",
+        "status": 1,
+        "children": [
+            {
+                "title": "Categories",
+                "sort_order": 1,
+                "icon": "category",
+                "url": "/category",
+                "permission_name": "view_category",
+                "status": 1
+            },
+            {
+                "title": "Trending Categories",
+                "sort_order": 2,
+                "icon": "trending-up",
+                "url": "/trending-category",
+                "permission_name": "view_category",
+                "status": 1
+            },
+            {
+                "title": "Tags",
+                "sort_order": 3,
+                "icon": "tags",
+                "url": "/tags",
+                "permission_name": "view_tags",
+                "status": 1
+            },
+            {
+                "title": "Attribute Sets",
+                "sort_order": 4,
+                "icon": "attributeSet",
+                "url": "/attribute-sets",
+                "permission_name": "view_attribute_sets",
+                "status": 1
+            },
+            {
+                "title": "Attributes",
+                "sort_order": 4,
+                "icon": "attribute",
+                "url": "/attribute",
+                "permission_name": "view_attributes",
+                "status": 1
+            },
+            {
+                "title": "Attributes Filters",
+                "sort_order": 4,
+                "icon": "attribute-filter",
+                "url": "/attributes_filters",
+                "permission_name": "view_attribute_filters",
+                "status": 1
+            },
+            {
+                "title": "Products",
+                "sort_order": 5,
+                "icon": "product",
+                "url": "/products",
+                "permission_name": "view_products",
+                "status": 1
+            },
+            {
+                "title": "Limited Time Deals",
+                "sort_order": 2,
+                "icon": "hourglass-empty",
+                "url": "/limited-time-deals",
+                "permission_name": "view_category",
+                "status": 1
+            },
+            {
+                "title": "Reviews",
+                "sort_order": 6,
+                "icon": "review",
+                "url": "/reviews",
+                "permission_name": "view_reviews",
+                "status": 1
+            },
+            {
+                "title": "Brand",
+                "sort_order": 7,
+                "icon": "brand-cake",
+                "url": "/brand",
+                "permission_name": "view_brand",
+                "status": 1
+            },
+            {
+                "title": "Color",
+                "sort_order": 8,
+                "icon": "color-filter",
+                "url": "/color",
+                "permission_name": "view_color",
+                "status": 1
+            }
+        ]
+    },
+    {
+        "title": "Contents",
+        "sort_order": 9,
+        "icon": "contents",
+        "url": "/contents",
+        "permission_name": "view_contents",
+        "status": 1
+    },
+    {
+        "title": "Blogs",
+        "sort_order": 10,
+        "icon": "blog",
+        "url": "/blog",
+        "permission_name": "view_posts",
+        "status": 1
+    },
+    {
+        "title": "Delivery Charges",
+        "sort_order": 11,
+        "icon": "delivery",
+        "url": "/delivery-charges",
+        "permission_name": "view_delivery_charges",
+        "status": 1
+    },
+    {
+        "title": "Corporate Order",
+        "sort_order": 12,
+        "icon": "corporate",
+        "url": "/corporateOrder",
+        "permission_name": "view_corporate_orders",
+        "status": 1
+    },
+    {
+        "title": "Warranty",
+        "sort_order": 13,
+        "icon": "warranty",
+        "url": null,
+        "permission_name": "view_warranty_managements",
+        "status": 1,
+        "children": [
+            {
+                "title": "Warranty Registration",
+                "sort_order": 1,
+                "icon": "warranty-registration",
+                "url": "/warranty-registration",
+                "permission_name": "view_warranty_registrations",
+                "status": 1
+            },
+            {
+                "title": "Warranty Claim",
+                "sort_order": 2,
+                "icon": "warranty-claim",
+                "url": "/warranty-claim",
+                "permission_name": "view_warranty_claims",
+                "status": 1
+            }
+        ]
+    },
+   {
+        "title": "Coupons",
+        "sort_order": 14,
+        "icon": "coupon",
+        "url": "/coupons",
+        "permission_name": "view_coupons",
+        "status": 1
+   },
+    {
+        "title": "Sales",
+        "sort_order": 15,
+        "icon": "sales",
+        "url": null,
+        "permission_name": "view_sales",
+        "status": 1,
+        "children": [
+            {
+                "title": "Orders",
+                "sort_order": 1,
+                "icon": "orders",
+                "url": "/orders",
+                "permission_name": "view_orders",
+                "status": 1
+            },
+            {
+                "title": "Order Processing",
+                "sort_order": 2,
+                "icon": "order-processing",
+                "url": "/order-processing",
+                "permission_name": "view_order_processing",
+                "status": 1
+            },
+            {
+                "title": "Transactions",
+                "sort_order": 3,
+                "icon": "transactions",
+                "url": "/transactions",
+                "permission_name": "view_transactions",
+                "status": 1
+            },
+            {
+                "title": "Customers",
+                "sort_order": 4,
+                "icon": "customers",
+                "url": "/customers",
+                "permission_name": "view_customers",
+                "status": 1
+            }
+        ]
+    },
+    {
+        "title": "Support",
+        "sort_order": 16,
+        "icon": "support",
+        "url": null,
+        "permission_name": "view_support",
+        "status": 1,
+        "children": [
+            {
+                "title": "General Support",
+                "sort_order": 1,
+                "icon": "general-support",
+                "url": "/general-support",
+                "permission_name": "view_general_support",
+                "status": 1
+            },
+            {
+                "title": "Order Support",
+                "sort_order": 2,
+                "icon": "order-support",
+                "url": "/order-support",
+                "permission_name": "view_order_support",
+                "status": 1
+            }
+        ]
+    },
+    {
+        "title": "Users",
+        "sort_order": 2,
+        "icon": "users",
+        "url": "/users",
+        "permission_name": "view_users",
+        "status": 1
+    },
+    {
+        "title": "Others",
+        "sort_order": 17,
+        "icon": "others",
+        "url": "/others",
+        "permission_name": "view_others_content",
+        "status": 1
+    },
+    {
+        "title": "Analytics",
+        "sort_order": 18,
+        "icon": "analytics",
+        "url": "/analytics",
+        "permission_name": "view_analytics",
+        "status": 1
+    },
+    {
+        "title":"Flash Sale",
+        "sort_order":19,
+        "icon":"rosette-discount",
+        "url":"/flash-sale",
+        "permission_name":"view_flash_sales",
+        "status":1
+    }
+
+]

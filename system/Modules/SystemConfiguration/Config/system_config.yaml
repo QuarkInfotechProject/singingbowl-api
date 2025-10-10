@@ -1,0 +1,21 @@
+
+#email
+- { name: email_transport, title: Email Transport, value: smtp, section: email }
+- { name: email_host, title: Email Host, value: smtp.mailgun.org, section: email }
+- { name: email_port, title: Email Port, value: 587, section: email }
+- { name: email_encryption, title: Email Encryption, value: tls, section: email }
+- { name: email_username, title: Email Username, value: username, section: email }
+- { name: email_password, title: Email Password, value: password, section: email }
+- { name: email_timeout, title: Email Timeout, value: null, section: email }
+- { name: email_address, title: Email Address, value: info@squarebx.com, section: email }
+- { name: email_name, title: Email Name, value: Example, section: email }
+#product option limitation
+- { name: product_option_limitation, title: Product options limitation, value: 3, section: product}
+
+#code verification
+- { name: code_expiration_time, title: Code Expiration Time, value: 5, section: verification_code}
+- { name: code_attempts, title: Code Attempts, value: 3, section: verification_code}
+- { name: verification_code_api_hits, title: Verification Code API Hits, value: 1, section: verification_code}
+
+#End user password reset token expiration time
+- { name: token_expiration_time, title: Password Reset Link Expiration Time, value: 30, section: password_reset}

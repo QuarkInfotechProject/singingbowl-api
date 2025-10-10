@@ -1,0 +1,7 @@
+docker-compose.yml
+
+# Cursor IDE specific files
+.cursor/
+.idea/workspace.xml
+.idea/workspace.xml
+/dependencies

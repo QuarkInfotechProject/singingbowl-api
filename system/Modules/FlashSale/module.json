@@ -1,0 +1,11 @@
+{
+    "name": "FlashSale",
+    "alias": "flashsale",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\FlashSale\\App\\Providers\\FlashSaleServiceProvider"
+    ],
+    "files": []
+}

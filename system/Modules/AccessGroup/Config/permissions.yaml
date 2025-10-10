@@ -1,0 +1,500 @@
+#Permission related to dashboard
+- name: view_dashboard
+  description: can view dashboard
+  section: Dashboard
+  isIndex: 1
+
+# Permission related to  admin users
+- name: view_admin_users
+  description: can view all existing admin users
+  section: Admin User
+  isIndex: 1
+
+#- name: create_admin_user
+#  description: can create a new admin user
+#  section: Admin User
+#  isIndex: 0
+#
+#- name: update_admin_user
+#  description: can edit an existing admin user
+#  section: Admin User
+#  isIndex: 0
+#
+#- name: delete_admin_user
+#  description: can delete an existing admin user
+#  section: Admin User
+#  isIndex: 0
+#
+#- name: block_admin_user
+#  description: can block an existing admin user
+#  section: Admin User
+#  isIndex: 0
+#
+#- name: reactivate_admin_user
+#  description: can reactivate a blocked or deleted admin user
+#  section: Admin User
+#  isIndex: 0
+
+# Permission related to users
+- name: view_users
+  description: can view all existing end users
+  section: User
+  isIndex: 1
+
+#- name: block_user
+#  description: can block an existing end user
+#  section: User
+#  isIndex: 0
+#
+#- name: reactivate_user
+#  description: can reactivate a blocked or deleted end user
+#  section: User
+#  isIndex: 0
+
+# Permission related to activity logs
+- name: view_activity_logs
+  description: can view all activity logs
+  section: Activity Log
+  isIndex: 1
+
+# Permission related to settings
+- name: view_system_configurations
+  description: can view all existing system configurations
+  section: System Configurations
+  isIndex: 1
+
+- name: view_setting_configurations
+  description: can view all existing system configurations
+  section: Settings
+  isIndex: 1
+
+#- name: update_setting_configuration
+#  description: can update an existing system configuration
+#  section: Settings
+#  isIndex: 0
+
+# Permission related to email template
+- name: view_email_templates
+  description: can view all existing email templates
+  section: Email Templates
+  isIndex: 1
+
+#- name: view_email_template
+#  description: can view a specific email template
+#  section: Email Templates
+#  isIndex: 0
+#
+#- name: update_email_template
+#  description: can update an existing email template
+#  section: Email Templates
+#  isIndex: 0
+
+# Permission related to menu
+- name: view_menus
+  description: can view all menu
+  section: Menu
+  isIndex: 1
+
+#- name: reorder_menu
+#  description: can reorder a menu
+#  section: Menu
+#  isIndex: 0
+#
+#- name: change_menu_status
+#  description: can change the status of a menu
+#  section: Menu
+#  isIndex: 0
+
+# Permission related to access group
+- name: view_access_group
+  description: can view access group
+  section: Permission
+  isIndex: 1
+
+# Permission related to assigning permissions to a role
+- name: view_permissions
+  description: can view all permissions related to role
+  section: Permission
+  isIndex: 1
+
+#- name: assign_permission_to_role
+#  description: can assign a permission to a role
+#  section: Permission
+#  isIndex: 0
+#
+#- name: revoke_permission_from_role
+#  description: can revoke a permission from a role
+#  section: Permission
+#  isIndex: 0
+
+# Permission related to roles
+- name: view_roles
+  description: can view all roles
+  section: Role
+  isIndex: 1
+
+#- name: create_role
+#  description: can create a new role
+#  section: Role
+#  isIndex: 0
+#
+#- name: update_role
+#  description: can edit an existing role
+#  section: Role
+#  isIndex: 0
+#
+#- name: delete_role
+#  description: can delete an existing role
+#  section: Role
+#  isIndex: 0
+
+# Permission related to media center
+- name: view_media_center
+  description: can view media center
+  section: Media center
+  isIndex: 1
+
+#- name: create_file_category
+#  description: can create a new file category
+#  section: File Category
+#  isIndex: 0
+#
+#- name: view_file_category
+#  description: can view detail of a file category
+#  section: File Category
+#  isIndex: 0
+#
+#- name: update_file_category
+#  description: can edit an existing file category
+#  section: File Category
+#  isIndex: 0
+#
+#- name: delete_file_category
+#  description: can delete an existing file category
+#  section: File Category
+#  isIndex: 0
+
+#- name: create_media_file
+#  description: can create a new file category
+#  section: Media File
+#  isIndex: 0
+#
+#- name: view_media_file
+#  description: can view detail of a media file
+#  section: Media File
+#  isIndex: 0
+#
+#- name: update_media_file
+#  description: can edit an existing media file
+#  section: Media File
+#  isIndex: 0
+#
+#- name: delete_media_file
+#  description: can delete an existing media file
+#  section: Media File
+#  isIndex: 0
+
+# Permission related to catalog
+- name: view_catalog
+  description: can view catalog menu
+  section: Catalog
+  isIndex: 1
+
+# Permission related to categories
+- name: view_category
+  description: can view category
+  section: Category
+  isIndex: 1
+
+#- name: create_category
+#  description: can create a new category
+#  section: Category
+#  isIndex: 0
+#
+#- name: update_category
+#  description: can edit an existing category
+#  section: Category
+#  isIndex: 0
+#
+#- name: delete_category
+#  description: can delete an existing category
+#  section: Category,
+#  isIndex: 0
+
+# Permission related to tags
+- name: view_tags
+  description: can view all tags
+  section: Tag
+  isIndex: 1
+
+#- name: create_tag
+#  description: can create a new tag
+#  section: Tag
+#  isIndex: 0
+#
+#- name: update_tag
+#  description: can edit an existing tag
+#  section: Tag
+#  isIndex: 0
+#
+#- name: delete_tag
+#  description: can delete an existing tag
+#  section: Tag
+#  isIndex: 0
+
+# Permission related to attribute sets
+- name: view_attribute_sets
+  description: can view all attribute sets
+  section: Attribute Set
+  isIndex: 1
+
+#- name: create_attribute_set
+#  description: can create a new attribute set
+#  section: Attribute Set
+#  isIndex: 0
+#
+#- name: update_attribute_set
+#  description: can edit an existing attribute set
+#  section: Attribute Set
+#  isIndex: 0
+#
+#- name: delete_attribute_set
+#  description: can delete an existing attribute set
+#  section: Attribute Set
+#  isIndex: 0
+
+# Permission related to attributes
+- name: view_attributes
+  description: can view all attributes
+  section: Attribute
+  isIndex: 1
+
+#- name: create_attribute
+#  description: can create a new attribute
+#  section: Attribute
+#  isIndex: 0
+#
+#- name: update_attribute
+#  description: can edit an existing attribute
+#  section: Attribute
+#  isIndex: 0
+#
+#- name: delete_attribute
+#  description: can delete an existing attribute
+#  section: Attribute
+#  isIndex: 0
+
+# Permission related to products
+- name: view_products
+  description: can view all products
+  section: Product
+  isIndex: 1
+
+#- name: create_product
+#  description: can create a new product
+#  section: Product
+#  isIndex: 0
+#
+#- name: update_product
+#  description: can edit an existing product
+#  section: Product
+#  isIndex: 0
+#
+#- name: delete_product
+#  description: can delete an existing product
+#  section: Product
+#  isIndex: 0
+
+# Permission related to contents
+- name: view_contents
+  description: can view all contents
+  section: Content
+  isIndex: 1
+
+#- name: create_content
+#  description: can create a new content
+#  section: Content
+#  isIndex: 0
+#
+#- name: update_content
+#  description: can edit an existing content
+#  section: Content
+#  isIndex: 0
+#
+#- name: delete_content
+#  description: can delete an existing content
+#  section: Content
+#  isIndex: 0
+
+#Permission related to FlashSale
+
+# Permission related to blogs
+- name: view_posts
+  description: can view all posts
+  section: Blog
+  isIndex: 1
+
+# Permission related to blogs
+- name: view_flash_sale
+  description: can view all sale
+  section: Flash Sale
+  isIndex: 1
+
+# Permission related to color
+- name: view_color
+  description: can view color
+  section: Color
+  isIndex: 1
+
+# Permission related to brand
+- name: view_brand
+  description: can view brand
+  section: Brand
+  isIndex: 1
+
+#- name: create_post
+#  description: can create a new post
+#  section: Blog
+#  isIndex: 0
+#
+#- name: update_post
+#  description: can edit an existing post
+#  section: Blog
+#  isIndex: 0
+#
+#- name: delete_post
+#  description: can delete an existing post
+#  section: Blog
+#  isIndex: 0
+
+# Permission related to coupons
+- name: view_coupons
+  description: can view all coupons
+  section: Coupon
+  isIndex: 1
+
+#- name: create_coupon
+#  description: can create a new coupon
+#  section: Coupon
+#  isIndex: 0
+#
+#- name: update_coupon
+#  description: can edit an existing coupon
+#  section: Coupon
+#  isIndex: 0
+#
+#- name: delete_coupon
+#  description: can delete an existing coupon
+#  section: Coupon
+#  isIndex: 0
+
+# Permission related to delivery charges
+- name: view_delivery_charges
+  description: can view all delivery charges
+  section: Delivery Charge
+  isIndex: 1
+
+# Permission related to corporate orders
+- name: view_corporate_orders
+  description: can view all corporate orders
+  section: Corporate Order
+  isIndex: 1
+
+# Permission related to warranty management
+- name: view_warranty_registrations
+  description: can view all warranty registrations
+  section: Warranty
+  isIndex: 1
+
+- name: view_warranty_claims
+  description: can view all warranty claims
+  section: Warranty
+  isIndex: 1
+
+# Permission related to product review
+- name: view_reviews
+  description: can view all product reviews
+  section: Product Review
+  isIndex: 1
+
+#- name: delete_review
+#  description: can delete a product review
+#  section: Product Review
+#  isIndex: 0
+
+# Permission related to sales
+- name: view_sales
+  description: can view sales
+  section: Sales
+  isIndex: 1
+
+# Permission related to orders
+- name: view_orders
+  description: can view all orders
+  section: Order
+  isIndex: 1
+
+#- name: update_order_status
+#  description: can update an order's status
+#  section: Order
+#  isIndex: 0
+#
+#- name: delete_order
+#  description: can delete an existing order
+#  section: Order
+#  isIndex: 0
+
+# Permission related to order processing
+- name: view_order_processing
+  description: can view all orders to be processed
+  section: Order Processing
+  isIndex: 1
+
+#- name: create_order_artifacts
+#  description: can create order artifacts and send order for further processing
+#  section: Order Processing
+#  isIndex: 0
+
+# Permission related to transactions
+- name: view_transactions
+  description: can view all transactions
+  section: Transaction
+  isIndex: 1
+
+- name: view_customers
+  description: can view all customer summary
+  section: Customer Summary
+  isIndex: 1
+
+# Permission related to support
+- name: view_support
+  description: can view support
+  section: Support
+  isIndex: 1
+
+- name: view_general_support
+  description: can view general support
+  section: Support
+  isIndex: 0
+
+- name: view_order_support
+  description: can view order support
+  section: Support
+  isIndex: 0
+
+- name: view_others_content
+  description: can view others content
+  section: Others
+  isIndex: 1
+
+- name: view_analytics
+  description: can view analytics
+  section: Analytics
+  isIndex: 1
+
+
+
+
+
+
+

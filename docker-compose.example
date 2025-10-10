@@ -1,0 +1,32 @@
+version: "4.4.1"
+services:
+    #    phpmyadmin:
+    #        image: phpmyadmin/phpmyadmin
+    #        ports:
+    #            - '8080:80'
+    #        restart: always
+    #        environment:
+    #            PMA_HOST: db
+    #        depends_on:
+    #            - db
+    ecommerce:
+        container_name: ecommerce
+        image: system:dev
+        build:
+            context: .
+            dockerfile: system/Dockerfile_dev
+            network: host
+            args:
+                app_env: dev
+        env_file: system/.env.local
+        working_dir: /opt/www
+        volumes:
+            - ./system/:/opt/www
+        ports:
+            - "98:8000"
+            # - "4001:8000"
+        networks:
+            - squareDev
+networks:
+    squareDev:
+        external: true

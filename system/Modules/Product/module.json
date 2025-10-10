@@ -1,0 +1,12 @@
+{
+    "name": "Product",
+    "alias": "product",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Product\\App\\Providers\\ProductServiceProvider",
+        "Modules\\Product\\App\\Providers\\EventServiceProvider"
+    ],
+    "files": []
+}

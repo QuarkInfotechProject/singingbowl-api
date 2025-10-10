@@ -1,0 +1,31 @@
+{
+    "name": "nwidart/flashsale",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\FlashSale\\": "",
+            "Modules\\FlashSale\\App\\": "app/",
+            "Modules\\FlashSale\\Database\\Factories\\": "database/factories/",
+            "Modules\\FlashSale\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\FlashSale\\Tests\\": "tests/"
+        }
+    }
+}

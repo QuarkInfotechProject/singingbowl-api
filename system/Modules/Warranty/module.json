@@ -1,0 +1,11 @@
+{
+    "name": "Warranty",
+    "alias": "warranty",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Warranty\\App\\Providers\\WarrantyServiceProvider"
+    ],
+    "files": []
+}

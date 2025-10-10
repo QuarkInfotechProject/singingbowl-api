@@ -1,0 +1,34 @@
+{
+    "name": "nwidart/shared",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Shared\\": "Modules/Shared/",
+            "Modules\\Shared\\App\\": "app/",
+            "Modules\\Shared\\Database\\Factories\\": "database/factories/",
+            "Modules\\Shared\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Shared\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "ext-imagick": "*"
+    }
+}

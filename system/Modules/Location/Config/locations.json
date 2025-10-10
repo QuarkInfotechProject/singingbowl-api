@@ -1,0 +1,3086 @@
+{
+    "Gandaki": [
+        {
+            "name": "Abukhaireni",
+            "id": 182,
+            "zones": [
+                {
+                    "name": "Abukhairenii",
+                    "id": 1789
+                }
+            ]
+        },
+        {
+            "name": "Baglung Bazzar",
+            "id": 110,
+            "zones": [
+                {
+                    "name": "Baglung",
+                    "id": 1357
+                }
+            ]
+        },
+        {
+            "name": "Bandipur",
+            "id": 271,
+            "zones": [
+                {
+                    "name": "Bandipur",
+                    "id": 1807
+                }
+            ]
+        },
+        {
+            "name": "Bardaghat (Parasi)",
+            "id": 108,
+            "zones": [
+                {
+                    "name": "Bardaghat",
+                    "id": 1355
+                }
+            ]
+        },
+        {
+            "name": "Beni",
+            "id": 113,
+            "zones": [
+                {
+                    "name": "Beni",
+                    "id": 1360
+                }
+            ]
+        },
+        {
+            "name": "Besisahar",
+            "id": 103,
+            "zones": [
+                {
+                    "name": "Besisahar",
+                    "id": 1350
+                }
+            ]
+        },
+        {
+            "name": "Bhimad (Tanahun)",
+            "id": 227,
+            "zones": [
+                {
+                    "name": "Tanahu",
+                    "id": 1845
+                }
+            ]
+        },
+        {
+            "name": "Burtibang (Baglung)",
+            "id": 290,
+            "zones": [
+                {
+                    "name": "Burtibang (Baglung)",
+                    "id": 1911
+                }
+            ]
+        },
+        {
+            "name": "Damauli",
+            "id": 90,
+            "zones": [
+                {
+                    "name": "Damauli",
+                    "id": 1337
+                }
+            ]
+        },
+        {
+            "name": "Dhulegauda",
+            "id": 153,
+            "zones": [
+                {
+                    "name": "Dhulegauda",
+                    "id": 1613
+                }
+            ]
+        },
+        {
+            "name": "Dumkibas (Nawalparasi)",
+            "id": 256,
+            "zones": [
+                {
+                    "name": "Dumkibas",
+                    "id": 1795
+                }
+            ]
+        },
+        {
+            "name": "Gairepatan (Pokhara)",
+            "id": 203,
+            "zones": [
+                {
+                    "name": "Gairepatan",
+                    "id": 1822
+                }
+            ]
+        },
+        {
+            "name": "Galkot (Baglung)",
+            "id": 289,
+            "zones": [
+                {
+                    "name": "Galkot (Baglung)",
+                    "id": 1910
+                }
+            ]
+        },
+        {
+            "name": "Gorkha Bazzar",
+            "id": 100,
+            "zones": [
+                {
+                    "name": "Gorkha",
+                    "id": 1347
+                }
+            ]
+        },
+        {
+            "name": "Hemja (Pokhara)",
+            "id": 207,
+            "zones": [
+                {
+                    "name": "Hemjaa",
+                    "id": 1826
+                }
+            ]
+        },
+        {
+            "name": "Jomsom",
+            "id": 128,
+            "zones": [
+                {
+                    "name": "Jomsom",
+                    "id": 1375
+                }
+            ]
+        },
+        {
+            "name": "Kawasoti",
+            "id": 97,
+            "zones": [
+                {
+                    "name": "Kawasoti",
+                    "id": 1344
+                }
+            ]
+        },
+        {
+            "name": "Kushma (Parbat)",
+            "id": 95,
+            "zones": [
+                {
+                    "name": "Kushma",
+                    "id": 1342
+                }
+            ]
+        },
+        {
+            "name": "Lamjung (Sundar Bazar)",
+            "id": 266,
+            "zones": [
+                {
+                    "name": "Sundarbazar",
+                    "id": 1803
+                }
+            ]
+        },
+        {
+            "name": "Manang",
+            "id": 168,
+            "zones": [
+                {
+                    "name": "Manang",
+                    "id": 1628
+                }
+            ]
+        },
+        {
+            "name": "Myagdi",
+            "id": 138,
+            "zones": [
+                {
+                    "name": "Myagdi",
+                    "id": 1573
+                }
+            ]
+        },
+        {
+            "name": "Pokhara",
+            "id": 79,
+            "zones": [
+                {
+                    "name": "Bagar (Pokhara)",
+                    "id": 1578
+                },
+                {
+                    "name": "Bagmara (Pokhara)",
+                    "id": 1582
+                },
+                {
+                    "name": "Chhorepatan",
+                    "id": 1581
+                },
+                {
+                    "name": "Hemja",
+                    "id": 1580
+                },
+                {
+                    "name": "Lakeside",
+                    "id": 1576
+                },
+                {
+                    "name": "Malepatan",
+                    "id": 1326
+                },
+                {
+                    "name": "Newroad (Pokhara)",
+                    "id": 1577
+                },
+                {
+                    "name": "Prithivi chowk",
+                    "id": 1575
+                },
+                {
+                    "name": "Srijana Chowk",
+                    "id": 1579
+                }
+            ]
+        },
+        {
+            "name": "Salyaan",
+            "id": 137,
+            "zones": [
+                {
+                    "name": "Salyan",
+                    "id": 1384
+                }
+            ]
+        },
+        {
+            "name": "Syanja (Walling)",
+            "id": 277,
+            "zones": [
+                {
+                    "name": "Syanja",
+                    "id": 1888
+                }
+            ]
+        },
+        {
+            "name": "Waling (Syangja)",
+            "id": 268,
+            "zones": [
+                {
+                    "name": "Waling",
+                    "id": 1805
+                }
+            ]
+        }
+    ],
+    "Bagmati": [
+        {
+            "name": "Adarshanagar (Chitwan)",
+            "id": 181,
+            "zones": [
+                {
+                    "name": "Adarshanagar",
+                    "id": 1788
+                }
+            ]
+        },
+        {
+            "name": "Banepa",
+            "id": 185,
+            "zones": [
+                {
+                    "name": "Banepaa",
+                    "id": 1808
+                }
+            ]
+        },
+        {
+            "name": "Battar Bazar (Nuwakot)",
+            "id": 287,
+            "zones": [
+                {
+                    "name": "Battar Bazar (Nuwakot)",
+                    "id": 1908
+                }
+            ]
+        },
+        {
+            "name": "Bharatpur",
+            "id": 191,
+            "zones": [
+                {
+                    "name": "Bharatpur",
+                    "id": 1812
+                }
+            ]
+        },
+        {
+            "name": "Bhiman (Sindhuli)",
+            "id": 291,
+            "zones": [
+                {
+                    "name": "Bhiman (Sindhuli)",
+                    "id": 1912
+                }
+            ]
+        },
+        {
+            "name": "Bidur (Nuwakot)",
+            "id": 288,
+            "zones": [
+                {
+                    "name": "Bidur (Nuwakot)",
+                    "id": 1909
+                }
+            ]
+        },
+        {
+            "name": "Charikot (Dolakha)",
+            "id": 142,
+            "zones": [
+                {
+                    "name": "Charikot (Dolakha)",
+                    "id": 1571
+                }
+            ]
+        },
+        {
+            "name": "Chitwan",
+            "id": 82,
+            "zones": [
+                {
+                    "name": "Chitwan",
+                    "id": 1329
+                }
+            ]
+        },
+        {
+            "name": "Dakshinkali",
+            "id": 239,
+            "zones": [
+                {
+                    "name": "Dakshinkalii",
+                    "id": 1856
+                }
+            ]
+        },
+        {
+            "name": "Daman",
+            "id": 162,
+            "zones": [
+                {
+                    "name": "Daman",
+                    "id": 1623
+                }
+            ]
+        },
+        {
+            "name": "Dhading Bazzar",
+            "id": 114,
+            "zones": [
+                {
+                    "name": "Dhading",
+                    "id": 1361
+                }
+            ]
+        },
+        {
+            "name": "Dhading besi",
+            "id": 292,
+            "zones": [
+                {
+                    "name": "Dhading besi",
+                    "id": 1913
+                }
+            ]
+        },
+        {
+            "name": "Dhulikhel",
+            "id": 199,
+            "zones": [
+                {
+                    "name": "Dhulikheli",
+                    "id": 1819
+                }
+            ]
+        },
+        {
+            "name": "Dolalghat",
+            "id": 164,
+            "zones": [
+                {
+                    "name": "Dolalghat",
+                    "id": 1625
+                }
+            ]
+        },
+        {
+            "name": "Dolkha Bazzar",
+            "id": 176,
+            "zones": [
+                {
+                    "name": "Dolkha",
+                    "id": 1635
+                }
+            ]
+        },
+        {
+            "name": "Gajuri (Dhading)",
+            "id": 293,
+            "zones": [
+                {
+                    "name": "Gajuri (Dhading)",
+                    "id": 1914
+                }
+            ]
+        },
+        {
+            "name": "Hetauda",
+            "id": 86,
+            "zones": [
+                {
+                    "name": "Hetauda",
+                    "id": 1333
+                }
+            ]
+        },
+        {
+            "name": "Kathmandu Valley",
+            "id": 65,
+            "zones": [
+                {
+                    "name": "Aarubari",
+                    "id": 1647
+                },
+                {
+                    "name": "Airport Area",
+                    "id": 1389
+                },
+                {
+                    "name": "Alok Nagar",
+                    "id": 1399
+                },
+                {
+                    "name": "Anamnagar",
+                    "id": 1200
+                },
+                {
+                    "name": "Ason",
+                    "id": 1236
+                },
+                {
+                    "name": "Babarmahal",
+                    "id": 1401
+                },
+                {
+                    "name": "Badegaun",
+                    "id": 1305
+                },
+                {
+                    "name": "Badikhel",
+                    "id": 1306
+                },
+                {
+                    "name": "Bafal ",
+                    "id": 1652
+                },
+                {
+                    "name": "Bagbazar",
+                    "id": 1201
+                },
+                {
+                    "name": "Bagdol",
+                    "id": 1660
+                },
+                {
+                    "name": "Bakhundol",
+                    "id": 1202
+                },
+                {
+                    "name": "Balaju",
+                    "id": 1203
+                },
+                {
+                    "name": "Balambu",
+                    "id": 1413
+                },
+                {
+                    "name": "Balkhu",
+                    "id": 1204
+                },
+                {
+                    "name": "Balkot",
+                    "id": 1454
+                },
+                {
+                    "name": "Balkumari",
+                    "id": 1387
+                },
+                {
+                    "name": "Baluwatar",
+                    "id": 1205
+                },
+                {
+                    "name": "Banasthali",
+                    "id": 1206
+                },
+                {
+                    "name": "Baneshowr Height",
+                    "id": 1398
+                },
+                {
+                    "name": "Bangalamukhi ",
+                    "id": 1684
+                },
+                {
+                    "name": "Baniyatar",
+                    "id": 1653
+                },
+                {
+                    "name": "Bansbari",
+                    "id": 1423
+                },
+                {
+                    "name": "Basantapur",
+                    "id": 1408
+                },
+                {
+                    "name": "Basundhara",
+                    "id": 1207
+                },
+                {
+                    "name": "Battishputali",
+                    "id": 1208
+                },
+                {
+                    "name": "Bhadrakali",
+                    "id": 1697
+                },
+                {
+                    "name": "Bhaisepati",
+                    "id": 1209
+                },
+                {
+                    "name": "Bhaktapur Durbar Square",
+                    "id": 1693
+                },
+                {
+                    "name": "Bhangal",
+                    "id": 1688
+                },
+                {
+                    "name": "Bhanimandal Chowk",
+                    "id": 1210
+                },
+                {
+                    "name": "Bhimsengola",
+                    "id": 1211
+                },
+                {
+                    "name": "BhoteBahal",
+                    "id": 1406
+                },
+                {
+                    "name": "Bhrikutimandap",
+                    "id": 1403
+                },
+                {
+                    "name": "Bijeshwori ",
+                    "id": 1706
+                },
+                {
+                    "name": "Bijulibazar",
+                    "id": 1396
+                },
+                {
+                    "name": "Bisankhunarayan",
+                    "id": 1307
+                },
+                {
+                    "name": "Bishalnagar",
+                    "id": 1659
+                },
+                {
+                    "name": "bode",
+                    "id": 1704
+                },
+                {
+                    "name": "Bode",
+                    "id": 1449
+                },
+                {
+                    "name": "Boudhha",
+                    "id": 1212
+                },
+                {
+                    "name": "Buddha Nagar",
+                    "id": 1213
+                },
+                {
+                    "name": "Budhanilkantha",
+                    "id": 1299
+                },
+                {
+                    "name": "Bungmati",
+                    "id": 1427
+                },
+                {
+                    "name": "Byasi",
+                    "id": 1525
+                },
+                {
+                    "name": "Chabahil",
+                    "id": 1214
+                },
+                {
+                    "name": "Chagal",
+                    "id": 1707
+                },
+                {
+                    "name": "Chakrapath",
+                    "id": 1639
+                },
+                {
+                    "name": "Chamati",
+                    "id": 1215
+                },
+                {
+                    "name": "Chandol",
+                    "id": 1421
+                },
+                {
+                    "name": "Chandragiri",
+                    "id": 1300
+                },
+                {
+                    "name": "Changathali",
+                    "id": 1687
+                },
+                {
+                    "name": "Changunarayan",
+                    "id": 1452
+                },
+                {
+                    "name": "Chapagaun",
+                    "id": 1302
+                },
+                {
+                    "name": "Chapagaun Dobato",
+                    "id": 1216
+                },
+                {
+                    "name": "Chappal Karkhana",
+                    "id": 1217
+                },
+                {
+                    "name": "Chardobato",
+                    "id": 1643
+                },
+                {
+                    "name": "Chhauni",
+                    "id": 1218
+                },
+                {
+                    "name": "Chhetrapati",
+                    "id": 1409
+                },
+                {
+                    "name": "Chundevi",
+                    "id": 1219
+                },
+                {
+                    "name": "Chyamasingh",
+                    "id": 1456
+                },
+                {
+                    "name": "Chyasal",
+                    "id": 1428
+                },
+                {
+                    "name": "Dadhikot",
+                    "id": 1709
+                },
+                {
+                    "name": "Dahachok",
+                    "id": 1692
+                },
+                {
+                    "name": "Dallu",
+                    "id": 1220
+                },
+                {
+                    "name": "Dhapakhel ",
+                    "id": 1651
+                },
+                {
+                    "name": "Dhobighat",
+                    "id": 1221
+                },
+                {
+                    "name": "Dhumbarahi",
+                    "id": 1222
+                },
+                {
+                    "name": "Dhungeadda, Chandragiri",
+                    "id": 1696
+                },
+                {
+                    "name": "Dhungedhara (Chhauni)",
+                    "id": 1683
+                },
+                {
+                    "name": "Dillibazar",
+                    "id": 1223
+                },
+                {
+                    "name": "Durbarmarg",
+                    "id": 1391
+                },
+                {
+                    "name": "Duwakot",
+                    "id": 1450
+                },
+                {
+                    "name": "Ekantakuna",
+                    "id": 1224
+                },
+                {
+                    "name": "Gairidhara",
+                    "id": 1225
+                },
+                {
+                    "name": "Gairigaun",
+                    "id": 1226
+                },
+                {
+                    "name": "Gatthaghar",
+                    "id": 1686
+                },
+                {
+                    "name": "Gaurighat",
+                    "id": 1227
+                },
+                {
+                    "name": "Gausala",
+                    "id": 1228
+                },
+                {
+                    "name": "Ghattekulo",
+                    "id": 1229
+                },
+                {
+                    "name": "Godawari",
+                    "id": 1308
+                },
+                {
+                    "name": "Gokarneshwor",
+                    "id": 1318
+                },
+                {
+                    "name": "Gongabu",
+                    "id": 1230
+                },
+                {
+                    "name": "Gothatar",
+                    "id": 1448
+                },
+                {
+                    "name": "Grande",
+                    "id": 1324
+                },
+                {
+                    "name": "Gurjudhara",
+                    "id": 1429
+                },
+                {
+                    "name": "Gwarko",
+                    "id": 1393
+                },
+                {
+                    "name": "Gyaneshwor",
+                    "id": 1231
+                },
+                {
+                    "name": "Hadigaun",
+                    "id": 1390
+                },
+                {
+                    "name": "Harisiddhi",
+                    "id": 1232
+                },
+                {
+                    "name": "Hattiban",
+                    "id": 1933
+                },
+                {
+                    "name": "Hattigauda",
+                    "id": 1422
+                },
+                {
+                    "name": "Hattisar",
+                    "id": 1233
+                },
+                {
+                    "name": "Imadol",
+                    "id": 1234
+                },
+                {
+                    "name": "Indrachok",
+                    "id": 1235
+                },
+                {
+                    "name": "Jadibuti",
+                    "id": 1292
+                },
+                {
+                    "name": "Jagati",
+                    "id": 1293
+                },
+                {
+                    "name": "Jamal",
+                    "id": 1237
+                },
+                {
+                    "name": "Jarankhu",
+                    "id": 1646
+                },
+                {
+                    "name": "Jawalakhel",
+                    "id": 1238
+                },
+                {
+                    "name": "Jhamsikhel",
+                    "id": 1239
+                },
+                {
+                    "name": "Jhaukhel",
+                    "id": 1451
+                },
+                {
+                    "name": "Jorpati",
+                    "id": 1316
+                },
+                {
+                    "name": "Kadaghari ",
+                    "id": 1640
+                },
+                {
+                    "name": "Kageshwari Manohara",
+                    "id": 487
+                },
+                {
+                    "name": "Kalanki",
+                    "id": 1240
+                },
+                {
+                    "name": "Kal Dhara",
+                    "id": 1407
+                },
+                {
+                    "name": "Kalimati",
+                    "id": 1241
+                },
+                {
+                    "name": "Kamaladi",
+                    "id": 1657
+                },
+                {
+                    "name": "KamalBinayak",
+                    "id": 1459
+                },
+                {
+                    "name": "kamalpokhari",
+                    "id": 1658
+                },
+                {
+                    "name": "Kapan",
+                    "id": 1242
+                },
+                {
+                    "name": "Kapurdhara",
+                    "id": 1420
+                },
+                {
+                    "name": "Karya Binayak",
+                    "id": 1426
+                },
+                {
+                    "name": "Katunje",
+                    "id": 1457
+                },
+                {
+                    "name": "Kaushaltar",
+                    "id": 1455
+                },
+                {
+                    "name": "Kharibot(kapan)",
+                    "id": 1703
+                },
+                {
+                    "name": "Khokana",
+                    "id": 1424
+                },
+                {
+                    "name": "Khumaltar",
+                    "id": 1243
+                },
+                {
+                    "name": "Khusibu ",
+                    "id": 1648
+                },
+                {
+                    "name": "Kimdol",
+                    "id": 1244
+                },
+                {
+                    "name": "Koteshwor",
+                    "id": 1245
+                },
+                {
+                    "name": "Kritipur",
+                    "id": 1312
+                },
+                {
+                    "name": "Kuleshwar",
+                    "id": 1246
+                },
+                {
+                    "name": "Kumaripati",
+                    "id": 1247
+                },
+                {
+                    "name": "Kupondole",
+                    "id": 1248
+                },
+                {
+                    "name": "Kusunti",
+                    "id": 1249
+                },
+                {
+                    "name": "Lagankhel",
+                    "id": 1250
+                },
+                {
+                    "name": "Lainchaur",
+                    "id": 1251
+                },
+                {
+                    "name": "Lamatar",
+                    "id": 1642
+                },
+                {
+                    "name": "Lazimpat",
+                    "id": 1252
+                },
+                {
+                    "name": "Lele",
+                    "id": 1418
+                },
+                {
+                    "name": "Lokanthali",
+                    "id": 1453
+                },
+                {
+                    "name": "Lubhu",
+                    "id": 1313
+                },
+                {
+                    "name": "Machchhegaun",
+                    "id": 1301
+                },
+                {
+                    "name": "Machhapokhari",
+                    "id": 1419
+                },
+                {
+                    "name": "Madhyapur Thimi",
+                    "id": 1297
+                },
+                {
+                    "name": "Mahaboudha",
+                    "id": 1691
+                },
+                {
+                    "name": "Mahalaxmi",
+                    "id": 1314
+                },
+                {
+                    "name": "Maharajganj",
+                    "id": 1253
+                },
+                {
+                    "name": "Maitidevi",
+                    "id": 1254
+                },
+                {
+                    "name": "Maitighar",
+                    "id": 1402
+                },
+                {
+                    "name": "Manamaiju",
+                    "id": 1255
+                },
+                {
+                    "name": "Mhepi",
+                    "id": 1645
+                },
+                {
+                    "name": "Mid Baneshwar",
+                    "id": 1256
+                },
+                {
+                    "name": "Minbhawan",
+                    "id": 1257
+                },
+                {
+                    "name": "Mitrapark",
+                    "id": 1258
+                },
+                {
+                    "name": "Mulpani",
+                    "id": 1315
+                },
+                {
+                    "name": "Nagarjuna",
+                    "id": 1431
+                },
+                {
+                    "name": "Naikap",
+                    "id": 1641
+                },
+                {
+                    "name": "Nakhipot",
+                    "id": 1702
+                },
+                {
+                    "name": "Nakhu",
+                    "id": 1259
+                },
+                {
+                    "name": "Nakhudol",
+                    "id": 1260
+                },
+                {
+                    "name": "Narayan Chaur",
+                    "id": 1261
+                },
+                {
+                    "name": "Narayangopal Chok",
+                    "id": 1262
+                },
+                {
+                    "name": "Narayantar",
+                    "id": 1644
+                },
+                {
+                    "name": "Narayantar ktm",
+                    "id": 1700
+                },
+                {
+                    "name": "Naxal",
+                    "id": 1263
+                },
+                {
+                    "name": "Nayabazar",
+                    "id": 1264
+                },
+                {
+                    "name": "Nepaltar",
+                    "id": 1433
+                },
+                {
+                    "name": "New Baneshwar",
+                    "id": 1265
+                },
+                {
+                    "name": "New Road",
+                    "id": 1266
+                },
+                {
+                    "name": "Nyatapol",
+                    "id": 1524
+                },
+                {
+                    "name": "Old Baneshwar",
+                    "id": 1267
+                },
+                {
+                    "name": "Panipokhari",
+                    "id": 1268
+                },
+                {
+                    "name": "Pankajol",
+                    "id": 1269
+                },
+                {
+                    "name": "Pashupatinth",
+                    "id": 1400
+                },
+                {
+                    "name": "Patan",
+                    "id": 1270
+                },
+                {
+                    "name": "Pepsicola",
+                    "id": 1447
+                },
+                {
+                    "name": "Pulchowk",
+                    "id": 1271
+                },
+                {
+                    "name": "Purano Naikap",
+                    "id": 1412
+                },
+                {
+                    "name": "Putalisadak",
+                    "id": 1272
+                },
+                {
+                    "name": "Radhe Radhe",
+                    "id": 1294
+                },
+                {
+                    "name": "Ramhiti",
+                    "id": 1699
+                },
+                {
+                    "name": "Ravibhawan",
+                    "id": 1698
+                },
+                {
+                    "name": "Sainbu",
+                    "id": 1425
+                },
+                {
+                    "name": "Sallaghari",
+                    "id": 1295
+                },
+                {
+                    "name": "Samakhusi",
+                    "id": 1273
+                },
+                {
+                    "name": "Sanepa",
+                    "id": 1274
+                },
+                {
+                    "name": "Sankhu",
+                    "id": 1320
+                },
+                {
+                    "name": "Sano Bharyang",
+                    "id": 1275
+                },
+                {
+                    "name": "Sanogau ",
+                    "id": 1694
+                },
+                {
+                    "name": "Sano Thimi",
+                    "id": 1298
+                },
+                {
+                    "name": "Satdobato",
+                    "id": 1276
+                },
+                {
+                    "name": "Satungal",
+                    "id": 1430
+                },
+                {
+                    "name": "Sesmati",
+                    "id": 1701
+                },
+                {
+                    "name": "Shankhamul",
+                    "id": 1277
+                },
+                {
+                    "name": "Shantinagar",
+                    "id": 1397
+                },
+                {
+                    "name": "Sinamangal",
+                    "id": 1278
+                },
+                {
+                    "name": "Singha Durbar",
+                    "id": 1404
+                },
+                {
+                    "name": "Single tree",
+                    "id": 1432
+                },
+                {
+                    "name": "sipadol",
+                    "id": 1656
+                },
+                {
+                    "name": "Siphal",
+                    "id": 1655
+                },
+                {
+                    "name": "Sirutar",
+                    "id": 1689
+                },
+                {
+                    "name": "Sitapaila",
+                    "id": 1279
+                },
+                {
+                    "name": "Soltimode",
+                    "id": 1392
+                },
+                {
+                    "name": "Sorakhutte",
+                    "id": 1280
+                },
+                {
+                    "name": "Srijana Nagar",
+                    "id": 1458
+                },
+                {
+                    "name": "Subidhanagar",
+                    "id": 1281
+                },
+                {
+                    "name": "Sukedhara",
+                    "id": 1282
+                },
+                {
+                    "name": "Sukuldhoka",
+                    "id": 1654
+                },
+                {
+                    "name": "Sunakothi",
+                    "id": 1416
+                },
+                {
+                    "name": "Sundarijal",
+                    "id": 1317
+                },
+                {
+                    "name": "Sundhara",
+                    "id": 1405
+                },
+                {
+                    "name": "Suryabinayak",
+                    "id": 1296
+                },
+                {
+                    "name": "Suryamadi, Bhaktapur",
+                    "id": 1695
+                },
+                {
+                    "name": "Swayambhu",
+                    "id": 1283
+                },
+                {
+                    "name": "Syuchatar",
+                    "id": 1411
+                },
+                {
+                    "name": "Tahachal",
+                    "id": 1414
+                },
+                {
+                    "name": "Tahakhel",
+                    "id": 1417
+                },
+                {
+                    "name": "Talchikhel",
+                    "id": 1690
+                },
+                {
+                    "name": "Tangal",
+                    "id": 1284
+                },
+                {
+                    "name": "Tarkeshwor",
+                    "id": 1304
+                },
+                {
+                    "name": "Teku",
+                    "id": 1285
+                },
+                {
+                    "name": "Thaiba",
+                    "id": 1309
+                },
+                {
+                    "name": "Thali",
+                    "id": 1319
+                },
+                {
+                    "name": "Thamel",
+                    "id": 1286
+                },
+                {
+                    "name": "Thapagaun",
+                    "id": 1388
+                },
+                {
+                    "name": "Thapathali",
+                    "id": 1287
+                },
+                {
+                    "name": "Thasikhel",
+                    "id": 1288
+                },
+                {
+                    "name": "Thecho",
+                    "id": 1415
+                },
+                {
+                    "name": "Thulo Bharyang",
+                    "id": 1289
+                },
+                {
+                    "name": "Tikathali",
+                    "id": 1649
+                },
+                {
+                    "name": "Tinkune",
+                    "id": 1290
+                },
+                {
+                    "name": "Tokha",
+                    "id": 1325
+                },
+                {
+                    "name": "Tribhuvan University",
+                    "id": 1410
+                },
+                {
+                    "name": "Tripureshwar",
+                    "id": 1291
+                },
+                {
+                    "name": "Uttar Dhoka",
+                    "id": 1705
+                }
+            ]
+        },
+        {
+            "name": "Khokana",
+            "id": 144,
+            "zones": [
+                {
+                    "name": "Khokanaa",
+                    "id": 1876
+                }
+            ]
+        },
+        {
+            "name": "Malekhu (Dhading)",
+            "id": 244,
+            "zones": [
+                {
+                    "name": "Malekhu",
+                    "id": 1860
+                }
+            ]
+        },
+        {
+            "name": "Manahari Makwanpur",
+            "id": 151,
+            "zones": [
+                {
+                    "name": "Makwanpur",
+                    "id": 1611
+                }
+            ]
+        },
+        {
+            "name": "Manthali (Ramechap)",
+            "id": 118,
+            "zones": [
+                {
+                    "name": "Manthali",
+                    "id": 1365
+                }
+            ]
+        },
+        {
+            "name": "Meghauli (Chitwan)",
+            "id": 261,
+            "zones": [
+                {
+                    "name": "Meghauli",
+                    "id": 1799
+                }
+            ]
+        },
+        {
+            "name": "Melamchi",
+            "id": 127,
+            "zones": [
+                {
+                    "name": "Melamchi",
+                    "id": 1374
+                }
+            ]
+        },
+        {
+            "name": "Mugling",
+            "id": 169,
+            "zones": [
+                {
+                    "name": "Mugling",
+                    "id": 1629
+                }
+            ]
+        },
+        {
+            "name": "Nagarkot",
+            "id": 76,
+            "zones": [
+                {
+                    "name": "Nagarkot",
+                    "id": 1321
+                }
+            ]
+        },
+        {
+            "name": "Nuwakot Bazzar",
+            "id": 102,
+            "zones": [
+                {
+                    "name": "Nuwakot",
+                    "id": 1349
+                }
+            ]
+        },
+        {
+            "name": "Panauti",
+            "id": 222,
+            "zones": [
+                {
+                    "name": "Panauti",
+                    "id": 1841
+                }
+            ]
+        },
+        {
+            "name": "Panchkhal (Kavre)",
+            "id": 263,
+            "zones": [
+                {
+                    "name": "Panchkhal",
+                    "id": 1801
+                }
+            ]
+        },
+        {
+            "name": "Pharping",
+            "id": 77,
+            "zones": [
+                {
+                    "name": "Dakshinkali",
+                    "id": 1322
+                },
+                {
+                    "name": "Pharping",
+                    "id": 1323
+                }
+            ]
+        },
+        {
+            "name": "Ramechhap Bazar",
+            "id": 126,
+            "zones": [
+                {
+                    "name": "Ramechhap Bazar",
+                    "id": 1373
+                }
+            ]
+        },
+        {
+            "name": "Rasuwa (Dhunchee)",
+            "id": 240,
+            "zones": [
+                {
+                    "name": "Dhunche",
+                    "id": 1857
+                }
+            ]
+        },
+        {
+            "name": "Sankhu",
+            "id": 75,
+            "zones": [
+                {
+                    "name": "Sankhu.",
+                    "id": 1879
+                }
+            ]
+        },
+        {
+            "name": "Sindhuli",
+            "id": 112,
+            "zones": [
+                {
+                    "name": "Sindhuli",
+                    "id": 1359
+                }
+            ]
+        },
+        {
+            "name": "Sindhupalchowk",
+            "id": 309,
+            "zones": [
+                {
+                    "name": "Sindhupalchowk (Barhabise)",
+                    "id": 1931
+                },
+                {
+                    "name": "Sindhupalchowk (Chautara)",
+                    "id": 1930
+                }
+            ]
+        },
+        {
+            "name": "Tandi (Chitwan)",
+            "id": 228,
+            "zones": [
+                {
+                    "name": "Tandi",
+                    "id": 1846
+                }
+            ]
+        }
+    ],
+    "Madhesh": [
+        {
+            "name": "Amlekhgunj (Bara)",
+            "id": 233,
+            "zones": [
+                {
+                    "name": "Amlekhgunj",
+                    "id": 1851
+                }
+            ]
+        },
+        {
+            "name": "Bardibas",
+            "id": 91,
+            "zones": [
+                {
+                    "name": "Bardibas",
+                    "id": 1338
+                }
+            ]
+        },
+        {
+            "name": "Birgunj Bazzar",
+            "id": 111,
+            "zones": [
+                {
+                    "name": "Birgunj",
+                    "id": 1358
+                }
+            ]
+        },
+        {
+            "name": "Chandranigahapur (Rautahat)",
+            "id": 140,
+            "zones": [
+                {
+                    "name": "Rautahat",
+                    "id": 1385
+                }
+            ]
+        },
+        {
+            "name": "Dhalkebar (Dhanusa)",
+            "id": 252,
+            "zones": [
+                {
+                    "name": "Dhalkebar",
+                    "id": 1866
+                }
+            ]
+        },
+        {
+            "name": "Garuda (Rahutahat)",
+            "id": 295,
+            "zones": [
+                {
+                    "name": "Garuda (Rahutahat)",
+                    "id": 1916
+                }
+            ]
+        },
+        {
+            "name": "Gaur (Rautahat)",
+            "id": 141,
+            "zones": [
+                {
+                    "name": "Gaur (Rautahat)",
+                    "id": 1572
+                }
+            ]
+        },
+        {
+            "name": "Gaushala (Mahottari)",
+            "id": 300,
+            "zones": [
+                {
+                    "name": "Gaushala (Mahottari)",
+                    "id": 1921
+                }
+            ]
+        },
+        {
+            "name": "Golbazaar (Lahan)",
+            "id": 299,
+            "zones": [
+                {
+                    "name": "Golbazaar (Lahan)",
+                    "id": 1920
+                }
+            ]
+        },
+        {
+            "name": "Hariwan (Sarlahi)",
+            "id": 253,
+            "zones": [
+                {
+                    "name": "Hariwan",
+                    "id": 1868
+                }
+            ]
+        },
+        {
+            "name": "Jaleshwor (Mahottari)",
+            "id": 258,
+            "zones": [
+                {
+                    "name": "Jaleshworr",
+                    "id": 1871
+                }
+            ]
+        },
+        {
+            "name": "Janakpur",
+            "id": 92,
+            "zones": [
+                {
+                    "name": "Janakpur",
+                    "id": 1339
+                }
+            ]
+        },
+        {
+            "name": "Jitpur (Bara)",
+            "id": 234,
+            "zones": [
+                {
+                    "name": "Jeetpur",
+                    "id": 1852
+                }
+            ]
+        },
+        {
+            "name": "Kalaiya (Bara)",
+            "id": 211,
+            "zones": [
+                {
+                    "name": "Kalaiya",
+                    "id": 1830
+                }
+            ]
+        },
+        {
+            "name": "Kalyanpur (Saptari)",
+            "id": 276,
+            "zones": [
+                {
+                    "name": "Kalyanpur (Saptari)",
+                    "id": 1874
+                }
+            ]
+        },
+        {
+            "name": "Kanchanpur (Saptari)",
+            "id": 269,
+            "zones": [
+                {
+                    "name": "Saptari",
+                    "id": 1806
+                }
+            ]
+        },
+        {
+            "name": "Lahan bazzar",
+            "id": 216,
+            "zones": [
+                {
+                    "name": "Lahan",
+                    "id": 1835
+                }
+            ]
+        },
+        {
+            "name": "Lalbandi (Sarlahi)",
+            "id": 217,
+            "zones": [
+                {
+                    "name": "Lalbandi",
+                    "id": 1836
+                }
+            ]
+        },
+        {
+            "name": "Lalghad",
+            "id": 235,
+            "zones": [
+                {
+                    "name": "Lalghad",
+                    "id": 1853
+                }
+            ]
+        },
+        {
+            "name": "Mahottari Bazzar",
+            "id": 220,
+            "zones": [
+                {
+                    "name": "Mahottari",
+                    "id": 1839
+                }
+            ]
+        },
+        {
+            "name": "Malangwa (Sarlahi)",
+            "id": 254,
+            "zones": [
+                {
+                    "name": "Malangwa",
+                    "id": 1869
+                }
+            ]
+        },
+        {
+            "name": "Mirchaiya (Siraha)",
+            "id": 221,
+            "zones": [
+                {
+                    "name": "Mirchaiya",
+                    "id": 1840
+                }
+            ]
+        },
+        {
+            "name": "Nijgadh (Bara)",
+            "id": 296,
+            "zones": [
+                {
+                    "name": "Nijgadh (Bara)",
+                    "id": 1917
+                }
+            ]
+        },
+        {
+            "name": "Patlaiya (Bara)",
+            "id": 236,
+            "zones": [
+                {
+                    "name": "Pathlaiya",
+                    "id": 1854
+                }
+            ]
+        },
+        {
+            "name": "Phattepur (Saptari)",
+            "id": 302,
+            "zones": [
+                {
+                    "name": "Phattepur (Saptari)",
+                    "id": 1923
+                }
+            ]
+        },
+        {
+            "name": "Rajbiraj",
+            "id": 106,
+            "zones": [
+                {
+                    "name": "Rajbiraj",
+                    "id": 1353
+                }
+            ]
+        },
+        {
+            "name": "Sarlahi Bazzar",
+            "id": 99,
+            "zones": [
+                {
+                    "name": "Sarlahi",
+                    "id": 1346
+                }
+            ]
+        },
+        {
+            "name": "Simara (Bara)",
+            "id": 226,
+            "zones": [
+                {
+                    "name": "Simara",
+                    "id": 1794
+                }
+            ]
+        },
+        {
+            "name": "Siraha Bazzar",
+            "id": 152,
+            "zones": [
+                {
+                    "name": "Siraha",
+                    "id": 1612
+                }
+            ]
+        }
+    ],
+    "Lumbini": [
+        {
+            "name": "Amuwa (Rupandehi)",
+            "id": 303,
+            "zones": [
+                {
+                    "name": "Amuwa (Rupandehi)",
+                    "id": 1924
+                }
+            ]
+        },
+        {
+            "name": "Arghakhanchi",
+            "id": 273,
+            "zones": [
+                {
+                    "name": "Arghakhanchi",
+                    "id": 1861
+                }
+            ]
+        },
+        {
+            "name": "Bansagadhi (Bardiya)",
+            "id": 297,
+            "zones": [
+                {
+                    "name": "Bansagadhi (Bardiya)",
+                    "id": 1918
+                }
+            ]
+        },
+        {
+            "name": "Bhairahawa",
+            "id": 80,
+            "zones": [
+                {
+                    "name": "Bhairahawa",
+                    "id": 1327
+                }
+            ]
+        },
+        {
+            "name": "Bhalubang (Dang)",
+            "id": 190,
+            "zones": [
+                {
+                    "name": "Bhalubang - Dang",
+                    "id": 1900
+                }
+            ]
+        },
+        {
+            "name": "Bhurigoan (Bardiya)",
+            "id": 298,
+            "zones": [
+                {
+                    "name": "Bhurigoan (Bardiya)",
+                    "id": 1919
+                }
+            ]
+        },
+        {
+            "name": "Butwal",
+            "id": 81,
+            "zones": [
+                {
+                    "name": "Butwal",
+                    "id": 1328
+                }
+            ]
+        },
+        {
+            "name": "Chandrauta (Kapilvastu)",
+            "id": 283,
+            "zones": [
+                {
+                    "name": "Chandrauta (Kapilvastu)",
+                    "id": 1904
+                }
+            ]
+        },
+        {
+            "name": "Ghorahi",
+            "id": 206,
+            "zones": [
+                {
+                    "name": "Ghorahi",
+                    "id": 1825
+                }
+            ]
+        },
+        {
+            "name": "Gorusinge (kapilvastu)",
+            "id": 284,
+            "zones": [
+                {
+                    "name": "Gorusinge (kapilvastu)",
+                    "id": 1905
+                }
+            ]
+        },
+        {
+            "name": "Gulariya (Bardiya)",
+            "id": 166,
+            "zones": [
+                {
+                    "name": "Gulariya",
+                    "id": 1627
+                }
+            ]
+        },
+        {
+            "name": "Gulmi",
+            "id": 117,
+            "zones": [
+                {
+                    "name": "Gulmi",
+                    "id": 1364
+                }
+            ]
+        },
+        {
+            "name": "Jeetpur No.4 (Kapilvastu)",
+            "id": 285,
+            "zones": [
+                {
+                    "name": "Jeetpur No.4 (Kapilvastu)",
+                    "id": 1906
+                }
+            ]
+        },
+        {
+            "name": "Jogikuti (Rupandehi)",
+            "id": 307,
+            "zones": [
+                {
+                    "name": "Jogikuti (Rupandehi)",
+                    "id": 1928
+                }
+            ]
+        },
+        {
+            "name": "Kapilbastu",
+            "id": 98,
+            "zones": [
+                {
+                    "name": "Kapilbastu",
+                    "id": 1345
+                }
+            ]
+        },
+        {
+            "name": "Khaireni (Rupendehi)",
+            "id": 213,
+            "zones": [
+                {
+                    "name": "Khairenitar",
+                    "id": 1831
+                }
+            ]
+        },
+        {
+            "name": "Kohalpur (Nepalgunj)",
+            "id": 215,
+            "zones": [
+                {
+                    "name": "Kohalpurr",
+                    "id": 1833
+                }
+            ]
+        },
+        {
+            "name": "Kotihawa",
+            "id": 109,
+            "zones": [
+                {
+                    "name": "Kotihawa",
+                    "id": 1356
+                }
+            ]
+        },
+        {
+            "name": "Krishnanagar (Kapilvastu)",
+            "id": 282,
+            "zones": [
+                {
+                    "name": "Krishnanagar (Kapilbastu)",
+                    "id": 1903
+                }
+            ]
+        },
+        {
+            "name": "Lamahi (Dang)",
+            "id": 280,
+            "zones": [
+                {
+                    "name": "Lamahi",
+                    "id": 1901
+                }
+            ]
+        },
+        {
+            "name": "Manigram (Rupandehi)",
+            "id": 304,
+            "zones": [
+                {
+                    "name": "Manigram (Rupandehi)",
+                    "id": 1925
+                }
+            ]
+        },
+        {
+            "name": "Motipur (Rupandehi)",
+            "id": 305,
+            "zones": [
+                {
+                    "name": "Motipur (Rupandehi)",
+                    "id": 1926
+                }
+            ]
+        },
+        {
+            "name": "Murgiya (Rupandehi)",
+            "id": 306,
+            "zones": [
+                {
+                    "name": "Murgiya (Rupandehi)",
+                    "id": 1927
+                }
+            ]
+        },
+        {
+            "name": "Nepalgunj",
+            "id": 87,
+            "zones": [
+                {
+                    "name": "Bansgadhi",
+                    "id": 1670
+                },
+                {
+                    "name": "Bardiya Gulariya",
+                    "id": 1675
+                },
+                {
+                    "name": "Basgadhi",
+                    "id": 1676
+                },
+                {
+                    "name": "Chisa Pani",
+                    "id": 1677
+                },
+                {
+                    "name": "Guleriya",
+                    "id": 1673
+                },
+                {
+                    "name": "Khajura",
+                    "id": 1669
+                },
+                {
+                    "name": "Khajuraa",
+                    "id": 1674
+                },
+                {
+                    "name": "Kohalpur",
+                    "id": 1668
+                },
+                {
+                    "name": "Manikpur",
+                    "id": 1672
+                },
+                {
+                    "name": "Nepalgunj",
+                    "id": 1334
+                },
+                {
+                    "name": "Sonapur (Nepalgunj)",
+                    "id": 1667
+                }
+            ]
+        },
+        {
+            "name": "Pharsatikar (Rupandehi)",
+            "id": 308,
+            "zones": [
+                {
+                    "name": "Pharsatikar (Rupandehi)",
+                    "id": 1929
+                }
+            ]
+        },
+        {
+            "name": "Pyuthan",
+            "id": 129,
+            "zones": [
+                {
+                    "name": "Pyuthan",
+                    "id": 1376
+                }
+            ]
+        },
+        {
+            "name": "Rajapur (Bardiya)",
+            "id": 156,
+            "zones": [
+                {
+                    "name": "Bardiya",
+                    "id": 1616
+                }
+            ]
+        },
+        {
+            "name": "Rampur (Palpa)",
+            "id": 115,
+            "zones": [
+                {
+                    "name": "Palpa",
+                    "id": 1362
+                }
+            ]
+        },
+        {
+            "name": "Rolpa (Liwang)",
+            "id": 265,
+            "zones": [
+                {
+                    "name": "Rolpa",
+                    "id": 1802
+                }
+            ]
+        },
+        {
+            "name": "Rolpa (Sulichaur)",
+            "id": 301,
+            "zones": [
+                {
+                    "name": "Rolpa (Sulichaur)",
+                    "id": 1922
+                }
+            ]
+        },
+        {
+            "name": "Rukum",
+            "id": 247,
+            "zones": [
+                {
+                    "name": "Rukum",
+                    "id": 1884
+                }
+            ]
+        },
+        {
+            "name": "Sunwal",
+            "id": 238,
+            "zones": [
+                {
+                    "name": "Sunwal",
+                    "id": 1855
+                }
+            ]
+        },
+        {
+            "name": "Tansen (Palpa)",
+            "id": 229,
+            "zones": [
+                {
+                    "name": "Tansen",
+                    "id": 1847
+                }
+            ]
+        },
+        {
+            "name": "Taulihawa (Kapilvastu)",
+            "id": 286,
+            "zones": [
+                {
+                    "name": "Taulihawa (Kapilvastu)",
+                    "id": 1907
+                }
+            ]
+        },
+        {
+            "name": "Tillotama",
+            "id": 230,
+            "zones": [
+                {
+                    "name": "Tillotama",
+                    "id": 1848
+                }
+            ]
+        },
+        {
+            "name": "Tulsipur (Dang)",
+            "id": 231,
+            "zones": [
+                {
+                    "name": "Tulsipur",
+                    "id": 1849
+                }
+            ]
+        }
+    ],
+    "Koshi": [
+        {
+            "name": "Arjundhara (Birtamode)",
+            "id": 183,
+            "zones": [
+                {
+                    "name": "Arjundhara",
+                    "id": 1791
+                }
+            ]
+        },
+        {
+            "name": "Belbari (Morang)",
+            "id": 186,
+            "zones": [
+                {
+                    "name": "Belbarii",
+                    "id": 1809
+                }
+            ]
+        },
+        {
+            "name": "Beltar (Udayapur)",
+            "id": 158,
+            "zones": [
+                {
+                    "name": "Beltar",
+                    "id": 1618
+                }
+            ]
+        },
+        {
+            "name": "Bhadrapur (Jhapa)",
+            "id": 189,
+            "zones": [
+                {
+                    "name": "Bhadrapur",
+                    "id": 1793
+                }
+            ]
+        },
+        {
+            "name": "Bhedatar",
+            "id": 147,
+            "zones": [
+                {
+                    "name": "Bhedatar",
+                    "id": 1599
+                }
+            ]
+        },
+        {
+            "name": "Biratchowk (Morang)",
+            "id": 193,
+            "zones": [
+                {
+                    "name": "Biratchowkk",
+                    "id": 1814
+                }
+            ]
+        },
+        {
+            "name": "Biratnagar",
+            "id": 83,
+            "zones": [
+                {
+                    "name": "Biratnagar",
+                    "id": 1330
+                },
+                {
+                    "name": "Hatkhola",
+                    "id": 1681
+                },
+                {
+                    "name": "Rangeli",
+                    "id": 1682
+                }
+            ]
+        },
+        {
+            "name": "Birtamode",
+            "id": 85,
+            "zones": [
+                {
+                    "name": "Birtamode",
+                    "id": 1332
+                }
+            ]
+        },
+        {
+            "name": "Chandragadhi (Jhapa)",
+            "id": 195,
+            "zones": [
+                {
+                    "name": "Chandragadhi",
+                    "id": 1816
+                }
+            ]
+        },
+        {
+            "name": "Charali (Jhapa)",
+            "id": 196,
+            "zones": [
+                {
+                    "name": "Charali",
+                    "id": 1817
+                }
+            ]
+        },
+        {
+            "name": "Damak",
+            "id": 88,
+            "zones": [
+                {
+                    "name": "Damak",
+                    "id": 1335
+                }
+            ]
+        },
+        {
+            "name": "Dhankuta Bazzar",
+            "id": 96,
+            "zones": [
+                {
+                    "name": "Dhankuta",
+                    "id": 1343
+                }
+            ]
+        },
+        {
+            "name": "Dharan",
+            "id": 94,
+            "zones": [
+                {
+                    "name": "Budasubba",
+                    "id": 1666
+                },
+                {
+                    "name": "Deurali",
+                    "id": 1664
+                },
+                {
+                    "name": "Dharan",
+                    "id": 1341
+                },
+                {
+                    "name": "Fusre",
+                    "id": 1665
+                },
+                {
+                    "name": "Panmara",
+                    "id": 1663
+                },
+                {
+                    "name": "Railway (Itahari)",
+                    "id": 1662
+                },
+                {
+                    "name": "Zero Point",
+                    "id": 1661
+                }
+            ]
+        },
+        {
+            "name": "Dhulabari (Jhapa)",
+            "id": 198,
+            "zones": [
+                {
+                    "name": "Dhulabari",
+                    "id": 1818
+                }
+            ]
+        },
+        {
+            "name": "Diktel Bazaar (khotang)",
+            "id": 167,
+            "zones": [
+                {
+                    "name": "Khotang",
+                    "id": 1619
+                }
+            ]
+        },
+        {
+            "name": "Dingla (Bhojpur)",
+            "id": 163,
+            "zones": [
+                {
+                    "name": "Dingla",
+                    "id": 1624
+                }
+            ]
+        },
+        {
+            "name": "Duhabi (Itahari)",
+            "id": 200,
+            "zones": [
+                {
+                    "name": "Duhabii",
+                    "id": 1820
+                }
+            ]
+        },
+        {
+            "name": "Dulari (Itahari)",
+            "id": 201,
+            "zones": [
+                {
+                    "name": "Dulari",
+                    "id": 1878
+                }
+            ]
+        },
+        {
+            "name": "Dumre",
+            "id": 202,
+            "zones": [
+                {
+                    "name": "Dumre",
+                    "id": 1821
+                }
+            ]
+        },
+        {
+            "name": "Fikkal",
+            "id": 242,
+            "zones": [
+                {
+                    "name": "Fikkal",
+                    "id": 1858
+                }
+            ]
+        },
+        {
+            "name": "Gaighat (Udayapur)",
+            "id": 105,
+            "zones": [
+                {
+                    "name": "Gaighat",
+                    "id": 1352
+                }
+            ]
+        },
+        {
+            "name": "Gauradaha (Jhapa)",
+            "id": 204,
+            "zones": [
+                {
+                    "name": "Gauradaha",
+                    "id": 1823
+                }
+            ]
+        },
+        {
+            "name": "Gaurigunj (Jhapa)",
+            "id": 205,
+            "zones": [
+                {
+                    "name": "Gaurigunj",
+                    "id": 1824
+                }
+            ]
+        },
+        {
+            "name": "Hile (Dhankuta)",
+            "id": 208,
+            "zones": [
+                {
+                    "name": "Hile",
+                    "id": 1827
+                }
+            ]
+        },
+        {
+            "name": "Ilam",
+            "id": 278,
+            "zones": [
+                {
+                    "name": "Ilam",
+                    "id": 1887
+                }
+            ]
+        },
+        {
+            "name": "Illam Bazzar",
+            "id": 116,
+            "zones": [
+                {
+                    "name": "Illam",
+                    "id": 1363
+                }
+            ]
+        },
+        {
+            "name": "Inaruwa (Sunsari)",
+            "id": 209,
+            "zones": [
+                {
+                    "name": "Inaruwa",
+                    "id": 1828
+                }
+            ]
+        },
+        {
+            "name": "Itahari",
+            "id": 84,
+            "zones": [
+                {
+                    "name": "Bhatbhateni (Itahari)",
+                    "id": 1585
+                },
+                {
+                    "name": "Biratchowk",
+                    "id": 1594
+                },
+                {
+                    "name": "Duhabi",
+                    "id": 1589
+                },
+                {
+                    "name": "Gachhiya",
+                    "id": 1592
+                },
+                {
+                    "name": "Halgada chowk",
+                    "id": 1584
+                },
+                {
+                    "name": "Itahari",
+                    "id": 1331
+                },
+                {
+                    "name": "Jhumka",
+                    "id": 1587
+                },
+                {
+                    "name": "khanar",
+                    "id": 1588
+                },
+                {
+                    "name": "khursane",
+                    "id": 1595
+                },
+                {
+                    "name": "Pakali",
+                    "id": 1586
+                },
+                {
+                    "name": "Pathri",
+                    "id": 1597
+                },
+                {
+                    "name": "Salakpur",
+                    "id": 1593
+                },
+                {
+                    "name": "Sonapur (Itahari)",
+                    "id": 1590
+                },
+                {
+                    "name": "Tarahara",
+                    "id": 1583
+                }
+            ]
+        },
+        {
+            "name": "Kakarvitta",
+            "id": 210,
+            "zones": [
+                {
+                    "name": "Kakarvitta",
+                    "id": 1829
+                }
+            ]
+        },
+        {
+            "name": "Kalabanjar",
+            "id": 270,
+            "zones": [
+                {
+                    "name": "Kalabanjar",
+                    "id": 1872
+                }
+            ]
+        },
+        {
+            "name": "Kanepokhari (Morang)",
+            "id": 251,
+            "zones": [
+                {
+                    "name": "Kanepokhari",
+                    "id": 1865
+                }
+            ]
+        },
+        {
+            "name": "Khanar (Itahari)",
+            "id": 214,
+            "zones": [
+                {
+                    "name": "Khanar",
+                    "id": 1832
+                }
+            ]
+        },
+        {
+            "name": "Khandbari (Shankhuwasabha)",
+            "id": 243,
+            "zones": [
+                {
+                    "name": "Khandbari",
+                    "id": 1859
+                }
+            ]
+        },
+        {
+            "name": "Letang (Morang)",
+            "id": 218,
+            "zones": [
+                {
+                    "name": "Letang",
+                    "id": 1837
+                }
+            ]
+        },
+        {
+            "name": "Madhumalla (Morang)",
+            "id": 219,
+            "zones": [
+                {
+                    "name": "Madhumalla",
+                    "id": 1838
+                }
+            ]
+        },
+        {
+            "name": "Myanglung Bazar (Terathum)",
+            "id": 262,
+            "zones": [
+                {
+                    "name": "Terhathum",
+                    "id": 1800
+                }
+            ]
+        },
+        {
+            "name": "Nepaltar (Illam)",
+            "id": 294,
+            "zones": [
+                {
+                    "name": "Nepaltar (Illam)",
+                    "id": 1915
+                }
+            ]
+        },
+        {
+            "name": "Okhaldhunga",
+            "id": 123,
+            "zones": [
+                {
+                    "name": "Okhaldhunga",
+                    "id": 1370
+                }
+            ]
+        },
+        {
+            "name": "Panchthar",
+            "id": 170,
+            "zones": [
+                {
+                    "name": "Panchthar",
+                    "id": 1630
+                }
+            ]
+        },
+        {
+            "name": "Panchthar (Phidim)",
+            "id": 120,
+            "zones": [
+                {
+                    "name": "Phidim",
+                    "id": 1367
+                }
+            ]
+        },
+        {
+            "name": "Pashupatinagar (Illam)",
+            "id": 171,
+            "zones": [
+                {
+                    "name": "Pashupatinagar",
+                    "id": 1631
+                }
+            ]
+        },
+        {
+            "name": "Pathari (Morang)",
+            "id": 223,
+            "zones": [
+                {
+                    "name": "Pathari",
+                    "id": 1842
+                }
+            ]
+        },
+        {
+            "name": "Rangeli (Biratnagar)",
+            "id": 224,
+            "zones": [
+                {
+                    "name": "Rangelii",
+                    "id": 1843
+                }
+            ]
+        },
+        {
+            "name": "Salleri (Solukhumbu)",
+            "id": 172,
+            "zones": [
+                {
+                    "name": "Salleri",
+                    "id": 1632
+                }
+            ]
+        },
+        {
+            "name": "Sanischare (Jhapa)",
+            "id": 225,
+            "zones": [
+                {
+                    "name": "Sanischare",
+                    "id": 1844
+                }
+            ]
+        },
+        {
+            "name": "Solukhumbu",
+            "id": 125,
+            "zones": [
+                {
+                    "name": "Solukhumbu",
+                    "id": 1372
+                }
+            ]
+        },
+        {
+            "name": "Taplejung Bazzzar",
+            "id": 119,
+            "zones": [
+                {
+                    "name": "Taplejung",
+                    "id": 1366
+                }
+            ]
+        },
+        {
+            "name": "Tumlingtar (Shankhuwasabha)",
+            "id": 248,
+            "zones": [
+                {
+                    "name": "Tumlingtar",
+                    "id": 1862
+                }
+            ]
+        },
+        {
+            "name": "Urlabari (Morang)",
+            "id": 232,
+            "zones": [
+                {
+                    "name": "Urlabari",
+                    "id": 1850
+                }
+            ]
+        }
+    ],
+    "Sudurpashchim": [
+        {
+            "name": "Attariya (kailali)",
+            "id": 184,
+            "zones": [
+                {
+                    "name": "Attariya",
+                    "id": 1790
+                }
+            ]
+        },
+        {
+            "name": "Baitadi",
+            "id": 154,
+            "zones": [
+                {
+                    "name": "Baitadi",
+                    "id": 1614
+                }
+            ]
+        },
+        {
+            "name": "Bajhang (Bazzar)",
+            "id": 159,
+            "zones": [
+                {
+                    "name": "Bajhangg",
+                    "id": 1620
+                }
+            ]
+        },
+        {
+            "name": "Bajura",
+            "id": 155,
+            "zones": [
+                {
+                    "name": "Bajura",
+                    "id": 1615
+                }
+            ]
+        },
+        {
+            "name": "Chainpur (bajhang)",
+            "id": 134,
+            "zones": [
+                {
+                    "name": "Bajhang",
+                    "id": 1381
+                }
+            ]
+        },
+        {
+            "name": "Dadeldhuraa (Amargadi)",
+            "id": 160,
+            "zones": [
+                {
+                    "name": "Dadeldhuraa",
+                    "id": 1621
+                }
+            ]
+        },
+        {
+            "name": "Darchula",
+            "id": 310,
+            "zones": [
+                {
+                    "name": "Darchula",
+                    "id": 1932
+                }
+            ]
+        },
+        {
+            "name": "Dhangadhi",
+            "id": 93,
+            "zones": [
+                {
+                    "name": "Dhangadhi",
+                    "id": 1340
+                },
+                {
+                    "name": "Jugeda ",
+                    "id": 1679
+                },
+                {
+                    "name": "phulwari ",
+                    "id": 1678
+                }
+            ]
+        },
+        {
+            "name": "Dipayal bazar (Doti)",
+            "id": 136,
+            "zones": [
+                {
+                    "name": "Doti",
+                    "id": 1383
+                }
+            ]
+        },
+        {
+            "name": "Kanchanpur (Belauri)",
+            "id": 157,
+            "zones": [
+                {
+                    "name": "Belauri",
+                    "id": 1617
+                }
+            ]
+        },
+        {
+            "name": "Lamki (Kailali)",
+            "id": 260,
+            "zones": [
+                {
+                    "name": "Lamki",
+                    "id": 1798
+                }
+            ]
+        },
+        {
+            "name": "Mahendranagar",
+            "id": 107,
+            "zones": [
+                {
+                    "name": "Mahendranagar",
+                    "id": 1354
+                }
+            ]
+        },
+        {
+            "name": "Tikapur",
+            "id": 174,
+            "zones": [
+                {
+                    "name": "Tikapur",
+                    "id": 1634
+                }
+            ]
+        }
+    ],
+    "Karnali": [
+        {
+            "name": "Birendranagar (Surkhet)",
+            "id": 194,
+            "zones": [
+                {
+                    "name": "Birendranagar",
+                    "id": 1815
+                }
+            ]
+        },
+        {
+            "name": "Dailekh Bazzar",
+            "id": 131,
+            "zones": [
+                {
+                    "name": "Dailekh",
+                    "id": 1378
+                }
+            ]
+        },
+        {
+            "name": "Dolpa(Dunai)",
+            "id": 165,
+            "zones": [
+                {
+                    "name": "Dolpa",
+                    "id": 1626
+                }
+            ]
+        },
+        {
+            "name": "Jajarkot",
+            "id": 132,
+            "zones": [
+                {
+                    "name": "Jajarkot",
+                    "id": 1379
+                }
+            ]
+        },
+        {
+            "name": "Jumla (Khalanga)",
+            "id": 130,
+            "zones": [
+                {
+                    "name": "Jumla",
+                    "id": 1377
+                }
+            ]
+        },
+        {
+            "name": "Kalikot",
+            "id": 245,
+            "zones": [
+                {
+                    "name": "Kalikot",
+                    "id": 1893
+                }
+            ]
+        },
+        {
+            "name": "Mehelkuna (Surkhet)",
+            "id": 281,
+            "zones": [
+                {
+                    "name": "Mehelkuna (Surkhet)",
+                    "id": 1902
+                }
+            ]
+        },
+        {
+            "name": "Mugu",
+            "id": 255,
+            "zones": [
+                {
+                    "name": "Mugu",
+                    "id": 1870
+                }
+            ]
+        },
+        {
+            "name": "Musikot",
+            "id": 246,
+            "zones": [
+                {
+                    "name": "Musikot",
+                    "id": 1885
+                }
+            ]
+        },
+        {
+            "name": "Simikot (Humla)",
+            "id": 133,
+            "zones": [
+                {
+                    "name": "Humla",
+                    "id": 1380
+                }
+            ]
+        },
+        {
+            "name": "Surkhet",
+            "id": 89,
+            "zones": [
+                {
+                    "name": "Surkhet",
+                    "id": 1336
+                }
+            ]
+        }
+    ]
+}
