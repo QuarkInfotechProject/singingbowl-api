@@ -136,7 +136,6 @@ class Product extends Model
         parent::boot();
 
         static::saving(function ($product) {
-            // Ensure in_stock is consistent with quantity on every save
             if (isset($product->attributes['quantity'])) {
                 $product->attributes['in_stock'] = ($product->attributes['quantity'] > 0) ? 1 : 0;
             }
@@ -207,7 +206,7 @@ class Product extends Model
 
     public function wishlists()
     {
-        return $this->belongsToMany(Wishlist::class, 'wishlist_product');
+        return $this->belongsToMany(Wishlist::class, 'wishlist_products');
     }
 
     public function features()

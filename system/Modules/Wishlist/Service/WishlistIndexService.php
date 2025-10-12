@@ -14,6 +14,30 @@ class WishlistIndexService
     function index()
     {
         $user = Auth::user();
+
+        $user->load([
+            'wishlist.products' => function ($query) {
+                $query->select([
+                    'products.id',
+                    'products.uuid',
+                    'products.product_name',
+                    'products.slug',
+                    'products.brand_id',
+                    'products.best_seller',
+                    'products.has_variant',
+                    'products.original_price',
+                    'products.special_price',
+                    'products.special_price_start',
+                    'products.special_price_end',
+                    'products.in_stock',
+                    'products.quantity',
+                    'products.new_from',
+                    'products.new_to',
+                    'products.created_at'
+                ]);
+            }
+        ]);
+
         $wishlist = $user->wishlist;
 
         if (!$wishlist) {
