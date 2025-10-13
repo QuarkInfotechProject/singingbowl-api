@@ -100,16 +100,16 @@ jobs:
             # COMPOSER INSTALL
             # ================================
             echo '📦 Installing Composer dependencies...'
-            /usr/local/lsws/lsphp8d/bin/php /usr/bin/composer install --no-interaction --prefer-dist --optimize-autoloader
+            /usr/local/lsws/lsphp81/bin/php /usr/bin/composer install --no-interaction --prefer-dist --optimize-autoloader
 
             # ================================
             # ARTISAN COMMANDS
             # ================================
             echo '⚙️ Running Laravel maintenance tasks...'
-            /usr/local/lsws/lsphp84/bin/php artisan key:generate || true
-            /usr/local/lsws/lsphp84/bin/php artisan migrate --force
-            /usr/local/lsws/lsphp84/bin/php artisan optimize:clear
-            /usr/local/lsws/lsphp84/bin/php artisan config:cache
+            /usr/local/lsws/lsphp81/bin/php artisan key:generate || true
+            /usr/local/lsws/lsphp81/bin/php artisan migrate --force
+            /usr/local/lsws/lsphp81/bin/php artisan optimize:clear
+            /usr/local/lsws/lsphp81/bin/php artisan config:cache
 
             echo '✅ Laravel deployment complete!'
             echo '📅 Finished at:' \$(date)
