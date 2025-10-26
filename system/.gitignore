@@ -18,7 +18,7 @@ yarn-error.log
 .env.local
 docker-compose.yml
 /storage/logs
-storage/framework
+storage/framework/
 storage/app
 /public/modules/
 /public/EndUserProfilePicture
