@@ -86,6 +86,15 @@ jobs:
             fi
 
             # ================================
+            # ENSURE REQUIRED LARAVEL DIRECTORIES EXIST
+            # ================================
+            echo '🧱 Ensuring Laravel directory structure...'
+            mkdir -p system/storage/{app,framework/{cache,sessions,testing,views},logs} system/bootstrap/cache
+            mkdir -p system/public/{modules,EndUserProfilePicture,WarrantyClaimImages,OrderSupportImages}
+
+            echo '✅ Folder structure verified.'
+
+            # ================================
             # MOVE TO SYSTEM DIRECTORY (where artisan lives)
             # ================================
             if [ ! -d 'system' ]; then
