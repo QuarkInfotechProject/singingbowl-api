@@ -4,6 +4,8 @@ namespace Modules\Brand\Service\User;
 use Illuminate\Pagination\Paginator;
 use Modules\Brand\App\Models\Brand;
 
+//hihihi
+
 class BrandIndexService
 {
     public function index($status = null, $name = null, $page = 1)
