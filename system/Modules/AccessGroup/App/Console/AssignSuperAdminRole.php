@@ -31,10 +31,19 @@ class AssignSuperAdminRole extends Command
      */
     public function handle()
     {
-        Role::create([
-            'name' => 'Super Admin',
-            'guard_name' => 'admin'
-        ]);
+        $role = Role::where('name', 'Super Admin')
+                   ->where('guard_name', 'admin')
+                   ->first();
+
+        if (!$role) {
+            $role = Role::create([
+                'name' => 'Super Admin',
+                'guard_name' => 'admin'
+            ]);
+            $this->info("Super Admin role created.");
+        } else {
+            $this->info("Super Admin role already exists.");
+        }
 
         $adminUser = AdminUser::first();
 
@@ -43,8 +52,11 @@ class AssignSuperAdminRole extends Command
             return;
         }
 
-        $adminUser->assignRole('Super Admin');
-
-        $this->info("Super admin role has been assigned to the user.");
+        if ($adminUser->hasRole('Super Admin')) {
+            $this->info("User already has Super Admin role.");
+        } else {
+            $adminUser->assignRole('Super Admin');
+            $this->info("Super admin role has been assigned to the user.");
+        }
     }
 }

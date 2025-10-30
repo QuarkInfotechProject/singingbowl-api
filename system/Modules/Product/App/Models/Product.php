@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Arr;
-use Laravel\Scout\Searchable;
+// use Laravel\Scout\Searchable; // Temporarily disabled to avoid Meilisearch dependency during product creation
 use Modules\Category\App\Models\Category;
 use Modules\Media\Trait\HasMedia;
 use Modules\Meta\Trait\HasMetaData;
@@ -24,7 +24,7 @@ use \Modules\FlashSale\App\Models\FlashSale;
 
 class Product extends Model
 {
-    use HasFactory, HasMedia, HasMetaData, Searchable;
+    use HasFactory, HasMedia, HasMetaData; // Searchable trait disabled while Meilisearch is offline
     /**
      * The attributes that are mass assignable.
      */
@@ -76,21 +76,13 @@ class Product extends Model
         $this->attributes['in_stock'] = ($value > 0) ? 1 : 0;
     }
 
-    /**
-     * Get the name of the index associated with the model.
-     *
-     * @return string
-     */
+    // Meilisearch indexing disabled while search infrastructure is unavailable.
+    /*
     public function searchableAs(): string
     {
         return 'products';
     }
 
-    /**
-     * Get the indexable data array for the model.
-     *
-     * @return array
-     */
     public function toSearchableArray(): array
     {
         $array = [
@@ -130,6 +122,7 @@ class Product extends Model
 
         return $array;
     }
+    */
 
     public static function boot()
     {

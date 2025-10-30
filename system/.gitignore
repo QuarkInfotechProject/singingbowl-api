@@ -27,5 +27,6 @@ storage/app
 /system/storage/logs
 .idea/workspace.xml
 ../docker-compose.yml
+bootstrap/cache/*.php
 
 
