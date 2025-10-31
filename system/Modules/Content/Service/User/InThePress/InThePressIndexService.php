@@ -13,7 +13,7 @@ class InThePressIndexService
         $results =  InThePress::with([
             'files' => function ($q) {
                 $q->whereIn('zone', ['desktopImage', 'mobileImage'])
-                    ->select('zone', DB::raw("CONCAT(path, '/', temp_filename) AS imageUrl"));
+                    ->select('zone', DB::raw("CONCAT(path, '/', temp_filename) AS \"imageUrl\""));
             },
         ])
             ->select('id', 'title', 'link', 'published_date as publishedDate')

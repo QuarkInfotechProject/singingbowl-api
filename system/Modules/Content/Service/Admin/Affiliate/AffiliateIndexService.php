@@ -19,7 +19,7 @@ class AffiliateIndexService
             ->with([
                 'files' => function ($q) {
                     $q->whereIn('zone', ['desktopLogo', 'mobileLogo'])
-                        ->select('zone', DB::raw("CONCAT(path, '/', temp_filename) AS imageUrl"));
+                        ->select('zone', DB::raw("CONCAT(path, '/', temp_filename) AS \"imageUrl\""));
                 },
             ])
             ->select('id', 'title', 'description', 'is_partner as isPartner', 'is_active as isActive')

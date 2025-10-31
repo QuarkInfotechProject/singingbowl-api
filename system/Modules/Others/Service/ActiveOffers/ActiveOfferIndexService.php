@@ -13,7 +13,7 @@ class ActiveOfferIndexService
         return ActiveOffer::with([
             'files' => function ($q) {
                 $q->where('zone', 'image')
-                    ->select('zone', DB::raw("CONCAT(path, '/', temp_filename) AS imageUrl"));
+                    ->select('zone', DB::raw("CONCAT(path, '/', temp_filename) AS \"imageUrl\""));
             },
         ])
             ->select('id', 'text', 'is_active as isActive')

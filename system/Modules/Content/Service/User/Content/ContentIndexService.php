@@ -26,7 +26,7 @@ class ContentIndexService
                             'files.id as file_id',
                             'model_files.model_id as content_id',
                             'model_files.zone',
-                            DB::raw("CONCAT(path, '/', temp_filename) AS imageUrl")
+                            DB::raw("CONCAT(path, '/', temp_filename) AS \"imageUrl\"")
                         );
                 },
             ])

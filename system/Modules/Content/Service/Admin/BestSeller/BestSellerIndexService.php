@@ -15,7 +15,7 @@ class BestSellerIndexService
             ->with([
                 'files' => function ($q) {
                     $q->whereIn('zone', ['desktopFile', 'mobileFile'])
-                        ->select('zone', DB::raw("CONCAT(path, '/', temp_filename) AS imageUrl"));
+                        ->select('zone', DB::raw("CONCAT(path, '/', temp_filename) AS \"imageUrl\""));
                 },
             ])
             ->select('id', 'name', 'link', 'is_active as isActive')

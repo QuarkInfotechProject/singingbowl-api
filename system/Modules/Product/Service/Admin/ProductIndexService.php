@@ -76,7 +76,7 @@ class ProductIndexService
             ->with([
                 'files' => function ($q) {
                     $q->wherePivot('zone', 'baseImage')
-                        ->select(DB::raw("CONCAT(path, '/Thumbnail/', temp_filename) AS imageUrl"));
+                        ->select(DB::raw("CONCAT(path, '/Thumbnail/', temp_filename) AS \"imageUrl\""));
                 },
                 'categories',
                 'brand'

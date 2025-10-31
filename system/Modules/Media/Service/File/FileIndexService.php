@@ -50,11 +50,11 @@ class FileIndexService
         }
 
         $result = $query->select('id',
-            DB::raw("CONCAT(filename, '.', extension) AS fileName"),
+            DB::raw("CONCAT(filename, '.', extension) AS \"fileName\""),
             'width',
             'height',
-            DB::raw("CONCAT(path, '/', temp_filename) AS imageUrl"),
-            DB::raw("CONCAT(path, '/Thumbnail/', temp_filename) AS thumbnailUrl"))
+            DB::raw("CONCAT(path, '/', temp_filename) AS \"imageUrl\""),
+            DB::raw("CONCAT(path, '/Thumbnail/', temp_filename) AS \"thumbnailUrl\""))
             ->paginate(30);
 
         return $result ?? collect([]);

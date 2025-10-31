@@ -38,7 +38,7 @@ class ProductExclusionService
             ->with([
                 'files' => function ($q) {
                     $q->wherePivot('zone', 'baseImage')
-                        ->select(DB::raw("CONCAT(path, '/Thumbnail/', temp_filename) AS imageUrl"));
+                        ->select(DB::raw("CONCAT(path, '/Thumbnail/', temp_filename) AS \"imageUrl\""));
                 },
             ])
             ->select('id', 'uuid', 'product_name as name', 'original_price as originalPrice', 'special_price as specialPrice')
