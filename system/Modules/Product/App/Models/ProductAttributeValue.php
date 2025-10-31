@@ -19,7 +19,16 @@ class ProductAttributeValue extends Model
      */
     protected $fillable = ['product_attribute_id', 'attribute_value_id'];
 
+    /**
+     * The model uses a composite key and does not have an auto-incrementing id.
+     *
+     * @var bool
+     */
+    public $incrementing = false;
+
     public $timestamps = false;
+
+    protected $primaryKey = 'product_attribute_id';
 
     public function exists()
     {
@@ -29,5 +38,12 @@ class ProductAttributeValue extends Model
     public function attributeValue()
     {
         return $this->belongsTo(AttributeValue::class, 'attribute_value_id');
+    }
+
+    protected function setKeysForSaveQuery($query)
+    {
+        return $query
+            ->where('product_attribute_id', $this->getAttribute('product_attribute_id'))
+            ->where('attribute_value_id', $this->getAttribute('attribute_value_id'));
     }
 }
