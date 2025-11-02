@@ -9,8 +9,8 @@ class AttributeUpdateDTO extends Constructor
     public int $id;
     public int $attributeSetId;
     public string $name;
-    public bool $is_enabled;
-    public int $sort_order;
+    public bool $is_enabled = true;
+    public int $sort_order = 0;
     public array|null $category_ids;
 
     /**
