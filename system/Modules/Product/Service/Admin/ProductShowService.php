@@ -37,6 +37,7 @@ class ProductShowService
 
 
         return [
+            'uuid'=> $product->uuid,
             'productName' => $product->productName,
             'brandId' => $product->brandId,
             'url' => $product->url,
