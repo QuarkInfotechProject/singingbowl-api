@@ -102,6 +102,7 @@ class ProductIndexService
 
             $productItems[] = [
                 'id' => $product->id,
+                'uuid' => $product->uuid,
                 'name' => $product->name,
                 'brandId'=>$product->brand_id,
                 'hasVariant' => $product->has_variant,

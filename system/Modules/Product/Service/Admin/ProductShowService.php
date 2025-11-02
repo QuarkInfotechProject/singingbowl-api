@@ -15,9 +15,9 @@ use Modules\Shared\StatusCode\ErrorCode;
 
 class ProductShowService
 {
-    public function show(string $id)
+    public function show(string $uuid)
     {
-        $product = $this->getProduct($id);
+        $product = $this->getProduct($uuid);
 
         $categories = $this->getProductCategories($product);
         $mediaFiles = $this->getMediaFiles($product);
@@ -37,8 +37,8 @@ class ProductShowService
 
 
         return [
-            'uuid'=> $product->uuid,
             'productName' => $product->productName,
+            'uuid' => $product->uuid,
             'brandId' => $product->brandId,
             'url' => $product->url,
             'sortOrder' => $product->sortOrder,
@@ -75,7 +75,7 @@ class ProductShowService
         ];
     }
 
-    private function getProduct(string $id)
+    private function getProduct(string $uuid)
     {
         $product = Product::select(
             'id',
@@ -102,7 +102,7 @@ class ProductShowService
             'new_to as newTo',
             'specifications'
 
-        )->where('id', $id)->first();
+        )->where('uuid', $uuid)->first();
 
         if (!$product) {
             throw new Exception('Product not found.', ErrorCode::NOT_FOUND);
