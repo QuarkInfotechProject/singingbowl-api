@@ -7,6 +7,9 @@ use Modules\Product\App\Rules\UniqueOptionName;
 use Modules\Product\App\Rules\UniqueOptionValue;
 use Modules\Product\App\Rules\UniqueSkuRule;
 use Modules\Product\App\Rules\WithoutSpacesRule;
+use Modules\Product\App\Models\Product;
+use Illuminate\Validation\Rule;
+
 
 class ProductUpdateRequest extends FormRequest
 {
@@ -103,8 +106,22 @@ class ProductUpdateRequest extends FormRequest
         return request()->hasVariant ? 'nullable|numeric|min:0' : 'required|numeric|min:0';
     }
 
-    private function getSkuRules() {
-        return request()->hasVariant ? 'nullable|string|min:2|max:50' : 'required|string|min:2|max:50|unique:products,sku|regex:/^\S*$/';
+//    private function getSkuRules() {
+//        return request()->hasVariant ? 'nullable|string|min:2|max:50' : 'required|string|min:2|max:50|unique:products,sku|regex:/^\S*$/';
+//    }
+
+    private function getSkuRules()
+    {
+        // On update, we get product id from uuid (because your payload contains uuid)
+        $productId = Product::where('uuid', $this->uuid)->value('id');
+
+        $uniqueRule = Rule::unique('products', 'sku')->ignore($productId);
+
+        if (request()->hasVariant) {
+            return ['nullable', 'string', 'min:2', 'max:50', 'regex:/^\S*$/', $uniqueRule];
+        }
+
+        return ['required', 'string', 'min:2', 'max:50', 'regex:/^\S*$/', $uniqueRule];
     }
 
     private function getQuantityRules() {
