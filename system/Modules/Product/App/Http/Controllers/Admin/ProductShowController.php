@@ -238,9 +238,9 @@ class ProductShowController extends AdminBaseController
     {
     }
 
-    function __invoke(string $uuid)
+    function __invoke(string $id)
     {
-        $product = $this->productShowService->show($uuid);
+        $product = $this->productShowService->show($id);
 
         return $this->successResponse('Product has been fetched successfully.', $product);
     }

@@ -34,7 +34,7 @@ Route::group(['middleware' => ['cors', 'json.response', 'auth:admin', 'can:view_
         Route::post('/create', ProductCreateController::class);
 //            ->middleware('can:create_product');
 
-        Route::get('/show/{uuid}', ProductShowController::class);
+        Route::get('/show/{id}', ProductShowController::class);
 
         Route::post('/update', ProductUpdateController::class);
 //            ->middleware('can:update_product');
