@@ -36,7 +36,7 @@ class CategoryProductListService
 
                         return [
                             'id' => $product->id,
-                            'productName' => $product->name,
+                            'productName' => $product->product_name,
                             'url' => $product->slug,
                             'brandId' => $product->brand_id ?? null,
                             'bestSeller' => (bool) $product->best_seller,
