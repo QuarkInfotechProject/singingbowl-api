@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Modules\Category\App\Http\Controllers\User\CategoryIndexController;
+use Modules\Category\App\Http\Controllers\User\CategoryProductListController;
 
 /*
     |--------------------------------------------------------------------------
@@ -16,4 +17,5 @@ use Modules\Category\App\Http\Controllers\User\CategoryIndexController;
 
 Route::middleware(['guest'])->group(function () {
     Route::get('/categories', CategoryIndexController::class);
+    Route::get('/categories/product', CategoryProductListController::class);
 });
