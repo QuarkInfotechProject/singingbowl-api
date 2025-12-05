@@ -16,7 +16,7 @@ use Modules\Product\App\Http\Controllers\User\ProductShowController;
 use Modules\Product\App\Http\Controllers\User\ProductShowNamesController;
 use Modules\Product\App\Http\Controllers\User\ProductGetRelatedProductController;
 use Modules\Product\App\Http\Controllers\User\ProductFilterDataController;
-
+use Modules\Product\App\Http\Controllers\User\ProductListByCategoryController;
 
 /*
     |--------------------------------------------------------------------------
@@ -31,6 +31,7 @@ use Modules\Product\App\Http\Controllers\User\ProductFilterDataController;
 
 Route::middleware(['guest'])->group(function () {
     Route::get('/products/names', ProductShowNamesController::class);
+    Route::get('/products/list-by-category', ProductListByCategoryController::class);
     Route::get('/products/{categoryName}', ProductByCategoryController::class);
     Route::post('/products', ProductIndexController::class);
     Route::get('/shop', ProductShopController::class);

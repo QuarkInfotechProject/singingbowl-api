@@ -58,7 +58,7 @@ class ProductCreateService
             DB::commit();
 
             // Dispatch ProductCreated event to trigger cache invalidation
-            Event::dispatch(new ProductCreated($product));
+            // Event::dispatch(new ProductCreated($product));
 
         } catch (\Exception $exception) {
             Log::error('Error creating product', [
