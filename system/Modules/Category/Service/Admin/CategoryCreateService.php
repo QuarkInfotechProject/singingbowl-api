@@ -38,12 +38,12 @@ class CategoryCreateService
             throw $exception;
         }
 
-        Event::dispatch(
-            new AdminUserActivityLogEvent(
-                'Category added of name: ' . $categoryCreateDTO->name,
-                $category->id,
-                ActivityTypeConstant::CATEGORY_CREATED,
-                $ipAddress)
-        );
+         Event::dispatch(
+             new AdminUserActivityLogEvent(
+                 'Category added of name: ' . $categoryCreateDTO->name,
+                 $category->id,
+                 ActivityTypeConstant::CATEGORY_CREATED,
+                 $ipAddress)
+         );
     }
 }
