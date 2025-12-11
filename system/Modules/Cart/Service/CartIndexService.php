@@ -1,13 +1,20 @@
 <?php
 
 namespace Modules\Cart\Service;
+
 use Modules\Product\App\Models\ProductOptionValue;
 use Modules\Cart\Service\CartRepository;
 use Modules\Shared\Exception\Exception;
+use Modules\DeliveryCharge\Service\User\DeliveryCalculatorService;
+use Modules\DeliveryCharge\App\Models\DeliveryCharge;
+use Illuminate\Support\Facades\Auth;
+
 class CartIndexService
 {
-    public function __construct(private CartRepository $cartRepository)
-    {
+    public function __construct(
+        private CartRepository $cartRepository,
+        private DeliveryCalculatorService $deliveryCalculator
+    ) {
     }
 
     /**
@@ -42,9 +49,48 @@ class CartIndexService
             $total = $cartItems->sum('lineTotal');
 
             $totalDiscount = $coupons->sum('discountAmount');
-
             $totalDiscount = min($totalDiscount, $total);
-            $grandTotal = $total - $totalDiscount;
+
+            // --- START SHIPPING CALCULATION ---
+            $shippingCost = 0;
+            $shippingType = null;
+            $totalWeight = $cart->total_weight ?? 0;
+
+            // Check if it is a registered user cart and user is logged in
+            if ($cartType === 'user' && Auth::check()) {
+                $user = Auth::user();
+                
+                // Get the user's default address
+                // Note: Ensure your User model has 'addresses' relationship defined
+                $defaultAddress = $user->addresses()->where('is_default', true)->first();
+
+                if ($defaultAddress) {
+                    // Fetch delivery rules
+                    $allCharges = DeliveryCharge::all()->toArray();
+
+                    // Prepare data structures expected by the calculator service
+                    $cartDataForService = ['total_weight' => $totalWeight];
+                    
+                    // Map your Address model columns to what the Service expects
+                    $addressDataForService = [
+                        'countryCode' => $defaultAddress->country_code ?? $defaultAddress->country, 
+                        'cityId' => $defaultAddress->city_id ?? null,
+                    ];
+
+                    $calculationResult = $this->deliveryCalculator->calculate(
+                        $cartDataForService,
+                        $addressDataForService,
+                        $allCharges
+                    );
+
+                    $shippingCost = $calculationResult['cost'];
+                    $shippingType = $calculationResult['type'];
+                }
+            }
+            // --- END SHIPPING CALCULATION ---
+
+            // Update Grand Total to include shipping
+            $grandTotal = ($total - $totalDiscount) + $shippingCost;
 
             $result = [
                 'items' => $cartItems,
@@ -53,7 +99,10 @@ class CartIndexService
                 'grand_total' => $grandTotal,
                 'total_discount' => $totalDiscount,
                 'coupons' => $coupons->toArray(),
-		'total_weight' => $cart->total_weight ?? 0,
+                'total_weight' => $totalWeight,
+                // Add Shipping info to response
+                'shipping_charge' => $shippingCost,
+                'shipping_type' => $shippingType,
             ];
 
             if ($cartType === 'user') {
@@ -64,6 +113,7 @@ class CartIndexService
 
             return $result;
         } catch (\Exception $exception) {
+            // It is often useful to log this: \Log::error($exception);
             return $this->getEmptyCartStructure($cartType, $cartIdentifier);
         }
     }
@@ -200,12 +250,11 @@ class CartIndexService
             'count' => 0,
             'grand_total' => 0,
             'total_discount' => 0,
+            'shipping_charge' => 0,
             'coupons' => [],
             'cart_id' => $cartType === 'guest' ? $cartIdentifier : null
         ];
     }
-
-
 
     /**
      * Optimized cart items mapping with pre-computed values.
@@ -261,7 +310,7 @@ class CartIndexService
                 'unitPrice' => $unitPrice,
                 'lineTotal' => $lineTotal,
                 'quantity' => $cartItem->quantity,
-		'weight' => $product->weight,
+                'weight' => $product->weight,
             ];
         });
     }
@@ -314,3 +363,4 @@ class CartIndexService
         });
     }
 }
+
