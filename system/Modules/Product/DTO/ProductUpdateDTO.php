@@ -24,6 +24,7 @@ class ProductUpdateDTO extends Constructor
     public string|null $saleStart;
     public string|null $saleEnd;
     public int|null $quantity;
+    public string|int|float|null $weight;
     public bool|null $inStock;
     public string|null $newFrom;
     public string|null $newTo;

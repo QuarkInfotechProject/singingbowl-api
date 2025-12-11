@@ -22,6 +22,18 @@ class Cart extends Model
         'user_agent'
     ];
 
+    protected $appends = ['total_weight'];
+
+    public function getTotalWeightAttribute()
+    {
+        return $this->items->sum(function ($item) {
+            // Weight is on the parent product
+            $weight = $item->product->weight ?? 0; 
+            return $item->quantity * $weight;
+        });
+    }
+
+    
     public function items()
     {
         return $this->hasMany(CartItem::class);
@@ -31,6 +43,7 @@ class Cart extends Model
     {
         return $this->belongsTo(User::class);
     }
+
 
     public function cartCoupons()
     {
@@ -134,7 +147,8 @@ class Cart extends Model
         return [
             'subTotal' => $subTotal,
             'totalDiscount' => $totalDiscount,
-            'total' => $total
+            'total' => $total,
+	    'totalWeight' => $this->total_weight
         ];
     }
 

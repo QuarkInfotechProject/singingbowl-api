@@ -52,7 +52,8 @@ class CartIndexService
                 'count' => $cartItems->count(),
                 'grand_total' => $grandTotal,
                 'total_discount' => $totalDiscount,
-                'coupons' => $coupons->toArray()
+                'coupons' => $coupons->toArray(),
+		'total_weight' => $cart->total_weight ?? 0,
             ];
 
             if ($cartType === 'user') {
@@ -260,6 +261,7 @@ class CartIndexService
                 'unitPrice' => $unitPrice,
                 'lineTotal' => $lineTotal,
                 'quantity' => $cartItem->quantity,
+		'weight' => $product->weight,
             ];
         });
     }

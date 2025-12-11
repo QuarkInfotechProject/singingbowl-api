@@ -93,6 +93,7 @@ class ProductCreateService
                 'sale_start' => $productCreateDTO->saleStart,
                 'sale_end' => $productCreateDTO->saleEnd,
                 'quantity' => $productCreateDTO->quantity,
+		'weight' => $productCreateDTO->weight,
                 'in_stock' => $productCreateDTO->inStock,
                 'new_from' => $productCreateDTO->newFrom,
                 'new_to' => $productCreateDTO->newTo,
