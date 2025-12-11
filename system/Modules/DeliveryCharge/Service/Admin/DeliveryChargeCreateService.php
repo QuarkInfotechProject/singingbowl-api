@@ -17,17 +17,25 @@ class DeliveryChargeCreateService
             DB::beginTransaction();
 
             $deliveryCharge = DeliveryCharge::create([
-                'description' => $data['description'],
-                'delivery_charge' => $data['deliveryCharge'] ?? 0,
-                'additional_charge_per_item' => $data['additionalChargePerItem'],
-                'weight_based_charge' => $data['weightBasedCharge']
+                // Existing fields
+                'description'                => $data['description'],
+                'delivery_charge'            => $data['deliveryCharge'] ?? 0,
+                'additional_charge_per_item' => $data['additionalChargePerItem'] ?? 0,
+                'weight_based_charge'        => $data['weightBasedCharge'] ?? 0,
+
+                // New fields with proper naming (snake_case)
+                'country'                    => $data['country'] ?? null,
+                'country_code'               => $data['countryCode'] ?? null,
+                'charge_above_20kg'          => $data['chargeAbove20kg'] ?? 0,
+                'charge_above_45kg'          => $data['chargeAbove45kg'] ?? 0,
+                'charge_above_100kg'         => $data['chargeAbove100kg'] ?? 0,
             ]);
 
             DB::commit();
         } catch (\Exception $exception) {
             Log::error('Failed to create DeliveryCharge during transaction: ' . $exception->getMessage(), [
                 'exception' => $exception,
-                'data' => $data,
+                'data'      => $data,
                 'ipAddress' => $ipAddress
             ]);
             DB::rollBack();
@@ -36,7 +44,7 @@ class DeliveryChargeCreateService
 
         Event::dispatch(
             new AdminUserActivityLogEvent(
-                'Delivery charge created of description: ' . $deliveryCharge->description,
+                'Delivery charge created for country: ' . $deliveryCharge->country . ' (' . $deliveryCharge->description . ')',
                 $deliveryCharge->id,
                 ActivityTypeConstant::DELIVERY_CHARGE_CREATED,
                 $ipAddress

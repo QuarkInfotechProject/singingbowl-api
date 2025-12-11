@@ -35,8 +35,8 @@ return [
 
     'pdf' => [
         'enabled' => true,
-        'binary'  => env('WKHTML_PDF_BINARY', '/usr/local/bin/wkhtmltopdf'),
-        'timeout' => false,
+	'binary'  => env('WKHTMLTOPDF_BINARY', '/usr/local/bin/wkhtmltopdf'),
+        'timeout' => 60,
         'options' => [],
         'env'     => [],
     ],

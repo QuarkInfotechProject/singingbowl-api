@@ -60,12 +60,14 @@ class UserSendRegisterMailService
     function saveVerificationCode($email)
     {
         try {
-            $minutes = SystemConfig::where('name', 'code_expiration_time')->pluck('value')->first();
+            //$minutes = SystemConfig::where('name', 'code_expiration_time')->pluck('value')->first();
+
+            // $minutes = SystemConfig::where('name', 'code_expiration_time')->pluck('value')->first();
             return VerificationCode::updateOrCreate([
                 'email' => $email
             ], [
                 'code' => mt_rand(100000, 999999),
-                'expires_at' => now()->addMinutes($minutes),
+                'expires_at' => now()->addMinutes(15),
             ]);
         } catch (\Exception $exception) {
             Log::error('Error saving verification code: ' . $exception->getMessage(), [

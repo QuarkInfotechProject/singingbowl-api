@@ -12,7 +12,7 @@ use Modules\Shared\StatusCode\ErrorCode;
 
 class AddressCreateService
 {
-    function create($data)
+    public function create($data)
     {
         $userId = Auth::user()->id;
 
@@ -22,11 +22,23 @@ class AddressCreateService
             Address::create([
                 'uuid' => Str::uuid(),
                 'user_id' => $userId,
+                
+                // New Fields
+                'email' => $data['email'],
+                'address_line_1' => $data['addressLine1'], // Renamed from 'address'
+                'address_line_2' => $data['addressLine2'] ?? null,
+                'postal_code' => $data['postalCode'],
+                'landmark' => $data['landmark'] ?? null,
+                'address_type' => $data['addressType'] ?? 'home',
+                'delivery_instructions' => $data['deliveryInstructions'] ?? null,
+                'is_default' => $data['isDefault'] ?? false,
+                'label' => $data['label'] ?? null,
+
+                // Existing Fields
                 'first_name' => $data['firstName'],
                 'last_name' => $data['lastName'],
                 'mobile' => $data['mobile'],
                 'backup_mobile' => $data['backupMobile'],
-                'address' => $data['address'],
                 'country_name' => $data['countryName'],
                 'province_id' => $data['provinceId'],
                 'province_name' => $data['provinceName'],
@@ -38,13 +50,15 @@ class AddressCreateService
 
             DB::commit();
         } catch (\Exception $exception) {
+            // Rollback must happen before throwing a new exception to close the transaction
+            DB::rollBack();
+
             Log::info('Failed to create address.', ['error' => $exception->getMessage(), 'user_id' => $userId]);
 
             if ($exception->getCode() == 23000) {
                 throw new Exception('An address for this user already exists.', ErrorCode::UNPROCESSABLE_CONTENT);
             };
 
-            DB::rollBack();
             throw $exception;
         }
     }

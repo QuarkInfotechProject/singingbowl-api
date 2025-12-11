@@ -17,11 +17,23 @@ class Address extends Model
     protected $fillable = [
         'uuid',
         'user_id',
+        
+        // New Fields
+        'email',
+        'address_line_1', // Renamed from 'address'
+        'address_line_2',
+        'postal_code',
+        'landmark',
+        'address_type',
+        'delivery_instructions',
+        'is_default',
+        'label',
+
+        // Existing Fields
         'first_name',
         'last_name',
         'mobile',
         'backup_mobile',
-        'address',
         'country_name',
         'province_id',
         'province_name',
@@ -29,6 +41,13 @@ class Address extends Model
         'city_name',
         'zone_id',
         'zone_name'
+    ];
+
+    /**
+     * The attributes that should be cast.
+     */
+    protected $casts = [
+        'is_default' => 'boolean',
     ];
 
     public function orderAddress()
