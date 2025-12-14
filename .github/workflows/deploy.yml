@@ -10,12 +10,11 @@ env:
   SSH_HOST: "202.51.71.55"
   SSH_USER: "ubuntu"
   SSH_PORT: "22"
-
   PROJECT_PATH: "/var/www/api"
   BRANCH: "master"
 
   PHP_PATH: "/usr/bin/php"
-  COMPOSER_PATH: "/usr/bin/composer"
+  COMPOSER_PATH: "/usr/local/bin/composer"
 
 jobs:
   deploy:
