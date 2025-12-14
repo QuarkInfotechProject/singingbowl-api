@@ -57,15 +57,12 @@ class CartIndexService
             $shippingType = null;
             $totalWeightGrams = $cart->total_weight ?? 0;
 
-            // Convert Weight to KG (Assuming DB stores grams, e.g., 830g -> 0.83kg)
-            $totalWeightKg = $totalWeightGrams > 0 ? $totalWeightGrams / 1000 : 0;
-
             // Check if it is a registered user cart and user is logged in
-            if ($cartType === 'user' && Auth::check()) {
-                $user = Auth::user();
+            if ($cartType === 'user' && Auth::guard('user')->check()) {
+                $user = Auth::guard('user')->user();
 
-                // Auto-fetch the user's default address
-                $defaultAddress = $user->addresses()->where('is_default', true)->first();
+                // Auto-fetch the user's address (User has a hasOne relationship with Address)
+                $defaultAddress = $user->address;
 
                 if ($defaultAddress) {
                     // UPDATED MATCHING LOGIC
@@ -89,7 +86,8 @@ class CartIndexService
                         // --- MATCH FOUND: Calculate based on rules ---
                         $allCharges = DeliveryCharge::all()->toArray();
 
-                        $cartDataForService = ['total_weight' => $totalWeightKg];
+                        // Pass weight in GRAMS (calculator expects grams for tier comparisons: 20000g, 45000g, 100000g)
+                        $cartDataForService = ['total_weight' => $totalWeightGrams];
 
                         // UPDATED: Pass countryCode explicitly so the calculator can use it
                         $addressDataForService = [
@@ -393,3 +391,4 @@ class CartIndexService
         });
     }
 }
+

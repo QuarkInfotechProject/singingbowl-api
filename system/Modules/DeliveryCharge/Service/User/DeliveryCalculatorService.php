@@ -5,30 +5,46 @@ namespace Modules\DeliveryCharge\Service\User;
 class DeliveryCalculatorService
 {
     /**
-     * Calculate Delivery Charge based on your specific table columns.
+     * Calculate Delivery Charge based on country code matching and weight tiers.
+     * Returns $9 base price if no matching delivery charge is found.
      */
     public function calculate($cartData, $addressData, $allDeliveryCharges)
     {
         // 1. Get Inputs
         $totalWeight = $cartData['total_weight'] ?? 0; // in Grams
-        $countryCode = $addressData['countryCode'] ?? 'US';
+        $countryCode = $addressData['countryCode'] ?? null;
+        $countryName = $addressData['countryName'] ?? null;
 
         // 2. Find the Rate Row for this Country
-        // We filter the DB results to find the one matching the user's country_code
+        // First try to match by country_code, then fallback to country name
         $rateRow = null;
-        foreach ($allDeliveryCharges as $charge) {
-            if (isset($charge['country_code']) && $charge['country_code'] === $countryCode) {
-                $rateRow = $charge;
-                break;
+        
+        // Try matching by country_code first
+        if (!empty($countryCode)) {
+            foreach ($allDeliveryCharges as $charge) {
+                if (isset($charge['country_code']) && $charge['country_code'] === $countryCode) {
+                    $rateRow = $charge;
+                    break;
+                }
+            }
+        }
+        
+        // If no match by code, try matching by country name
+        if (!$rateRow && !empty($countryName)) {
+            foreach ($allDeliveryCharges as $charge) {
+                if (isset($charge['country']) && strcasecmp($charge['country'], $countryName) === 0) {
+                    $rateRow = $charge;
+                    break;
+                }
             }
         }
 
-        // If no rate found for this country, return 0 or default
+        // If no rate found for this country, return $9 base price
         if (!$rateRow) {
-            return ['cost' => 0, 'type' => 'No Rate Found for Country'];
+            return ['cost' => 9.00, 'type' => 'Base Rate (No Country Match)'];
         }
 
-        // 3. Logic based on your specific columns
+        // 3. Logic based on weight tiers
         // 20 KG = 20000 Grams
         // 45 KG = 45000 Grams
         // 100 KG = 100000 Grams
@@ -60,3 +76,4 @@ class DeliveryCalculatorService
         }
     }
 }
+
