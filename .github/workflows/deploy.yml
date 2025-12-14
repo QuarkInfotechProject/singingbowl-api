@@ -3,7 +3,7 @@ name: 🚀 Deploy Laravel App
 on:
   push:
     branches:
-      - main
+      - master
 
 # Editable deployment values
 env:
@@ -12,7 +12,7 @@ env:
   SSH_PORT: "22"
 
   PROJECT_PATH: "/var/www/api"
-  BRANCH: "main"
+  BRANCH: "master"
 
   PHP_PATH: "/usr/bin/php"
   COMPOSER_PATH: "/usr/bin/composer"
