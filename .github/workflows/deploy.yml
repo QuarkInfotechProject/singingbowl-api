@@ -1,130 +1,63 @@
-name: 🚀 Deploy Laravel API (Smart + Self-Healing)
+name: 🚀 Deploy Laravel App
 
 on:
   push:
     branches:
-      - master
+      - main
+
+# Editable deployment values
+env:
+  SSH_HOST: "202.51.71.55"
+  SSH_USER: "ubuntu"
+  SSH_PORT: "22"
+
+  PROJECT_PATH: "/var/www/api"
+  BRANCH: "main"
+
+  PHP_PATH: "/usr/bin/php"
+  COMPOSER_PATH: "/usr/bin/composer"
 
 jobs:
   deploy:
     name: Deploy via SSH
     runs-on: ubuntu-latest
 
-    env:
-      DEBUG: false # Set to true for detailed SSH logging
-
     steps:
-      # ======================================================
-      # 1️⃣ CHECKOUT REPOSITORY
-      # ======================================================
-      - name: ⏳ Checkout Repository
-        uses: actions/checkout@v4
+      - name: 🛎 Checkout Code
+        uses: actions/checkout@v3
+
+      - name: 🔐 SSH + Deploy
+        uses: appleboy/ssh-action@v1.0.3
         with:
-          fetch-depth: 0 # Full history for proper git operations
+          host: ${{ env.SSH_HOST }}
+          username: ${{ env.SSH_USER }}
+          port: ${{ env.SSH_PORT }}
+          key: ${{ secrets.SERVER_SSH_KEY }} # ssh key already working
+          script_stop: false
 
-      # ======================================================
-      # 2️⃣ SETUP SSH
-      # ======================================================
-      - name: 🔐 Setup SSH Agent
-        uses: webfactory/ssh-agent@v0.9.0
-        with:
-          ssh-private-key: ${{ secrets.SINGINGBOWL_SSH_PRIVATE_KEY }}
+          # IMPORTANT: pass env vars inside SSH session
+          envs: PROJECT_PATH,BRANCH,PHP_PATH,COMPOSER_PATH
 
-      # ======================================================
-      # 3️⃣ DEPLOY TO VPS
-      # ======================================================
-      - name: 🚀 Deploy Laravel API
-        env:
-          VPS_USER: ${{ secrets.SINGINGBOWL_USER }}
-          VPS_HOST: ${{ secrets.QUARK_VPS_HOST }}
-          VPS_PORT: ${{ secrets.QUARK_VPS_PORT }}
-          GIT_AUTH_TOKEN: ${{ secrets.GIT_AUTH_TOKEN }}
-          DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}
-          DEBUG: ${{ env.DEBUG }}
-          REPO_SLUG: ${{ github.repository }}
-        run: |
-          echo "🌍 Connecting to VPS: $VPS_HOST:$VPS_PORT as $VPS_USER"
-          echo "📂 Target Path: $DEPLOY_PATH"
+          script: |
+            echo "🚀 Starting Laravel deployment..."
 
-          if [ "$DEBUG" = "true" ]; then
-            echo "🧩 DEBUG MODE ENABLED — will print commands as they execute"
-            set -x
-          fi
+            echo "📁 Entering project directory: $PROJECT_PATH"
+            cd $PROJECT_PATH || { echo "❌ Directory not found"; exit 1; }
 
-          ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST -p $VPS_PORT "
-            set -e
+            echo "🔄 Pulling latest code..."
+            git pull origin $BRANCH || { echo '❌ Git pull failed'; exit 1; }
 
-            echo '🖥️ Connected to:' \$(hostname)
-            echo '📦 Starting Laravel deployment in:' $DEPLOY_PATH
+            echo "📦 Installing composer dependencies..."
+            $PHP_PATH $COMPOSER_PATH install --no-interaction --prefer-dist --optimize-autoloader
 
-            # ================================
-            # CHECK OR CREATE DEPLOYMENT DIRECTORY
-            # ================================
-            if [ ! -d '$DEPLOY_PATH' ]; then
-              echo '📁 Directory not found — creating: $DEPLOY_PATH'
-              mkdir -p '$DEPLOY_PATH'
-              echo '🆕 New deployment directory created.'
-            fi
-            cd '$DEPLOY_PATH'
+            echo "🔑 Generating key (safe)..."
+            $PHP_PATH artisan key:generate || true
 
-            # ================================
-            # GIT OPERATIONS
-            # ================================
-            echo '🔄 Updating repository...'
-            if [ ! -d '.git' ]; then
-              echo '⚠️ .git folder missing — cloning repository fresh...'
+            echo "🛠 Running migrations..."
+            $PHP_PATH artisan migrate --force
 
-              if [ -z '${GIT_AUTH_TOKEN}' ]; then
-                echo '❌ ERROR: GIT_AUTH_TOKEN not set or invalid. Check your GitHub Secrets.'
-                exit 1
-              fi
+            echo "🧹 Clearing and optimizing..."
+            $PHP_PATH artisan optimize:clear
+            $PHP_PATH artisan config:cache
 
-              git clone https://x-access-token:${GIT_AUTH_TOKEN}@github.com/${REPO_SLUG}.git .
-            else
-              git fetch origin master
-              git reset --hard origin/master
-            fi
-
-            # ================================
-            # ENSURE REQUIRED LARAVEL DIRECTORIES EXIST
-            # ================================
-            echo '🧱 Ensuring Laravel directory structure...'
-            mkdir -p system/storage/{app,framework/{cache,sessions,testing,views},logs} system/bootstrap/cache
-            mkdir -p system/public/{modules,EndUserProfilePicture,WarrantyClaimImages,OrderSupportImages}
-
-            echo '✅ Folder structure verified.'
-
-            # ================================
-            # MOVE TO SYSTEM DIRECTORY (where artisan lives)
-            # ================================
-            if [ ! -d 'system' ]; then
-              echo '❌ ERROR: Laravel system directory not found at $DEPLOY_PATH/system'
-              exit 1
-            fi
-
-            cd system
-            echo '📂 Entered Laravel system directory: ' \$(pwd)
-
-            # ================================
-            # COMPOSER INSTALL
-            # ================================
-            echo '📦 Installing Composer dependencies...'
-            /usr/local/lsws/lsphp83/bin/php /usr/bin/composer install --no-interaction --prefer-dist --optimize-autoloader
-
-            # ================================
-            # ARTISAN COMMANDS
-            # ================================
-            echo '⚙️ Running Laravel maintenance tasks...'
-            /usr/local/lsws/lsphp83/bin/php artisan key:generate || true
-            /usr/local/lsws/lsphp83/bin/php artisan migrate --force
-            /usr/local/lsws/lsphp83/bin/php artisan optimize:clear
-            /usr/local/lsws/lsphp83/bin/php artisan config:cache
-
-            echo '✅ Laravel deployment complete!'
-            echo '📅 Finished at:' \$(date)
-          "
-
-          if [ "$DEBUG" = "true" ]; then
-            set +x
-            echo "🧩 DEBUG MODE DISABLED — end of logs"
-          fi
+            echo "🎉 Laravel Deployment Complete!"
