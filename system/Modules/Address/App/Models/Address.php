@@ -28,6 +28,7 @@ class Address extends Model
         'delivery_instructions',
         'is_default',
         'label',
+	'country_code',
 
         // Existing Fields
         'first_name',

@@ -14,24 +14,23 @@ class AddressCreateRequest extends FormRequest
         return [
             'firstName' => 'required|string|min:2|max:255|regex:/^[\pL\s\-]+$/u',
             'lastName' => 'required|string|min:2|max:255|regex:/^[\pL\s\-]+$/u',
-            'email' => 'required|email|max:255', // New field
-            
+            'email' => 'required|email|max:255',
+
             'mobile' => 'required|integer|digits:10|unique:addresses,mobile',
             'backupMobile' => 'nullable|integer|digits:10|different:mobile',
-            
-            // Renamed from 'address' to 'addressLine1'
-            'addressLine1' => 'required|string|min:5|max:255',
-            'addressLine2' => 'nullable|string|max:255', // New field
-            
-            'postalCode' => 'required|string|max:20', // New field
-            'landmark' => 'nullable|string|max:255', // New field
-            
-            'addressType' => 'nullable|string|in:home,office,other', // New field with validation
-            'deliveryInstructions' => 'nullable|string|max:500', // New field
-            'isDefault' => 'boolean', // New field
-            'label' => 'nullable|string|max:255', // New field
 
-            'countryId' => 'required|integer', // Added ID validation if needed, assuming you send both
+            'addressLine1' => 'required|string|min:5|max:255',
+            'addressLine2' => 'nullable|string|max:255',
+
+            'postalCode' => 'required|string|max:20',
+            'landmark' => 'nullable|string|max:255',
+
+            'addressType' => 'nullable|string|in:home,office,other',
+            'deliveryInstructions' => 'nullable|string|max:500',
+            'isDefault' => 'boolean',
+            'label' => 'nullable|string|max:255',
+
+            'countryCode' => 'required|string|max:10', // Changed from countryId to countryCode
             'countryName' => 'required|string',
             'provinceId' => 'required|integer',
             'provinceName' => 'required|string',
@@ -67,7 +66,7 @@ class AddressCreateRequest extends FormRequest
             // Address Lines
             'addressLine1.required' => 'Please provide your main address (Line 1).',
             'addressLine1.min' => 'Address must be at least 5 characters long.',
-            
+
             // Postal Code
             'postalCode.required' => 'Postal code is required.',
 
@@ -75,6 +74,7 @@ class AddressCreateRequest extends FormRequest
             'addressType.in' => 'Address type must be either home, office, or other.',
 
             // Location details
+            'countryCode.required' => 'Country Code is required.', // Updated message
             'countryName.required' => 'Country name is missing.',
             'provinceId.required' => 'Please select a province.',
             'cityId.required' => 'Please select a city.',

@@ -28,7 +28,7 @@ class AddressUpdateService
             $address->update([
                 // New Fields
                 'email' => $data['email'],
-                'address_line_1' => $data['addressLine1'], // Renamed from 'address'
+                'address_line_1' => $data['addressLine1'],
                 'address_line_2' => $data['addressLine2'] ?? null,
                 'postal_code' => $data['postalCode'],
                 'landmark' => $data['landmark'] ?? null,
@@ -43,6 +43,7 @@ class AddressUpdateService
                 'mobile' => $data['mobile'],
                 'backup_mobile' => $data['backupMobile'],
                 'country_name' => $data['countryName'],
+                'country_code' => $data['countryCode'], // Added here
                 'province_id' => $data['provinceId'],
                 'province_name' => $data['provinceName'],
                 'city_id' => $data['cityId'],

@@ -5,7 +5,7 @@ namespace Modules\Address\Service\User;
 use Illuminate\Support\Facades\Auth;
 use Modules\Address\App\Models\Address;
 use Modules\Shared\StatusCode\ErrorCode;
-use Modules\Shared\Exception\Exception; // Fixed namespace import
+use Modules\Shared\Exception\Exception;
 
 class AddressShowService
 {
@@ -16,7 +16,7 @@ class AddressShowService
         $address = Address::select(
             // New Fields
             'email',
-            'address_line_1 as addressLine1', // Renamed from 'address'
+            'address_line_1 as addressLine1',
             'address_line_2 as addressLine2',
             'postal_code as postalCode',
             'landmark',
@@ -31,6 +31,7 @@ class AddressShowService
             'mobile',
             'backup_mobile as backupMobile',
             'country_name as countryName',
+            'country_code as countryCode', // Added here
             'province_id as provinceId',
             'province_name as provinceName',
             'city_id as cityId',
