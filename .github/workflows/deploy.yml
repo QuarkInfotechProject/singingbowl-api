@@ -10,7 +10,7 @@ env:
   SSH_HOST: "202.51.71.55"
   SSH_USER: "ubuntu"
   SSH_PORT: "22"
-  PROJECT_PATH: "/var/www/api"
+  PROJECT_PATH: "/var/www/api/system"
   BRANCH: "master"
 
   PHP_PATH: "/usr/bin/php"
