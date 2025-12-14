@@ -1,13 +1,21 @@
 <?php
 
 namespace Modules\Cart\Service;
+
 use Modules\Product\App\Models\ProductOptionValue;
 use Modules\Cart\Service\CartRepository;
 use Modules\Shared\Exception\Exception;
+use Modules\DeliveryCharge\Service\User\DeliveryCalculatorService;
+use Modules\DeliveryCharge\App\Models\DeliveryCharge;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
+
 class CartIndexService
 {
-    public function __construct(private CartRepository $cartRepository)
-    {
+    public function __construct(
+        private CartRepository $cartRepository,
+        private DeliveryCalculatorService $deliveryCalculator
+    ) {
     }
 
     /**
@@ -42,9 +50,73 @@ class CartIndexService
             $total = $cartItems->sum('lineTotal');
 
             $totalDiscount = $coupons->sum('discountAmount');
-
             $totalDiscount = min($totalDiscount, $total);
-            $grandTotal = $total - $totalDiscount;
+
+            // --- START SHIPPING CALCULATION ---
+            $shippingCost = 0;
+            $shippingType = null;
+            $totalWeightGrams = $cart->total_weight ?? 0;
+
+            // Check if it is a registered user cart and user is logged in
+            if ($cartType === 'user' && Auth::guard('user')->check()) {
+                $user = Auth::guard('user')->user();
+
+                // Auto-fetch the user's address (User has a hasOne relationship with Address)
+                $defaultAddress = $user->address;
+
+                if ($defaultAddress) {
+                    // UPDATED MATCHING LOGIC
+                    // We check if ANY rule exists for this location (Code or Name) before loading all charges
+                    $hasSpecificCharge = DeliveryCharge::query()
+                        ->where(function($query) use ($defaultAddress) {
+                            if (!empty($defaultAddress->country_code)) {
+                                $query->where('country_code', $defaultAddress->country_code);
+                            }
+                            if (!empty($defaultAddress->country_name)) {
+                                $query->orWhere('country', $defaultAddress->country_name);
+                            }
+                            // Legacy check
+                            if (!empty($defaultAddress->country_id)) {
+                                $query->orWhere('country_id', $defaultAddress->country_id);
+                            }
+                        })
+                        ->exists();
+
+                    if ($hasSpecificCharge) {
+                        // --- MATCH FOUND: Calculate based on rules ---
+                        $allCharges = DeliveryCharge::all()->toArray();
+
+                        // Pass weight in GRAMS (calculator expects grams for tier comparisons: 20000g, 45000g, 100000g)
+                        $cartDataForService = ['total_weight' => $totalWeightGrams];
+
+                        // UPDATED: Pass countryCode explicitly so the calculator can use it
+                        $addressDataForService = [
+                            'countryCode' => $defaultAddress->country_code ?? null,
+                            'countryName' => $defaultAddress->country_name ?? null,
+                            'countryId'   => $defaultAddress->country_id ?? null,
+                            'cityId'      => $defaultAddress->city_id ?? null,
+                        ];
+
+                        $calculationResult = $this->deliveryCalculator->calculate(
+                            $cartDataForService,
+                            $addressDataForService,
+                            $allCharges
+                        );
+
+                        $shippingCost = $calculationResult['cost'];
+                        $shippingType = $calculationResult['type'];
+
+                    } else {
+                        // --- NO MATCH: Apply Default $9 Flat Rate ---
+                        $shippingCost = 9.00;
+                        $shippingType = 'global_flat_rate';
+                    }
+                }
+            }
+            // --- END SHIPPING CALCULATION ---
+
+            // Update Grand Total to include shipping
+            $grandTotal = ($total - $totalDiscount) + $shippingCost;
 
             $result = [
                 'items' => $cartItems,
@@ -52,7 +124,12 @@ class CartIndexService
                 'count' => $cartItems->count(),
                 'grand_total' => $grandTotal,
                 'total_discount' => $totalDiscount,
-                'coupons' => $coupons->toArray()
+                'coupons' => $coupons->toArray(),
+                'total_weight' => $totalWeightGrams, 
+
+                // Add Shipping info to response
+                'shipping_charge' => $shippingCost,
+                'shipping_type' => $shippingType,
             ];
 
             if ($cartType === 'user') {
@@ -63,6 +140,8 @@ class CartIndexService
 
             return $result;
         } catch (\Exception $exception) {
+            Log::error('Cart Index Error: ' . $exception->getMessage());
+            // Return empty structure on error to prevent frontend crash
             return $this->getEmptyCartStructure($cartType, $cartIdentifier);
         }
     }
@@ -101,7 +180,7 @@ class CartIndexService
                 $isColor = false;
                 if ($optionValue->option) {
                     $isColor = strtolower($optionValue->option->name) === 'color' ||
-                              strtolower($optionValue->option->label) === 'color';
+                             strtolower($optionValue->option->label) === 'color';
                 }
 
                 return [
@@ -139,7 +218,7 @@ class CartIndexService
                 $isColor = false;
                 if (isset($optionValue->option)) {
                     $isColor = strtolower($optionValue->option->name) === 'color' ||
-                              strtolower($optionValue->option->label) === 'color';
+                             strtolower($optionValue->option->label) === 'color';
                 }
 
                 $formattedOptions[] = [
@@ -199,12 +278,11 @@ class CartIndexService
             'count' => 0,
             'grand_total' => 0,
             'total_discount' => 0,
+            'shipping_charge' => 0,
             'coupons' => [],
             'cart_id' => $cartType === 'guest' ? $cartIdentifier : null
         ];
     }
-
-
 
     /**
      * Optimized cart items mapping with pre-computed values.
@@ -260,6 +338,7 @@ class CartIndexService
                 'unitPrice' => $unitPrice,
                 'lineTotal' => $lineTotal,
                 'quantity' => $cartItem->quantity,
+                'weight' => $product->weight,
             ];
         });
     }
@@ -272,7 +351,7 @@ class CartIndexService
         if ($variant && !empty($variantOptions)) {
             $colorOption = collect($variantOptions)->first(function ($option) {
                 return ($option['is_color'] ?? false) ||
-                       strtolower($option['option_name'] ?? '') === 'color';
+                        strtolower($option['option_name'] ?? '') === 'color';
             });
 
             if ($colorOption && isset($colorOption['value_id']) && isset($optionValuesWithFiles[$colorOption['value_id']])) {
@@ -312,3 +391,4 @@ class CartIndexService
         });
     }
 }
+

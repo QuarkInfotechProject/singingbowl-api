@@ -3,6 +3,8 @@
 namespace Modules\Address\App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+use Modules\Address\App\Models\Address; // Import the Address model
 
 class AddressUpdateRequest extends FormRequest
 {
@@ -11,12 +13,42 @@ class AddressUpdateRequest extends FormRequest
      */
     public function rules(): array
     {
+        // 1. Get the current logged-in user
+        $user = $this->user();
+
+        // 2. Find the existing address for this user to get its ID
+        // We match the logic in your Service: finding the user's first address.
+        $address = Address::where('user_id', $user->id)->first();
+        $ignoreId = $address ? $address->id : null;
+
         return [
             'firstName' => 'required|string|min:2|max:255|regex:/^[\pL\s\-]+$/u',
             'lastName' => 'required|string|min:2|max:255|regex:/^[\pL\s\-]+$/u',
-            'mobile' => 'required|integer|digits:10',
+            'email' => 'required|email|max:255',
+
+            // MOBILE VALIDATION FIX
+            'mobile' => [
+                'required',
+                'integer',
+                'digits:10',
+                // This tells Laravel: "Check if unique, but ignore the record with this ID"
+                Rule::unique('addresses', 'mobile')->ignore($ignoreId),
+            ],
+            
             'backupMobile' => 'nullable|integer|digits:10|different:mobile',
-            'address' => 'required|string|min:5|max:255',
+
+            'addressLine1' => 'required|string|min:5|max:255',
+            'addressLine2' => 'nullable|string|max:255',
+
+            'postalCode' => 'required|string|max:20',
+            'landmark' => 'nullable|string|max:255',
+
+            'addressType' => 'nullable|string|in:home,office,other',
+            'deliveryInstructions' => 'nullable|string|max:500',
+            'isDefault' => 'boolean',
+            'label' => 'nullable|string|max:255',
+
+            'countryCode' => 'required|string|max:10',
             'countryName' => 'required|string',
             'provinceId' => 'required|integer',
             'provinceName' => 'required|string',
@@ -30,46 +62,35 @@ class AddressUpdateRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'first_name.required' => 'Please provide your first name.',
-            'first_name.string' => 'Your first name should only include letters.',
-            'first_name.min' => 'Your first name must be at least 2 characters long.',
-            'first_name.max' => 'Your first name cannot be longer than 255 characters.',
-            'first_name.regex' => 'Your first name can only include letters, spaces, and hyphens.',
+            'firstName.required' => 'Please provide your first name.',
+            'firstName.string' => 'Your first name should only include letters.',
+            'firstName.min' => 'Your first name must be at least 2 characters long.',
+            'firstName.regex' => 'Your first name can only include letters, spaces, and hyphens.',
 
-            'last_name.required' => 'Please provide your last name.',
-            'last_name.string' => 'Your last name should only include letters.',
-            'last_name.min' => 'Your last name must be at least 2 characters long.',
-            'last_name.max' => 'Your last name cannot be longer than 255 characters.',
-            'last_name.regex' => 'Your last name can only include letters, spaces, and hyphens.',
+            'lastName.required' => 'Please provide your last name.',
+            'lastName.regex' => 'Your last name can only include letters, spaces, and hyphens.',
+
+            'email.required' => 'Please provide your email address.',
+            'email.email' => 'Please provide a valid email address.',
 
             'mobile.required' => 'Please provide your mobile number.',
             'mobile.digits' => 'Your mobile number must be exactly 10 digits long.',
+            'mobile.unique' => 'This mobile number is already registered by another user.',
 
-            'backup_mobile.digits' => 'Your backup mobile number must be exactly 10 digits long.',
-            'backup_mobile.different' => 'Your backup mobile number should be different from your primary mobile number.',
+            'backupMobile.digits' => 'Your backup mobile number must be exactly 10 digits long.',
+            'backupMobile.different' => 'Backup number must be different from primary mobile.',
 
-            'address.required' => 'Please provide your address.',
-            'address.string' => 'Your address should be a valid text.',
-            'address.min' => 'Your address must be at least 10 characters long.',
-            'address.max' => 'Your address cannot be longer than 255 characters.',
+            'addressLine1.required' => 'Please provide your main address (Line 1).',
+            'addressLine1.min' => 'Address must be at least 5 characters long.',
 
-            'countryName.required' => 'Please provide a country name.',
-            'countryName.string' => 'Your country name should be a valid text.',
+            'postalCode.required' => 'Postal code is required.',
+            'addressType.in' => 'Address type must be either home, office, or other.',
 
+            'countryCode.required' => 'Country Code is required.',
+            'countryName.required' => 'Country name is missing.',
             'provinceId.required' => 'Please select a province.',
-            'provinceId.integer' => 'Please provide province id.',
-            'provinceName.required' => 'Please provide a province name.',
-            'provinceName.string' => 'Your province name should be a valid text.',
-
             'cityId.required' => 'Please select a city.',
-            'cityId.integer' => 'Please provide city id.',
-            'cityName.required' => 'Please provide a city name.',
-            'cityName.string' => 'Your city name should be a valid text.',
-
             'zoneId.required' => 'Please select a zone.',
-            'zoneId.integer' => 'Please provide zone id.',
-            'zoneName.required' => 'Please provide a zone name.',
-            'zoneName.string' => 'Your zone name should be a valid text.',
         ];
     }
 

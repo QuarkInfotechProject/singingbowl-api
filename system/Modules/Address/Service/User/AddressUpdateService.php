@@ -11,7 +11,7 @@ use Modules\Shared\StatusCode\ErrorCode;
 
 class AddressUpdateService
 {
-    function update($data)
+    public function update($data)
     {
         $userId = Auth::user()->id;
 
@@ -26,12 +26,24 @@ class AddressUpdateService
             DB::beginTransaction();
 
             $address->update([
+                // New Fields
+                'email' => $data['email'],
+                'address_line_1' => $data['addressLine1'],
+                'address_line_2' => $data['addressLine2'] ?? null,
+                'postal_code' => $data['postalCode'],
+                'landmark' => $data['landmark'] ?? null,
+                'address_type' => $data['addressType'] ?? 'home',
+                'delivery_instructions' => $data['deliveryInstructions'] ?? null,
+                'is_default' => $data['isDefault'] ?? false,
+                'label' => $data['label'] ?? null,
+
+                // Existing Fields
                 'first_name' => $data['firstName'],
                 'last_name' => $data['lastName'],
                 'mobile' => $data['mobile'],
                 'backup_mobile' => $data['backupMobile'],
-                'address' => $data['address'],
                 'country_name' => $data['countryName'],
+                'country_code' => $data['countryCode'], // Added here
                 'province_id' => $data['provinceId'],
                 'province_name' => $data['provinceName'],
                 'city_id' => $data['cityId'],
@@ -42,8 +54,8 @@ class AddressUpdateService
 
             DB::commit();
         } catch (\Exception $exception) {
-            Log::info('Failed to update address.', ['error' => $exception->getMessage(), 'address_id' => $address->id]);
             DB::rollBack();
+            Log::info('Failed to update address.', ['error' => $exception->getMessage(), 'address_id' => $address->id]);
             throw $exception;
         }
     }

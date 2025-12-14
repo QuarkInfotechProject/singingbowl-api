@@ -18,6 +18,8 @@ class GuestCart extends Model
         'guest_token',
     ];
 
+    protected $appends = ['total_weight'];
+
     /**
      * Boot the model.
      */
@@ -37,6 +39,14 @@ class GuestCart extends Model
     public function items()
     {
         return $this->hasMany(GuestCartItem::class);
+    }
+
+    public function getTotalWeightAttribute()
+    {
+        return $this->items->sum(function ($item) {
+            $weight = $item->product->weight ?? 0;
+            return $item->quantity * $weight;
+        });
     }
 
     /**
@@ -162,7 +172,9 @@ class GuestCart extends Model
         return [
             'subTotal' => $subTotal,
             'totalDiscount' => $totalDiscount,
-            'total' => $total
+            'total' => $total,
+	    'totalWeight' => $this->total_weight
+
         ];
     }
 

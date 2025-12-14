@@ -95,6 +95,7 @@ class ProductUpdateService
             'special_price_end' => $productUpdateDTO->specialPriceEnd,
             'sku' => $productUpdateDTO->sku,
             'quantity' => $productUpdateDTO->quantity,
+	    'weight' => $productUpdateDTO->weight,
             'in_stock' => $productUpdateDTO->inStock,
             'additional_description' => $productUpdateDTO->additionalDescription,
             'sale_start' => $productUpdateDTO->saleStart,

@@ -43,6 +43,8 @@ class ProductUpdateRequest extends FormRequest
             'quantity' => $this->getQuantityRules(),
             'inStock' => $this->getInStockRules(),
 
+	    'weight' => 'required|numeric|min:0',
+
             'categories' => 'nullable|array',
             'categories.*' => 'exists:categories,id',
 
@@ -195,6 +197,10 @@ class ProductUpdateRequest extends FormRequest
             'quantity.min' => 'The quantity must be at least :min.',
             'inStock.required' => 'Please specify if the product is in stock.',
             'inStock.boolean' => 'The in stock field must be either true or false.',
+
+	    'weight.required' => 'Please specify the weight of the product.',
+            'weight.numeric' => 'The weight must be a number.',
+            'weight.min' => 'The weight must be at least 0.',
 
             'categories.array' => 'Categories must be provided as an array.',
             'categories.*.exists' => 'One or more selected categories do not exist.',

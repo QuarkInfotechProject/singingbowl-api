@@ -25,17 +25,24 @@ class DeliveryChargeUpdateService
             DB::beginTransaction();
 
             $deliveryCharge->update([
-                'description' => $data['description'],
-                'delivery_charge' => $data['deliveryCharge'],
+                'description'                => $data['description'],
+                'delivery_charge'            => $data['deliveryCharge'],
                 'additional_charge_per_item' => $data['additionalChargePerItem'],
-                'weight_based_charge' => $data['weightBasedCharge']
+                'weight_based_charge'        => $data['weightBasedCharge'],
+
+                // New fields updated here
+                'country'                    => $data['country'],
+                'country_code'               => $data['countryCode'] ?? null,
+                'charge_above_20kg'          => $data['chargeAbove20kg'] ?? 0,
+                'charge_above_45kg'          => $data['chargeAbove45kg'] ?? 0,
+                'charge_above_100kg'         => $data['chargeAbove100kg'] ?? 0,
             ]);
 
             DB::commit();
         } catch (\Exception $exception) {
             Log::error('Failed to update DeliveryCharge during transaction: ' . $exception->getMessage(), [
                 'exception' => $exception,
-                'data' => $data,
+                'data'      => $data,
                 'ipAddress' => $ipAddress
             ]);
             DB::rollBack();
@@ -44,7 +51,7 @@ class DeliveryChargeUpdateService
 
         Event::dispatch(
             new AdminUserActivityLogEvent(
-                'Delivery charge updated of description: ' . $deliveryCharge->description,
+                'Delivery charge updated for country: ' . $deliveryCharge->country . ' (' . $deliveryCharge->description . ')',
                 $deliveryCharge->id,
                 ActivityTypeConstant::DELIVERY_CHARGE_UPDATED,
                 $ipAddress

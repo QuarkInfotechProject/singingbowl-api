@@ -28,14 +28,14 @@ class ProductShowService
         $productFromSlug = $this->validateProduct($slug);
         $productId = $productFromSlug->id;
 
-        $cacheKey = $this->cacheService->generateProductKey($productId);
-        $cacheTags = ["product:{$productId}"];
+        // $cacheKey = $this->cacheService->generateProductKey($productId);
+        // $cacheTags = ["product:{$productId}"];
 
-        $cachedData = $this->cacheService->get($cacheKey, $cacheTags);
+        // $cachedData = $this->cacheService->get($cacheKey, $cacheTags);
 
-        if ($cachedData) {
-            return [$cachedData];
-        }
+        // if ($cachedData) {
+        //     return [$cachedData];
+        // }
 
         $product = Product::with([
             'categories:id,name',
@@ -103,7 +103,7 @@ class ProductShowService
             'couponData' => $this->getApplicableCouponsData($product)
         ];
 
-        $this->cacheService->put($cacheKey, $responseData, $this->cacheService->getProductDetailTtl(), $cacheTags);
+        // $this->cacheService->put($cacheKey, $responseData, $this->cacheService->getProductDetailTtl(), $cacheTags);
 
         return [$responseData];
     }
@@ -118,17 +118,17 @@ class ProductShowService
     // Modified getRelatedProducts to include caching
     private function getRelatedProducts(Product $product, int|string $parentProductId)
     {
-        $cacheKey = $this->cacheService->generateProductRelatedKey($parentProductId);
+        // $cacheKey = $this->cacheService->generateProductRelatedKey($parentProductId);
         // Tag with the parent product ID so it can be invalidated when the parent changes,
         // or when any of the related products themselves change (more complex, for now parent-based invalidation).
-        $cacheTags = ['product:' . $parentProductId, 'product:' . $parentProductId . ':related'];
+        // $cacheTags = ['product:' . $parentProductId, 'product:' . $parentProductId . ':related'];
 
 
-        $cachedRelatedProducts = $this->cacheService->get($cacheKey, $cacheTags);
+        // $cachedRelatedProducts = $this->cacheService->get($cacheKey, $cacheTags);
 
-        if ($cachedRelatedProducts !== null) {
-            return $cachedRelatedProducts;
-        }
+        // if ($cachedRelatedProducts !== null) {
+        //     return $cachedRelatedProducts;
+        // }
 
         $relatedProducts = $product->relatedProducts()->get();
         $relatedProductData = [];
@@ -176,10 +176,11 @@ class ProductShowService
             ];
         }
 
-        $this->cacheService->put($cacheKey, $relatedProductData, $this->cacheService->getProductDetailTtl(), $cacheTags); // Same TTL as parent for simplicity
+        // $this->cacheService->put($cacheKey, $relatedProductData, $this->cacheService->getProductDetailTtl(), $cacheTags); // Same TTL as parent for simplicity
 
         return $relatedProductData;
     }
+    
     private function getFirstProductVariant($product)
     {
         $productOptionId = $product->options()->where('has_image', true)->value('id');
@@ -199,6 +200,7 @@ class ProductShowService
             return null;
         }
     }
+    
     private function getKeySpecsData($product)
     {
         $keySpecs = $product->keySpecs()

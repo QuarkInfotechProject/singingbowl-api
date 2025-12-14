@@ -23,6 +23,7 @@ class ProductCreateDTO extends Constructor
     public string|null $saleStart;
     public string|null $saleEnd;
     public int|null $quantity;
+    public string|int|float|null $weight;
     public bool|null $inStock;
 
     /**

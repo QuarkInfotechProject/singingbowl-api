@@ -47,6 +47,7 @@ class Product extends Model
         'sale_start',
         'sale_end',
         'quantity',
+	'weight',
         'in_stock',
         'new_from',
         'new_to',
@@ -57,6 +58,7 @@ class Product extends Model
     protected $casts = [
         'status' => 'boolean',
         'in_stock' => 'boolean',
+	'weight' => 'float',
         'has_variant' => 'boolean',
         'specifications' => 'array',
         'key_specs' => 'array'
