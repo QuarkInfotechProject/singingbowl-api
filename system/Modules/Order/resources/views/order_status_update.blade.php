@@ -135,7 +135,7 @@
     <div
         style="background-color: white; border-radius: 8px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); width: 100%; max-width: 600px; margin: 20px auto; padding: 0 0 20px 0; text-align: center; border: 2px solid #f1f1f1; overflow: hidden;">
         <div style="width: 100%; margin: 0 0 15px 0; padding: 0;">
-            <img src="https://uat.zolpastore.com/_next/image?url=%2Fimages%2FLayer_1.png&w=1080&q=75" alt="ZOLPA LOGO"
+            <img src="https://www.singingbowlvillagenepal.com/assets/logo/logo3.png" alt="ZOLPA LOGO"
                 style="width: auto; height: 60px; display: block; margin: 0 auto; object-fit: contain;">
         </div>
 

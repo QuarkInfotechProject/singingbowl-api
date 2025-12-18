@@ -284,7 +284,7 @@
                             <td style="vertical-align: middle;">
                                 <div class="company-info">
                                     <div class="logo-container">
-                                        <img src="https://uat.zolpastore.com/_next/image?url=%2Fimages%2FLayer_1.png&w=1080&q=75"
+                                        <img src="https://www.singingbowlvillagenepal.com/assets/logo/logo3.png"
                                             alt="ZOLPA STORE" class="logo">
                                     </div>
                                     <div class="company-text">

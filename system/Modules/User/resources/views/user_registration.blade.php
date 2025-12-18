@@ -32,8 +32,8 @@
                     
                     <!-- ZOLPA Logo -->
                     <div style="margin-bottom: 20px;width: 100%;">
-                        <img src="https://uat.zolpastore.com/_next/image?url=%2Fimages%2FLayer_1.png&w=1080&q=75"
-                            alt="ZOLPA STORE Logo" class="zolpa-logo" style="height: 60px;width: auto;object-fit: contain;">
+                        <img src="https://www.singingbowlvillagenepal.com/assets/logo/logo3.png"
+                            alt="SingingBowl Logo" class="zolpa-logo" style="height: 60px;width: auto;object-fit: contain;">
                     </div>
                     
                     <h1 style="color: #333;font-size: 24px;margin-bottom: 15px;font-weight: 600;">{{ $sendRegisterEmailDTO->title ?? 'You\'re Almost There!' }}</h1>

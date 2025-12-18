@@ -149,8 +149,8 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="https://uat.zolpastore.com/_next/image?url=%2Fimages%2FLayer_1.png&w=1080&q=75"
-                alt="ZOLPA STORE Logo" style="height: 60px; width: auto; object-fit: contain;">
+            <img src="https://www.singingbowlvillagenepal.com/assets/logo/logo3.png"
+                alt="SingingBowl Logo" style="height: 60px; width: auto; object-fit: contain;">
         </div>
         <h2 style="font-weight: normal !important; font-size: 18px; color: #2c3e50; margin-top: 0;">Account Registration
             Successful</h2>

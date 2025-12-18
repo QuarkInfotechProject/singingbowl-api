@@ -48,8 +48,8 @@
                 <div class="email-container"
                     style="background-color: white;border-radius: 12px;box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);width: 100%;border: #e6f3ff 2px solid;max-width: 500px;margin: 30px auto;padding: 30px;text-align: center;">
                     <div style="margin-bottom: 20px;width: 100%;">
-                        <img src="https://uat.zolpastore.com/_next/image?url=%2Fimages%2FLayer_1.png&w=1080&q=75"
-                            alt="ZOLPA STORE Logo" class="zolpa-logo"
+                        <img src="https://www.singingbowlvillagenepal.com/assets/logo/logo3.png"
+                            alt="SingingBowl Logo" class="zolpa-logo"
                             style="width: auto;height: 80px;display: block;margin: 0 auto;object-fit: contain;">
                     </div>
                     <h1 style="color: #333;font-size: 24px;margin-bottom: 15px;">Password Reset</h1>
