@@ -35,7 +35,7 @@ return [
 
     'pdf' => [
         'enabled' => true,
-	'binary'  => env('WKHTMLTOPDF_BINARY', '/usr/local/bin/wkhtmltopdf'),
+	'binary'  => env('WKHTMLTOPDF_BINARY', '/usr/bin/wkhtmltopdf'),
         'timeout' => 60,
         'options' => [],
         'env'     => [],
@@ -43,7 +43,7 @@ return [
 
     'image' => [
         'enabled' => true,
-        'binary'  => env('WKHTML_IMG_BINARY', '/usr/local/bin/wkhtmltoimage'),
+        'binary'  => env('WKHTML_IMG_BINARY', '/usr/bin/wkhtmltoimage'),
         'timeout' => false,
         'options' => [],
         'env'     => [],
