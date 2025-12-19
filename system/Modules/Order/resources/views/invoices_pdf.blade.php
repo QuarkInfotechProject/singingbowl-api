@@ -21,13 +21,13 @@
             max-width: 900px;
             width: 100%;
             margin: auto;
-            border-bottom: 2px solid #6A3BAF;
+            border-bottom: 2px solid #DB5E18;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             background-color: #ffffff;
         }
 
         .header {
-            background: linear-gradient(135deg, #6A3BAF 0%, #8854D0 100%);
+            background: linear-gradient(135deg, #DB5E18 0%, #E67E22 100%);
             padding: 25px 0;
         }
 
@@ -97,7 +97,7 @@
             font-weight: 600;
             font-size: 18px;
             margin: 0 0 15px;
-            color: #6A3BAF;
+            color: #DB5E18;
             border-bottom: 1px solid #e0e0e0;
             padding-bottom: 8px;
         }
@@ -136,7 +136,7 @@
         }
 
         .products-table th {
-            background-color: #6A3BAF;
+            background-color: #DB5E18;
             color: #ffffff;
             padding: 12px 15px;
             text-align: left;
@@ -200,9 +200,9 @@
         .totals-table tr:last-child td {
             font-weight: 700;
             font-size: 16px;
-            background-color: rgba(106, 59, 175, 0.1);
-            border-bottom: 2px solid #6A3BAF;
-            color: #6A3BAF;
+            background-color: rgba(219, 94, 24, 0.1);
+            border-bottom: 2px solid #DB5E18;
+            color: #DB5E18;
         }
 
         .total-label {
@@ -285,13 +285,13 @@
                                 <div class="company-info">
                                     <div class="logo-container">
                                         <img src="https://www.singingbowlvillagenepal.com/assets/logo/logo3.png"
-                                            alt="ZOLPA STORE" class="logo">
+                                            alt="Singing Bowl Village" class="logo">
                                     </div>
                                     <div class="company-text">
                                         <div class="company-details">
                                             Putalisadak, Kathmandu, Nepal<br>
                                             Phone: +977-01-4123456<br>
-                                            Email: info@zolpastore.com<br>
+                                            Email: info@singingbowlvillagenepal.com<br>
                                             PAN: 123456789
                                         </div>
                                     </div>
@@ -462,7 +462,7 @@
                         switch ($status) {
                             case 'Delivered':
                                 $thankYouMessage = 'Order Delivered Successfully!';
-                                $footerMessage = 'Thank you for choosing ZOLPA STORE. We hope you love your purchase!';
+                                $footerMessage = 'Thank you for choosing Singing Bowl Village. We hope you love your purchase!';
                                 break;
                             case 'Cancelled':
                                 $thankYouMessage = 'Order Cancelled';
@@ -513,10 +513,10 @@
 
                     <div class="thank-you">{{ $thankYouMessage }}</div>
                     <div>{{ $footerMessage }}</div>
-                    <div>Phone: +977-01-4123456 | Email: support@zolpastore.com</div>
+                    <div>Phone: +977-01-4123456 | Email: support@singingbowlvillagenepal.com</div>
                     <div style="margin-top: 10px;">
-                        <strong style="color: #6A3BAF;">ZOLPA STORE</strong> | Putalisadak, Kathmandu, Nepal |
-                        www.zolpastore.com
+                        <strong style="color: #DB5E18;">Singing Bowl Village</strong> | Putalisadak, Kathmandu, Nepal |
+                        www.singingbowlvillagenepal.com
                     </div>
                     <div style="margin-top: 15px; font-size: 12px; color: #888;">
                         All prices are in Nepalese Rupees (Rs). Payment terms as per agreed conditions.
