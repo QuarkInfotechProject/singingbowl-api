@@ -8,6 +8,7 @@ use Modules\Payment\Facades\Gateway;
 use Modules\Payment\Gateways\Card;
 use Modules\Payment\Gateways\COD;
 use Modules\Payment\Gateways\Esewa;
+use Modules\Payment\Gateways\GetPayGateway;
 use Modules\Payment\Gateways\IMEPay;
 use Modules\Payment\Gateways\Khalti;
 
@@ -27,6 +28,7 @@ class PaymentServiceProvider extends ServiceProvider
         $this->registerKhalti();
         $this->registerCard();
         $this->registerIMEPay();
+        $this->registerGetPay();
     }
 
     private function registerCashOnDelivery()
@@ -52,5 +54,10 @@ class PaymentServiceProvider extends ServiceProvider
     private function registerIMEPay()
     {
         Gateway::register('IMEPay', new IMEPay());
+    }
+
+    private function registerGetPay()
+    {
+        Gateway::register('getPay', new GetPayGateway());
     }
 }

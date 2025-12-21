@@ -15,4 +15,8 @@ class UrlConstant
     public const SWIFT_SMS_BASE_URL = 'https://smartsms.swifttech.com.np:8083/api/Sms/ExecuteSendSmsV5';
     public const PATHAO_BASE_URL = 'https://courier-api-sandbox.pathao.com';
     public const PATHAO_TRACK_URL = 'https://parcel.pathao.com/tracking';
+
+    // GetPay Payment Gateway
+    public const GETPAY_BASE_URL = 'https://uat-bank-getpay.nchl.com.np/ecom-web-checkout';
+    public const GETPAY_MERCHANT_STATUS_URL = '/v1/secure-merchant/transactions/merchant-status';
 }
