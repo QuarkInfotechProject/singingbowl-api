@@ -47,11 +47,19 @@
         "icon": "media",
         "url": "/media",
         "permission_name": "view_media_center",
+        "status": 1 
+    },
+     {
+        "title": "Gallery",
+        "sort_order": 7,
+        "icon": "gallery",
+        "url":"/gallery",
+        "permission_name": "view_gallery",
         "status": 1
     },
     {
         "title": "System Configurations",
-        "sort_order": 7,
+        "sort_order": 8,
         "icon": "system",
         "url": null,
         "permission_name": "view_system_configurations",
@@ -85,7 +93,7 @@
     },
     {
         "title": "Catalog",
-        "sort_order": 8,
+        "sort_order": 9,
         "icon": "system",
         "url": null,
         "permission_name": "view_catalog",
@@ -183,7 +191,7 @@
     },
     {
         "title": "Contents",
-        "sort_order": 9,
+        "sort_order": 10,
         "icon": "contents",
         "url": "/contents",
         "permission_name": "view_contents",
@@ -191,7 +199,7 @@
     },
     {
         "title": "Blogs",
-        "sort_order": 10,
+        "sort_order": 11,
         "icon": "blog",
         "url": "/blog",
         "permission_name": "view_posts",
@@ -199,7 +207,7 @@
     },
     {
         "title": "Delivery Charges",
-        "sort_order": 11,
+        "sort_order": 12,
         "icon": "delivery",
         "url": "/delivery-charges",
         "permission_name": "view_delivery_charges",
@@ -207,7 +215,7 @@
     },
     {
         "title": "Corporate Order",
-        "sort_order": 12,
+        "sort_order": 13,
         "icon": "corporate",
         "url": "/corporateOrder",
         "permission_name": "view_corporate_orders",
@@ -215,7 +223,7 @@
     },
     {
         "title": "Warranty",
-        "sort_order": 13,
+        "sort_order": 14,
         "icon": "warranty",
         "url": null,
         "permission_name": "view_warranty_managements",
@@ -241,7 +249,7 @@
     },
    {
         "title": "Coupons",
-        "sort_order": 14,
+        "sort_order": 15,
         "icon": "coupon",
         "url": "/coupons",
         "permission_name": "view_coupons",
@@ -249,7 +257,7 @@
    },
     {
         "title": "Sales",
-        "sort_order": 15,
+        "sort_order": 16,
         "icon": "sales",
         "url": null,
         "permission_name": "view_sales",
@@ -291,7 +299,7 @@
     },
     {
         "title": "Support",
-        "sort_order": 16,
+        "sort_order": 17,
         "icon": "support",
         "url": null,
         "permission_name": "view_support",
@@ -325,7 +333,7 @@
     },
     {
         "title": "Others",
-        "sort_order": 17,
+        "sort_order": 18,
         "icon": "others",
         "url": "/others",
         "permission_name": "view_others_content",
@@ -333,7 +341,7 @@
     },
     {
         "title": "Analytics",
-        "sort_order": 18,
+        "sort_order": 19,
         "icon": "analytics",
         "url": "/analytics",
         "permission_name": "view_analytics",
@@ -341,7 +349,7 @@
     },
     {
         "title":"Flash Sale",
-        "sort_order":19,
+        "sort_order":20,
         "icon":"rosette-discount",
         "url":"/flash-sale",
         "permission_name":"view_flash_sales",

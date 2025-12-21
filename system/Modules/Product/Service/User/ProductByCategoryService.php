@@ -32,7 +32,7 @@ class ProductByCategoryService
                 'products.created_at'
             )->where('products.status', true)
             ->latest();
-        }])
+        }, 'files'])
             ->where('name', $categoryName)
             ->where('is_active', true)
             ->first();
@@ -41,6 +41,13 @@ class ProductByCategoryService
             throw new Exception('Category not found.', ErrorCode::NOT_FOUND);
         }
 
-        return $this->getBasicProductInformation($category->products);
+        return [
+            'id' => $category->id,
+            'name' => $category->name,
+            'slug' => $category->slug,
+            'description' => $category->description,
+            'logo' => $category->logo->url,
+            'products' => $this->getBasicProductInformation($category->products),
+        ];
     }
 }
