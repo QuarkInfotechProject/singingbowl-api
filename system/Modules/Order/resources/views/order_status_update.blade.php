@@ -156,8 +156,8 @@
         <hr style="border: none; height: 1px; background-color: #e9ecef; margin: 20px 20px;">
 
         <div style="color: #666; font-size: 14px; margin-top: 20px; padding: 0 20px;">
-            <p>Need help? Contact us at <a href="mailto:support@singingbowlvillagenepal.com"
-                    style="color: #DB5E18; text-decoration: none;">support@singingbowlvillagenepal.com</a></p>
+            <p>Need help? Contact us at <a href="mailto:singingbowlvillagenepal@gmail.com"
+                    style="color: #DB5E18; text-decoration: none;">singingbowlvillagenepal@gmail.com</a></p>
         </div>
 
         <div style="text-align: center; margin-top: 20px;">

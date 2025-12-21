@@ -513,7 +513,7 @@
 
                     <div class="thank-you">{{ $thankYouMessage }}</div>
                     <div>{{ $footerMessage }}</div>
-                    <div>Phone: +977-01-4123456 | Email: support@singingbowlvillagenepal.com</div>
+                    <div>Phone: +977-01-4123456 | Email: singingbowlvillagenepal@gmail.com</div>
                     <div style="margin-top: 10px;">
                         <strong style="color: #DB5E18;">Singing Bowl Village</strong> | Putalisadak, Kathmandu, Nepal |
                         www.singingbowlvillagenepal.com
