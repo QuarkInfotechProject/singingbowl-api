@@ -32,7 +32,7 @@ class ProductListByCategoryService
                 'products.created_at'
             )->where('products.status', true)
             ->latest();
-        }])
+        }, 'files'])
             ->select('id', 'name', 'slug', 'description', 'is_active')
             ->where('is_active', true)
             ->get();
@@ -51,6 +51,7 @@ class ProductListByCategoryService
                 'name' => $category->name,
                 'slug' => $category->slug,
                 'description' => $category->description,
+                'logo' => $category->logo->url,
                 'products' => $products
             ];
         }
