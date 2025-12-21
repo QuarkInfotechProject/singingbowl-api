@@ -50,7 +50,7 @@ class GetPayGateway implements GatewayInterface
             'oprKey'          => $config['opr_key'],
             'insKey'          => $config['ins_key'],
             'websiteDomain'   => $config['website_domain'],
-            'base_url'        => $config['base_api_url'],
+            'baseUrl'         => $config['base_api_url'],
             'price'           => (float) $order->total,
             'businessName'    => $config['business_name'],
             'imageUrl'        => $config['logo_url'],
