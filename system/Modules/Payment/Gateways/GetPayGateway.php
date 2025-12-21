@@ -17,7 +17,7 @@ class GetPayGateway implements GatewayInterface
 {
     public function getName(): string
     {
-        return 'getpay';
+        return 'getPay';
     }
 
     /**

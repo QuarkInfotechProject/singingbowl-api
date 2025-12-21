@@ -103,13 +103,18 @@ class OrderCreateService
                 $purchaseResult = $gateway->purchase($order, $request)->toArray();
                 $this->cartClearService->clearCart('user', $userId);
                 return $purchaseResult;
+            } elseif ($paymentMethod === GatewayConstant::GETPAY) {
+                $gateway = Gateway::get(GatewayConstant::GETPAY);
+                $purchaseResult = $gateway->purchase($order, $request);
+                // Don't clear cart yet - will be cleared after successful payment callback
+                return $purchaseResult;
             } else {
                 Log::warning(
-                    'Attempt to use non-COD payment method, which is currently configured to be disabled.',
+                    'Attempt to use unsupported payment method.',
                     ['paymentMethod' => $paymentMethod, 'orderId' => $order->id]
                 );
                 throw new Exception(
-                    "The payment method '{$paymentMethod}' is not currently supported. Please choose Cash on Delivery.",
+                    "The payment method '{$paymentMethod}' is not currently supported.",
                     ErrorCode::BAD_REQUEST
                 );
             }
@@ -171,7 +176,7 @@ class OrderCreateService
                 // Get the actual discount amount that was calculated and stored in the cart
                 $cartCoupon = $cart->coupons()->where('coupons.id', $coupon->id)->first();
                 $discountAmount = $cartCoupon ? $cartCoupon->pivot->discount_amount : 0;
-                
+
                 OrderCoupon::create([
                     'order_id' => $order->id,
                     'coupon_id' => $coupon->id,

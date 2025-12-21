@@ -12,7 +12,8 @@ class ValidPaymentMethod implements ValidationRule
         // 'IMEPay',
         // 'khalti',
         // 'card',
-        'cod'
+        'cod',
+        'getPay'
     ];
 
     public function validate(string $attribute, mixed $value, Closure $fail): void
