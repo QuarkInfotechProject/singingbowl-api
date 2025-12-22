@@ -8,7 +8,7 @@ class GeneralSupportIndexService
 {
     function index()
     {
-        return GeneralSupport::select('id', 'name', 'email', 'phone')
+        return GeneralSupport::select('id', 'name', 'email', 'subject', 'phone')
             ->get();
     }
 }

@@ -15,6 +15,7 @@ class GeneralSupport extends Model
     protected $fillable = [
         'name',
         'email',
+        'subject',
         'phone',
         'message'
     ];

@@ -16,6 +16,7 @@ class GeneralSupportCreateService
             GeneralSupport::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
+                'subject' => $data['subject'],
                 'phone' => $data['phone'],
                 'message' => $data['message'],
             ]);

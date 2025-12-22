@@ -14,6 +14,7 @@ class GeneralSupportCreateRequest extends FormRequest
         return [
             'name' => 'required|string|min:2|max:255',
             'email' => 'required|email:rfc,dns',
+            'subject' => 'required|string|max:255',
             'phone' => 'required|string',
             'message' => 'required|string|max:1000',
         ];
@@ -29,6 +30,11 @@ class GeneralSupportCreateRequest extends FormRequest
 
             'email.required' => 'We need your email address to contact you.',
             'email.email' => 'This doesn\'t look like a valid email address. Please check and try again.',
+
+            'subject.required' => 'Please enter a subject.',
+            'subject.string' => 'Subject should be text.',
+            'subject.max' => 'Subject is too long. Please keep it under 255 characters.',
+
 
             'phone.required' => 'Please enter your phone number.',
             'phone.regex' => 'Please enter a valid phone number.',
