@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
-use Modules\Cart\Service\ClearCartService;
+use Modules\Cart\Service\CartClearService;
 use Modules\Order\App\Models\Order;
 use Modules\Payment\GatewayResponse;
 use Modules\Payment\HasTransactionReference;
@@ -41,7 +41,7 @@ class GetPayResponse extends GatewayResponse implements HasTransactionReference
             ]);
 
             // Clear cart on successful verification
-            App::make(ClearCartService::class)->clearCart();
+            App::make(CartClearService::class)->clearCart('user', $this->order->user_id);
 
             return [
                 'transaction_code' => $preparedResponse['id'],
