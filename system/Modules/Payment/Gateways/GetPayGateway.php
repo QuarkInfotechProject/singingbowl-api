@@ -66,7 +66,7 @@ class GetPayGateway implements GatewayInterface
             ],
             'disableFields'   => [],
             'callbackUrl'     => [
-                'successUrl' => UrlConstant::PAYMENT_SUCCESS_URL . '?paymentMethod=' . $request->get('paymentMethod') . '&orderId=' . $order->id . '&',
+                'successUrl' => UrlConstant::PAYMENT_SUCCESS_URL . '?paymentMethod=' . $request->get('paymentMethod') . '&orderId=' . $order->id,
                 'failUrl'    => UrlConstant::PAYMENT_FAILURE_URL . '?orderId=' . $order->id . '&amount=' . $order->total . '&uuid=' . $uuid,
             ],
             'themeColor'      => "#5662FF",
