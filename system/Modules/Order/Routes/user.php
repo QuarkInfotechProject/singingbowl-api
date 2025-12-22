@@ -28,8 +28,8 @@ Route::group(['middleware' => ['auth:user', 'cart.auth']], function () {
         Route::post('/create', OrderCreateController::class);
         Route::get('/show/{id}', OrderShowController::class);
         Route::post('/cancel', OrderCancelController::class);
-        Route::post('/payment-fail', OrderPaymentFailController::class);
-        Route::post('/success', OrderCompleteController::class);
+        Route::match(['get', 'post'], '/payment-fail/{orderId}', OrderPaymentFailController::class);
+        Route::match(['get', 'post'], '/success/{paymentMethod}/{orderId}', OrderCompleteController::class);
     });
 });
 

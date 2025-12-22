@@ -37,4 +37,14 @@ class OrderCompleteRequest extends FormRequest
     {
         return true;
     }
+    /**
+     * Merge route parameters into request data for validation.
+     */
+    protected function prepareForValidation()
+    {
+        $this->merge([
+            'orderId'       => $this->route('orderId') ?? $this->orderId,
+            'paymentMethod' => $this->route('paymentMethod') ?? $this->paymentMethod,
+        ]);
+    }
 }
