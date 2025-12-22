@@ -19,6 +19,11 @@ class CartAuthMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
+        // Exclude payment callback routes from auth checks
+        if ($request->is('api/user/orders/success/*') || $request->is('api/user/orders/payment-fail/*')) {
+             return $next($request);
+        }
+
         try {
             // Check for authenticated user
             if (Auth::guard('user')->check()) {
