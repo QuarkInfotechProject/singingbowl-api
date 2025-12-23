@@ -1,0 +1,12 @@
+{
+    "name": "Gallery",
+    "alias": "gallery",
+    "description": "Simple gallery of images created by admin and visible to users.",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Gallery\\App\\Providers\\GalleryServiceProvider"
+    ],
+    "files": []
+}
+

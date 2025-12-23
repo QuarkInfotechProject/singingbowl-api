@@ -204,7 +204,7 @@
       <path value="$PROJECT_DIR$/system/vendor/staabm/side-effects-detector" />
     </include_path>
   </component>
-  <component name="PhpProjectSharedConfiguration" php_language_level="8.4" />
+  <component name="PhpProjectSharedConfiguration" php_language_level="8.3" />
   <component name="PhpStan">
     <PhpStan_settings>
       <phpstan_by_interpreter asDefaultInterpreter="true" interpreter_id="b9add29c-c907-47cf-a56f-db4fbafb7113" timeout="60000" />

@@ -18,6 +18,7 @@
     "Warranty": true,
     "Coupon": true,
     "Location": true,
+    "Gallery": true,
     "Review": true,
     "DeliveryCharge": true,
     "Cart": true,

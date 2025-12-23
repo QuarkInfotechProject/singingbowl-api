@@ -17,6 +17,6 @@ class UrlConstant
     public const PATHAO_TRACK_URL = 'https://parcel.pathao.com/tracking';
 
     // GetPay Payment Gateway
-    public const GETPAY_BASE_URL = 'https://uat-bank-getpay.nchl.com.np/ecom-web-checkout';
+    public const GETPAY_BASE_URL = 'https://ecom-getpay.nchl.com.np/ecom-web-checkout';
     public const GETPAY_MERCHANT_STATUS_URL = '/v1/secure-merchant/transactions/merchant-status';
 }

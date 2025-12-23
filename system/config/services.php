@@ -80,7 +80,7 @@ return [
         'name'           => 'GetPay',
         'business_name'  => env('GETPAY_BUSINESS_NAME', 'Singing Bowl'),
         'website_domain' => env('GETPAY_WEBSITE_DOMAIN'),
-        'base_api_url'   => env('GETPAY_BASE_URL', 'https://uat-bank-getpay.nchl.com.np/ecom-web-checkout/v1/secure-merchant/transactions'),
+        'base_api_url'   => env('GETPAY_BASE_URL', 'https://ecom-getpay.nchl.com.np/ecom-web-checkout/v1/secure-merchant/transactions'),
         'logo_url'       => env('GETPAY_LOGO_URL'),
         'pap_info'       => env('GETPAY_PAP_INFO'),
         'opr_key'        => env('GETPAY_OPR_KEY'),
