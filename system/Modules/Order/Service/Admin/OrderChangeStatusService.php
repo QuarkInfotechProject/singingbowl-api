@@ -62,7 +62,15 @@ class OrderChangeStatusService
             throw new Exception('Address not found for related order.', ErrorCode::NOT_FOUND);
         }
 
-        $templateName = 'order_status_' . strtolower($status);
+        // Map internal database status strings to YAML template names
+        $statusTemplateMap = [
+            Order::DELIVERED => 'delivered',
+            Order::READY_TO_SHIP => 'ready_to_ship',
+            Order::PARTIALLY_REFUNDED => 'partially_refunded',
+        ];
+
+        $mappedStatus = $statusTemplateMap[$status] ?? $status;
+        $templateName = 'order_status_' . strtolower($mappedStatus);
         $template = EmailTemplate::where('name', $templateName)->first();
 
         if (!$template) {
