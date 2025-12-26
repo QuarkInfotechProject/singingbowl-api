@@ -289,10 +289,9 @@
                                     </div>
                                     <div class="company-text">
                                         <div class="company-details">
-                                            Putalisadak, Kathmandu, Nepal<br>
+                                            Kwabahal chowk, Thamel-17, Kathmandu, Nepal<br>
                                             Phone: +977-01-4123456<br>
-                                            Email: info@zolpastore.com<br>
-                                            PAN: 123456789
+                                            Email: singingbowlvillagenepal@gmail.com<br>
                                         </div>
                                     </div>
                                 </div>

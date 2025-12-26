@@ -176,17 +176,19 @@
 
         <hr>
         <div class="contact-info">
-            <p>Need help? Contact us at <a href="mailto:support@zolpastore.com">support@zolpastore.com</a></p>
+            <p>Need help? Contact us at <a href="mailto:singingbowlvillagenepal@gmail.com">singingbowlvillagenepal@gmail.com</a></p>
         </div>
         <div class="social-media">
-            <a href="https://www.instagram.com/zolpa.storenp/"><img
-                    src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-            <a href="https://www.tiktok.com/@zolpa.store"><img
-                    src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok"></a>
-            <a href="https://www.facebook.com/share/1LUCsGXkmK/"><img
+            <a href="https://www.instagram.com/singingbowlvillage/?igsh=MTkxcDY0YzNvbWQyNg%3D%3D&utm_source=qr"><img
+                    src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>            
+            <a href="https://www.facebook.com/people/Singing-Bowl/61550698021090/"><img
                     src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" alt="Facebook"></a>
-            <a href="https://www.linkedin.com/in/zolpa-store-36097536a"><img
-                    src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+                    <a href="https://wa.me/9779851352794" style="display: inline-block; margin: 0 8px;"><img
+                    src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"
+                    style="width: 28px; height: 28px;"></a>
+            <a href="https://www.youtube.com/@singingbowlvillage" style="display: inline-block; margin: 0 8px;"><img
+                    src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"
+                    style="width: 28px; height: 28px;"></a>
         </div>
         <div class="footer">
             &copy; <?php echo e(now()->year); ?> <?php echo e(env('STORE_NAME', 'SINGING BOWL VILLAGE NEPAL')); ?>. All rights reserved.<br>
