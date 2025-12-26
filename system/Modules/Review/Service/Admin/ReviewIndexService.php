@@ -25,7 +25,7 @@ class ReviewIndexService
             'products.uuid as productId',
             'reviews.created_at as reviewedAt',
             DB::raw('COUNT(products.id) OVER() as productReviewCount'),
-            DB::raw('CASE WHEN reviews.type = "review" AND reviews.user_id IS NOT NULL THEN users.profile_picture ELSE NULL END as profilePicture')
+            DB::raw("CASE WHEN reviews.type = 'review' AND reviews.user_id IS NOT NULL THEN users.profile_picture ELSE NULL END as profilePicture")
         )
             ->join('products', 'products.id', '=', 'reviews.product_id')
             ->leftJoin('users', 'users.id', '=', 'reviews.user_id')
@@ -71,3 +71,4 @@ class ReviewIndexService
         return $reviews;
     }
 }
+

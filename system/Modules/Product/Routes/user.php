@@ -17,6 +17,8 @@ use Modules\Product\App\Http\Controllers\User\ProductShowNamesController;
 use Modules\Product\App\Http\Controllers\User\ProductGetRelatedProductController;
 use Modules\Product\App\Http\Controllers\User\ProductFilterDataController;
 use Modules\Product\App\Http\Controllers\User\ProductListByCategoryController;
+use Modules\Product\App\Http\Controllers\User\ProductBestSellerController;
+use Modules\Product\App\Http\Controllers\User\ProductSimpleSearchController;
 
 /*
     |--------------------------------------------------------------------------
@@ -32,6 +34,7 @@ use Modules\Product\App\Http\Controllers\User\ProductListByCategoryController;
 Route::middleware(['guest'])->group(function () {
     Route::get('/products/names', ProductShowNamesController::class);
     Route::get('/products/list-by-category', ProductListByCategoryController::class);
+    Route::get('/products/bestsellers', ProductBestSellerController::class);
     Route::get('/products/{categoryName}', ProductByCategoryController::class);
     Route::post('/products', ProductIndexController::class);
     Route::get('/shop', ProductShopController::class);
@@ -45,6 +48,10 @@ Route::middleware(['guest'])->group(function () {
     Route::get('/products/show/variant/{id}', ProductGetVariantDescriptionController::class);
     Route::get('/products/get/bulk-offers', ProductGetBulkOffersController::class);
     Route::get('/products/related/{slug}', ProductGetRelatedProductController::class);
+
+    // Simple Search (without Meilisearch)
+    Route::get('/search', [ProductSimpleSearchController::class, 'search']);
+    Route::get('/search/suggestions', [ProductSimpleSearchController::class, 'suggestions']);
 
 });
 
