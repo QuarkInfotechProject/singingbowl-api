@@ -25,7 +25,7 @@ class NotifyUsersOfOrderShipped
         $mobile = $event->mobile;
 
 
-        $message = "Dear {$firstName}, Your order #{$orderId} from ZOLPA STORE has been Shipped. Track your order at: http://localhost:98/admin/track/$orderId/$mobile";
+        $message = "Dear {$firstName}, Your order #{$orderId} from SINGING BOWL VILLAGE NEPAL has been Shipped. Track your order at: https://www.singingbowlvillagenepal.com/admin/track/$orderId/$mobile";
         $this->smsService->sendSms($mobile, $message);
     }
 }

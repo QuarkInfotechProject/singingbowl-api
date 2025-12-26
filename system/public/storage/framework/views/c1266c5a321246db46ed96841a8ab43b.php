@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <meta name="supported-color-schemes" content="light dark">
-    <title>Welcome to ZOLPA STORE</title>
+    <title>Welcome to SINGING BOWL VILLAGE NEPAL</title>
 
     <style>
         body {
@@ -189,7 +189,7 @@
                     src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
         </div>
         <div class="footer">
-            &copy; <?php echo e(now()->year); ?> <?php echo e(env('STORE_NAME', 'ZOLPA STORE')); ?>. All rights reserved.<br>
+            &copy; <?php echo e(now()->year); ?> <?php echo e(env('STORE_NAME', 'SINGING BOWL VILLAGE NEPAL')); ?>. All rights reserved.<br>
             <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
         </div>
     </div>

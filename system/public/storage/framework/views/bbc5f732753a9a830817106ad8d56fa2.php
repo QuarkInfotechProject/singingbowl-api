@@ -285,7 +285,7 @@
                                 <div class="company-info">
                                     <div class="logo-container">
                                         <img src="https://www.singingbowlvillagenepal.com/assets/logo/logo3.png"
-                                            alt="ZOLPA STORE" class="logo">
+                                            alt="SINGING BOWL VILLAGE NEPAL" class="logo">
                                     </div>
                                     <div class="company-text">
                                         <div class="company-details">
@@ -465,7 +465,7 @@
                         switch ($status) {
                             case 'Delivered':
                                 $thankYouMessage = 'Order Delivered Successfully!';
-                                $footerMessage = 'Thank you for choosing ZOLPA STORE. We hope you love your purchase!';
+                                $footerMessage = 'Thank you for choosing SINGINING BOWL VILLAGE NEPAL. We hope you love your purchase!';
                                 break;
                             case 'Cancelled':
                                 $thankYouMessage = 'Order Cancelled';
@@ -516,10 +516,10 @@
 
                     <div class="thank-you"><?php echo e($thankYouMessage); ?></div>
                     <div><?php echo e($footerMessage); ?></div>
-                    <div>Phone: +977-01-4123456 | Email: support@zolpastore.com</div>
+                    <div>Phone: +977-01-4123456 | Email: singingbowlvillagenepal@gmail.com</div>
                     <div style="margin-top: 10px;">
-                        <strong style="color: #6A3BAF;">ZOLPA STORE</strong> | Putalisadak, Kathmandu, Nepal |
-                        www.zolpastore.com
+                        <strong style="color: #6A3BAF;">SINGING BOWL VILLAGE NEPAL</strong> | Kwabahal Chowk & Jyatha Street Thamel-17 Kathmandu, Nepal|
+                        https://www.singingbowlvillagenepal.com
                     </div>
                     <div style="margin-top: 15px; font-size: 12px; color: #888;">
                         All prices are in Nepalese Rupees (Rs). Payment terms as per agreed conditions.

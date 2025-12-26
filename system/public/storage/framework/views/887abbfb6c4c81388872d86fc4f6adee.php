@@ -86,7 +86,7 @@
                     
                     <!-- Footer -->
                     <div class="footer-text" style="color: #999;font-size: 12px;margin-top: 30px;border-top: 1px solid #e9ecef;padding-top: 20px;">
-                        © <?php echo e(now()->year); ?> ZOLPA STORE. All rights reserved.
+                        © <?php echo e(now()->year); ?> SINGING BOWL VILLAGE NEPAL. All rights reserved.
                         <br><br>
                         <a href="#" style="color: #999;text-decoration: none;margin: 0 10px;">Privacy Policy</a> | 
                         <a href="#" style="color: #999;text-decoration: none;margin: 0 10px;">Terms of Service</a>
