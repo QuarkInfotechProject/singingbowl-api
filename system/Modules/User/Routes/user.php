@@ -5,6 +5,7 @@ use Modules\User\App\Http\Controllers\Profile\UserProfileShowController;
 use Modules\User\App\Http\Controllers\Profile\UserProfileUpdateController;
 use Modules\User\App\Http\Controllers\UserChangePasswordController;
 use Modules\User\App\Http\Controllers\UserForgotPasswordController;
+use Modules\User\App\Http\Controllers\UserGoogleLoginController;
 use Modules\User\App\Http\Controllers\UserLoginController;
 use Modules\User\App\Http\Controllers\UserLogoutController;
 use Modules\User\App\Http\Controllers\UserRegisterController;
@@ -20,6 +21,7 @@ Route::middleware(['guest'])->group(function () {
     Route::post('/reset-password', UserResetPasswordController::class);
 
     Route::post('/login', UserLoginController::class);
+    Route::post('/auth/google/login', UserGoogleLoginController::class);
 
     Route::get('/auth/{provider}/redirect', UserSocialLoginRedirectController::class);
     Route::get('/auth/{provider}/callback', UserSocialLoginCallbackController::class);
