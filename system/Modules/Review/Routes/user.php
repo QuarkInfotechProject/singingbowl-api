@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Modules\Review\App\Http\Controllers\User\Question\QuestionCreateController;
 use Modules\Review\App\Http\Controllers\User\Review\ReviewCreateController;
+use Modules\Review\App\Http\Controllers\User\Review\ReviewIndexController;
 
 /*
     |--------------------------------------------------------------------------
@@ -15,6 +16,9 @@ use Modules\Review\App\Http\Controllers\User\Review\ReviewCreateController;
     |
 */
 
+// Public routes (no auth required)
+Route::get('/reviews', ReviewIndexController::class);
+
 Route::group(['middleware' => 'auth:user'], function () {
 
     Route::prefix('reviews')->group(function () {
@@ -23,3 +27,4 @@ Route::group(['middleware' => 'auth:user'], function () {
 });
 
 Route::post('questions/create', QuestionCreateController::class);
+
