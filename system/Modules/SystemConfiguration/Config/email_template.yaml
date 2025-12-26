@@ -8,7 +8,7 @@
   You can now access the admin panel and start managing the system.
 
   Thank You,
-  ZOLPA STORE Team'
+  Singing Bowl Village Team'
   description: 'Email to newly created admin user. {FULLNAME} - user fullname {EMAIL} - email address of user'
 
 - name: admin_user_blocked
@@ -21,7 +21,7 @@
   Please contact the system administrator for further details and assistance.
 
   Thank You,
-  ZOLPA STORE Team'
+  Singing Bowl Village Team'
   description: 'Email to admin user blocked. {FULLNAME} - user fullname {EMAIL} - email address of user'
 
 - name: admin_user_deleted
@@ -34,7 +34,7 @@
   Please contact the system administrator for further details and assistance.
 
   Thank You,
-  ZOLPA STORE Team'
+  Singing Bowl Village Team'
   description: 'Email to admin user deleted. {FULLNAME} - user fullname {EMAIL} - email address of user'
 
 - name: user_registration
@@ -42,7 +42,7 @@
   subject: Complete Your Registration - Verification Code
   message: 'Dear User,
 
-  Thank you for registering with ZOLPA STORE!
+  Thank you for registering with Singing Bowl Village!
 
   Please use the verification code below to complete your registration:
 
@@ -51,7 +51,7 @@
   Enter this code on the registration page to activate your account.
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Email to newly registered user. {CODE} - verification code'
 
 - name: end_user_forgot_password
@@ -67,7 +67,7 @@
   This code will expire soon for security reasons.
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Email to user with password reset OTP code. {FULLNAME} - user fullname {OTP_CODE} - verification code'
 
 - name: order_invoice
@@ -80,7 +80,7 @@
   Feel free to reach out if you have any questions about your order.
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Email to end user with order invoice.'
 
 - name: user_blocked
@@ -93,7 +93,7 @@
   Please contact our support team for further details and assistance.
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Email to user blocked. {FULLNAME} - user fullname {EMAIL} - email address of user'
 
 - name: user_activated
@@ -103,15 +103,15 @@
 
   Great news! Your account with username {EMAIL} has been successfully activated.
 
-  You can now enjoy full access to all ZOLPA STORE features and services.
+  You can now enjoy full access to all Singing Bowl Village features and services.
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Email to activated user. {FULLNAME} - user fullname {EMAIL} - email address of user'
 
 - name: customer_note_added
-  subject: Note Added to Your ZOLPA STORE Order
-  title: Note Added to Your ZOLPA STORE Order from {DATE}
+  subject: Note Added to Your Singing Bowl Village Order
+  title: Note Added to Your Singing Bowl Village Order from {DATE}
   message: 'Dear {FULLNAME},
 
   We have added an important note to your order:
@@ -121,11 +121,11 @@
   Your order invoice is attached for your reference.
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Email sent when a note is attached to order. {FULLNAME} - customer name {NOTE} - Note to customer {DATE} - date'
 
 - name: order_status_pending_payment
-  subject: 'Action Required: Complete Payment for Your ZOLPA STORE Order {ORDERID}'
+  subject: 'Action Required: Complete Payment for Your Singing Bowl Village Order {ORDERID}'
   title: Payment Pending for Order {ORDERID}
   message: 'Dear {FULLNAME},
 
@@ -134,11 +134,11 @@
   If you have any questions or need assistance, please contact our support team.
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Email sent when an order is awaiting payment. {FULLNAME} - customer name {ORDERID} - The order ID.'
 
 - name: order_status_processing
-  subject: Your ZOLPA STORE Order {ORDERID} Has Been Placed!
+  subject: Your Singing Bowl Village Order {ORDERID} Has Been Placed!
   title: Order Confirmation for {ORDERID}
   message: 'Dear {FULLNAME},
 
@@ -147,11 +147,11 @@
   We will notify you once your order is ready for shipment.
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Email sent when an order is placed and processing. {FULLNAME} - customer name {ORDERID} - The order ID.'
 
 - name: order_status_on_hold
-  subject: 'Important: Your ZOLPA STORE Order {ORDERID} is On Hold'
+  subject: 'Important: Your Singing Bowl Village Order {ORDERID} is On Hold'
   title: Order {ORDERID} On Hold
   message: 'Dear {FULLNAME},
 
@@ -160,11 +160,11 @@
   We will contact you shortly with more details or please reach out to our support team for clarification.
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Email sent when an order is on hold. {FULLNAME} - customer name {ORDERID} - The order ID.'
 
 - name: order_status_ready_to_ship
-  subject: Your ZOLPA STORE Order {ORDERID} is Ready for Shipment!
+  subject: Your Singing Bowl Village Order {ORDERID} is Ready for Shipment!
   title: Order {ORDERID} Ready to Ship
   message: 'Dear {FULLNAME},
 
@@ -173,11 +173,11 @@
   You will receive another email with tracking details once your order has been shipped.
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Email sent when an order is ready to ship. {FULLNAME} - customer name {ORDERID} - The order ID.'
 
 - name: order_status_shipped
-  subject: Your ZOLPA STORE Order {ORDERID} Has Been Shipped!
+  subject: Your Singing Bowl Village Order {ORDERID} Has Been Shipped!
   title: Order {ORDERID} Shipped
   message: 'Dear {FULLNAME},
 
@@ -186,11 +186,11 @@
   You can track your order using the following link: {TRACKING_LINK}
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Email sent when an order is shipped. {FULLNAME} - customer name {ORDERID} - The order ID. {TRACKING_LINK} - Link to track the order.'
 
 - name: order_status_delivered
-  subject: Great News! Your ZOLPA STORE Order {ORDERID} Has Been Delivered!
+  subject: Great News! Your Singing Bowl Village Order {ORDERID} Has Been Delivered!
   title: Your Order {ORDERID} Has Arrived!
   message: 'Dear {FULLNAME},
 
@@ -199,11 +199,11 @@
   We hope you enjoy your purchase! We''d love to hear what you think. Feel free to leave a review on our website for the products you bought.
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Email sent when an order is marked as delivered. {FULLNAME} - customer name {ORDERID} - The order ID.'
 
 - name: order_status_cancelled
-  subject: Your ZOLPA STORE Order {ORDERID} Has Been Cancelled
+  subject: Your Singing Bowl Village Order {ORDERID} Has Been Cancelled
   title: Order Cancellation Confirmation for {ORDERID}
   message: 'Dear {FULLNAME},
 
@@ -214,11 +214,11 @@
   We''re sorry to see you go and hope to serve you again in the future.
 
   Thank You,
-  The ZOLPA STORE Team'
+  The Singing Bowl Village Team'
   description: 'Email sent when an order is cancelled. {FULLNAME} - customer name {ORDERID} - The order ID.'
 
 - name: order_status_failed
-  subject: 'Important: Your ZOLPA STORE Order {ORDERID} Has Failed'
+  subject: 'Important: Your Singing Bowl Village Order {ORDERID} Has Failed'
   title: Order {ORDERID} Failed
   message: 'Dear {FULLNAME},
 
@@ -227,11 +227,11 @@
   Please contact our support team for assistance or to re-place your order.
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Email sent when an order fails. {FULLNAME} - customer name {ORDERID} - The order ID.'
 
 - name: order_status_failed_delivery
-  subject: 'Important: Delivery Attempt for Your ZOLPA STORE Order {ORDERID} Failed'
+  subject: 'Important: Delivery Attempt for Your Singing Bowl Village Order {ORDERID} Failed'
   title: Delivery Failed for Order {ORDERID}
   message: 'Dear {FULLNAME},
 
@@ -240,11 +240,11 @@
   Please contact our support team to reschedule your delivery or update your address.
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Email sent when a delivery attempt fails. {FULLNAME} - customer name {ORDERID} - The order ID.'
 
 - name: order_status_awaiting_refund
-  subject: Your ZOLPA STORE Order {ORDERID} is Awaiting Refund
+  subject: Your Singing Bowl Village Order {ORDERID} is Awaiting Refund
   title: Refund in Progress for Order {ORDERID}
   message: 'Dear {FULLNAME},
 
@@ -253,11 +253,11 @@
   We will notify you once the refund has been successfully completed.
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Email sent when an order is awaiting refund. {FULLNAME} - customer name {ORDERID} - The order ID.'
 
 - name: order_status_refunded
-  subject: Your ZOLPA STORE Order {ORDERID} Has Been Refunded
+  subject: Your Singing Bowl Village Order {ORDERID} Has Been Refunded
   title: Refund Confirmation for Order {ORDERID}
   message: 'Dear {FULLNAME},
 
@@ -266,11 +266,11 @@
   Please allow 3-5 business days for the refund to reflect in your account. A credit note is attached for your records.
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Email sent when an order is fully refunded. {FULLNAME} - customer name {ORDERID} - The order ID. {REFUND_AMOUNT} - The amount refunded.'
 
 - name: order_status_partially_refunded
-  subject: Your ZOLPA STORE Order {ORDERID} Has Been Partially Refunded
+  subject: Your Singing Bowl Village Order {ORDERID} Has Been Partially Refunded
   title: Partial Refund Confirmation for Order {ORDERID}
   message: 'Dear {FULLNAME},
 
@@ -279,33 +279,32 @@
   Please allow 3-5 business days for the refund to reflect in your account. A credit note is attached for your records.
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Email sent when an order is partially refunded. {FULLNAME} - customer name {ORDERID} - The order ID. {REFUND_AMOUNT} - The amount refunded.'
 
 - name: user_created
-  subject: Welcome to ZOLPA STORE - Account Created
-  title: Welcome to ZOLPA STORE
+  subject: Welcome to Singing Bowl Village - Account Created
+  title: Welcome to Singing Bowl Village
   message: 'Dear {FULLNAME},
 
-  Welcome to ZOLPA STORE! Your account with email {EMAIL} has been successfully created.
+  Welcome to Singing Bowl Village! Your account with email {EMAIL} has been successfully created.
 
   You can now browse our products and start shopping with us.
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Email to newly created user. {FULLNAME} - user fullname {EMAIL} - email address of user'
 
 - name: oauth_welcome
-  subject: Welcome to ZOLPA STORE - Account Created
-  title: Welcome to ZOLPA STORE
+  subject: Welcome to Singing Bowl Village - Account Created
+  title: Welcome to Singing Bowl Village
   message: 'Dear {FULLNAME},
 
-  Welcome to ZOLPA STORE! Your account has been successfully created using your {PROVIDER} account.
+  Welcome to Singing Bowl Village! Your account has been successfully created using your {PROVIDER} account.
 
   Your account with email {EMAIL} is now active and ready to use. You can now shop our amazing products and enjoy a seamless shopping experience.
 
   Thank You,
-  ZOLPA STORE'
+  Singing Bowl Village'
   description: 'Welcome email for OAuth users. {FULLNAME} - user fullname {EMAIL} - email address {PROVIDER} - OAuth provider name'
-
 

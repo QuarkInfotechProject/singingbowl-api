@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <meta name="supported-color-schemes" content="light dark">
-    <title>{{ $sendRegisterEmailDTO->title ?? 'ZOLPA STORE' }}</title>
+    <title>{{ $sendRegisterEmailDTO->title ?? 'Singing Bowl Village' }}</title>
 </head>
 
 <body
@@ -20,7 +20,7 @@
             .code-container { background-color: #3d3d3d !important; }
             .contact-info { color: #cccccc !important; }
             .footer-text { color: #999999 !important; }
-            .zolpa-logo { filter: brightness(0) invert(1); }
+            .sbv-logo { filter: brightness(0) invert(1); }
         }
     </style>
 
@@ -30,10 +30,10 @@
                 <div class="email-container"
                     style="background-color: white;border-radius: 12px;box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);width: 100%;border: #e6f3ff 2px solid;max-width: 500px;margin: 30px auto;padding: 30px;text-align: center;">
                     
-                    <!-- ZOLPA Logo -->
+                    <!-- Singing Bowl Village Logo -->
                     <div style="margin-bottom: 20px;width: 100%;">
                         <img src="https://www.singingbowlvillagenepal.com/assets/logo/logo3.png"
-                            alt="SingingBowl Logo" class="zolpa-logo" style="height: 60px;width: auto;object-fit: contain;">
+                            alt="Singing Bowl Village Logo" class="sbv-logo" style="height: 60px;width: auto;object-fit: contain;">
                     </div>
                     
                     <h1 style="color: #333;font-size: 24px;margin-bottom: 15px;font-weight: 600;">{{ $sendRegisterEmailDTO->title ?? 'You\'re Almost There!' }}</h1>
@@ -60,24 +60,26 @@
                     
                     <!-- Contact Information -->
                     <div class="contact-info" style="color: #666;font-size: 14px;margin-top: 20px;">
-                        Need help? Contact us at <a href="mailto:support@zolpastore.com" style="color: #0066cc;text-decoration: none;">support@zolpastore.com</a>
+                        Need help? Contact us at <a href="mailto:singingbowlvillagenepal@gmail.com" style="color: #0066cc;text-decoration: none;">singingbowlvillagenepal@gmail.com</a>
+                        <br>Phone: 977 985-1352794
+                        <br>WhatsApp: <a href="https://wa.me/9779851352794" style="color: #0066cc;text-decoration: none;">977 985-1352794</a>
                     </div>
                     
                     <!-- Social Media Links -->
                     <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-top: 25px;">
                         <tr>
                             <td align="center">
-                                <a href="https://www.instagram.com/zolpa.storenp/" style="display: inline-block;margin: 0 8px;"><img
+                                <a href="https://www.instagram.com/singingbowlvillage/?igsh=MTkxcDY0YzNvbWQyNg%3D%3D&utm_source=qr" style="display: inline-block;margin: 0 8px;"><img
                                         src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"
                                         style="width: 28px;height: 28px;"></a>
-                                <a href="https://www.tiktok.com/@zolpa.store" style="display: inline-block;margin: 0 8px;"><img
-                                        src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok"
-                                        style="width: 28px;height: 28px;"></a>
-                                <a href="https://www.facebook.com/share/1LUCsGXkmK/" style="display: inline-block;margin: 0 8px;"><img
+                                <a href="https://www.facebook.com/people/Singing-Bowl/61550698021090/" style="display: inline-block;margin: 0 8px;"><img
                                         src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" alt="Facebook"
                                         style="width: 28px;height: 28px;"></a>
-                                <a href="https://www.linkedin.com/in/zolpa-store-36097536a" style="display: inline-block;margin: 0 8px;"><img
-                                        src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"
+                                <a href="https://www.youtube.com/@singingbowlvillage" style="display: inline-block;margin: 0 8px;"><img
+                                        src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"
+                                        style="width: 28px;height: 28px;"></a>
+                                <a href="https://wa.me/9779851352794" style="display: inline-block;margin: 0 8px;"><img
+                                        src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"
                                         style="width: 28px;height: 28px;"></a>
                             </td>
                         </tr>
@@ -85,10 +87,10 @@
                     
                     <!-- Footer -->
                     <div class="footer-text" style="color: #999;font-size: 12px;margin-top: 30px;border-top: 1px solid #e9ecef;padding-top: 20px;">
-                        © {{ now()->year }} ZOLPA STORE. All rights reserved.
+                        © {{ now()->year }} Singing Bowl Village. All rights reserved.
                         <br><br>
-                        <a href="#" style="color: #999;text-decoration: none;margin: 0 10px;">Privacy Policy</a> | 
-                        <a href="#" style="color: #999;text-decoration: none;margin: 0 10px;">Terms of Service</a>
+                        <a href="https://www.singingbowlvillagenepal.com/privacy-policy" style="color: #999;text-decoration: none;margin: 0 10px;">Privacy Policy</a> | 
+                        <a href="https://www.singingbowlvillagenepal.com/terms-and-condition" style="color: #999;text-decoration: none;margin: 0 10px;">Terms of Service</a>
                     </div>
                 </div>
             </td>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <meta name="supported-color-schemes" content="light dark">
-    <title>Welcome to ZOLPA STORE</title>
+    <title>Welcome to Singing Bowl Village</title>
 
     <style>
         body {
@@ -150,7 +150,7 @@
     <div class="container">
         <div class="logo">
             <img src="https://www.singingbowlvillagenepal.com/assets/logo/logo3.png"
-                alt="SingingBowl Logo" style="height: 60px; width: auto; object-fit: contain;">
+                alt="Singing Bowl Village Logo" style="height: 60px; width: auto; object-fit: contain;">
         </div>
         <h2 style="font-weight: normal !important; font-size: 18px; color: #2c3e50; margin-top: 0;">Account Registration
             Successful</h2>
@@ -176,21 +176,23 @@
 
         <hr>
         <div class="contact-info">
-            <p>Need help? Contact us at <a href="mailto:support@zolpastore.com">support@zolpastore.com</a></p>
+            <p>Need help? Contact us at <a href="mailto:singingbowlvillagenepal@gmail.com">singingbowlvillagenepal@gmail.com</a></p>
+            <p>Phone: 977 985-1352794</p>
+            <p>WhatsApp: <a href="https://wa.me/9779851352794">977 985-1352794</a></p>
         </div>
         <div class="social-media">
-            <a href="https://www.instagram.com/zolpa.storenp/"><img
+            <a href="https://www.instagram.com/singingbowlvillage/?igsh=MTkxcDY0YzNvbWQyNg%3D%3D&utm_source=qr"><img
                     src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
-            <a href="https://www.tiktok.com/@zolpa.store"><img
-                    src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok"></a>
-            <a href="https://www.facebook.com/share/1LUCsGXkmK/"><img
+            <a href="https://www.facebook.com/people/Singing-Bowl/61550698021090/"><img
                     src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" alt="Facebook"></a>
-            <a href="https://www.linkedin.com/in/zolpa-store-36097536a"><img
-                    src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"></a>
+            <a href="https://www.youtube.com/@singingbowlvillage"><img
+                    src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"></a>
+            <a href="https://wa.me/9779851352794"><img
+                    src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
         </div>
         <div class="footer">
-            &copy; {{ now()->year }} {{ env('STORE_NAME', 'ZOLPA STORE') }}. All rights reserved.<br>
-            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+            &copy; {{ now()->year }} {{ env('STORE_NAME', 'Singing Bowl Village') }}. All rights reserved.<br>
+            <a href="https://www.singingbowlvillagenepal.com/privacy-policy">Privacy Policy</a> | <a href="https://www.singingbowlvillagenepal.com/terms-and-condition">Terms of Service</a>
         </div>
     </div>
 </body>

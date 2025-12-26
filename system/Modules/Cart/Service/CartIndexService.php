@@ -5,7 +5,6 @@ namespace Modules\Cart\Service;
 use Modules\Product\App\Models\ProductOptionValue;
 use Modules\Cart\Service\CartRepository;
 use Modules\Shared\Exception\Exception;
-use Modules\DeliveryCharge\Service\User\DeliveryCalculatorService;
 use Modules\DeliveryCharge\App\Models\DeliveryCharge;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
@@ -13,8 +12,7 @@ use Illuminate\Support\Facades\Log;
 class CartIndexService
 {
     public function __construct(
-        private CartRepository $cartRepository,
-        private DeliveryCalculatorService $deliveryCalculator
+        private CartRepository $cartRepository
     ) {
     }
 
@@ -52,66 +50,15 @@ class CartIndexService
             $totalDiscount = $coupons->sum('discountAmount');
             $totalDiscount = min($totalDiscount, $total);
 
-            // --- START SHIPPING CALCULATION ---
+            // --- SIMPLIFIED SHIPPING CALCULATION ---
             $shippingCost = 0;
-            $shippingType = null;
-            $totalWeightGrams = $cart->total_weight ?? 0;
+            $shippingType = 'No Delivery Charge';
 
-            // Check if it is a registered user cart and user is logged in
-            if ($cartType === 'user' && Auth::guard('user')->check()) {
-                $user = Auth::guard('user')->user();
-
-                // Auto-fetch the user's address (User has a hasOne relationship with Address)
-                $defaultAddress = $user->address;
-
-                if ($defaultAddress) {
-                    // UPDATED MATCHING LOGIC
-                    // We check if ANY rule exists for this location (Code or Name) before loading all charges
-                    $hasSpecificCharge = DeliveryCharge::query()
-                        ->where(function($query) use ($defaultAddress) {
-                            if (!empty($defaultAddress->country_code)) {
-                                $query->where('country_code', $defaultAddress->country_code);
-                            }
-                            if (!empty($defaultAddress->country_name)) {
-                                $query->orWhere('country', $defaultAddress->country_name);
-                            }
-                            // Legacy check
-                            if (!empty($defaultAddress->country_id)) {
-                                $query->orWhere('country_id', $defaultAddress->country_id);
-                            }
-                        })
-                        ->exists();
-
-                    if ($hasSpecificCharge) {
-                        // --- MATCH FOUND: Calculate based on rules ---
-                        $allCharges = DeliveryCharge::all()->toArray();
-
-                        // Pass weight in GRAMS (calculator expects grams for tier comparisons: 20000g, 45000g, 100000g)
-                        $cartDataForService = ['total_weight' => $totalWeightGrams];
-
-                        // UPDATED: Pass countryCode explicitly so the calculator can use it
-                        $addressDataForService = [
-                            'countryCode' => $defaultAddress->country_code ?? null,
-                            'countryName' => $defaultAddress->country_name ?? null,
-                            'countryId'   => $defaultAddress->country_id ?? null,
-                            'cityId'      => $defaultAddress->city_id ?? null,
-                        ];
-
-                        $calculationResult = $this->deliveryCalculator->calculate(
-                            $cartDataForService,
-                            $addressDataForService,
-                            $allCharges
-                        );
-
-                        $shippingCost = $calculationResult['cost'];
-                        $shippingType = $calculationResult['type'];
-
-                    } else {
-                        // --- NO MATCH: Apply Default $9 Flat Rate ---
-                        $shippingCost = 9.00;
-                        $shippingType = 'global_flat_rate';
-                    }
-                }
+            // Get the first delivery charge from the database
+            $deliveryCharge = DeliveryCharge::first();
+            if ($deliveryCharge) {
+                $shippingCost = (float) $deliveryCharge->delivery_charge;
+                $shippingType = 'Flat Rate';
             }
             // --- END SHIPPING CALCULATION ---
 
@@ -125,7 +72,6 @@ class CartIndexService
                 'grand_total' => $grandTotal,
                 'total_discount' => $totalDiscount,
                 'coupons' => $coupons->toArray(),
-                'total_weight' => $totalWeightGrams, 
 
                 // Add Shipping info to response
                 'shipping_charge' => $shippingCost,
@@ -391,4 +337,3 @@ class CartIndexService
         });
     }
 }
-

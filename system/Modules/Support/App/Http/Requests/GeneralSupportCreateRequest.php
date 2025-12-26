@@ -15,7 +15,7 @@ class GeneralSupportCreateRequest extends FormRequest
             'name' => 'required|string|min:2|max:255',
             'email' => 'required|email:rfc,dns',
             'subject' => 'required|string|max:255',
-            'phone' => 'required|string',
+            'phone' => ['required', 'string', 'regex:/^\+?\d{1,4}[\s-]?\d{7,14}$/'],
             'message' => 'required|string|max:1000',
         ];
     }
@@ -37,7 +37,7 @@ class GeneralSupportCreateRequest extends FormRequest
 
 
             'phone.required' => 'Please enter your phone number.',
-            'phone.regex' => 'Please enter a valid phone number.',
+            'phone.regex' => 'Please enter a valid phone number (e.g., +977 9851234567 or 9851234567).',
             'phone.min' => 'Your phone number seems too short. Please check and try again.',
 
             'message.required' => 'Message is required. Please keep it under 1000 characters.',

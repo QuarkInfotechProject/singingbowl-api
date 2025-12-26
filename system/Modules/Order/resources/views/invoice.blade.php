@@ -158,28 +158,29 @@
         <div style="color: #666; font-size: 14px; margin-top: 20px; padding: 0 20px;">
             <p>Need help? Contact us at <a href="mailto:singingbowlvillagenepal@gmail.com"
                     style="color: #DB5E18; text-decoration: none;">singingbowlvillagenepal@gmail.com</a></p>
+            <p>Phone: 977 985-1352794</p>
+            <p>WhatsApp: <a href="https://wa.me/9779851352794" style="color: #DB5E18; text-decoration: none;">977 985-1352794</a></p>
         </div>
 
         <div style="text-align: center; margin-top: 20px;">
-            <a href="https://www.instagram.com/singingbowlvillagenepal" style="display: inline-block; margin: 0 8px;"><img
+            <a href="https://www.instagram.com/singingbowlvillage/?igsh=MTkxcDY0YzNvbWQyNg%3D%3D&utm_source=qr" style="display: inline-block; margin: 0 8px;"><img
                     src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"
                     style="width: 28px; height: 28px;"></a>
-            <a href="https://www.tiktok.com/@singingbowlvillagenepal" style="display: inline-block; margin: 0 8px;"><img
-                    src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok"
-                    style="width: 28px; height: 28px;"></a>
-            <a href="https://www.facebook.com/singingbowlvillagenepal" style="display: inline-block; margin: 0 8px;"><img
+            <a href="https://www.facebook.com/people/Singing-Bowl/61550698021090/" style="display: inline-block; margin: 0 8px;"><img
                     src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" alt="Facebook"
                     style="width: 28px; height: 28px;"></a>
-            <a href="https://www.linkedin.com/company/singingbowlvillagenepal"
-                style="display: inline-block; margin: 0 8px;"><img
-                    src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"
+            <a href="https://www.youtube.com/@singingbowlvillage" style="display: inline-block; margin: 0 8px;"><img
+                    src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"
+                    style="width: 28px; height: 28px;"></a>
+            <a href="https://wa.me/9779851352794" style="display: inline-block; margin: 0 8px;"><img
+                    src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"
                     style="width: 28px; height: 28px;"></a>
         </div>
 
         <div
             style="text-align: center; color: #7f8c8d; font-size: 14px; margin-top: 30px; padding: 20px 20px 0; border-top: 1px solid #e9ecef;">
             &copy; {{ now()->year }} {{ env('STORE_NAME', 'Singing Bowl Village') }}. All rights reserved.<br>
-            <a href="#" style="color: #7f8c8d; text-decoration: none; margin: 0 10px;">Privacy Policy</a> | <a href="#"
+            <a href="https://www.singingbowlvillagenepal.com/privacy-policy" style="color: #7f8c8d; text-decoration: none; margin: 0 10px;">Privacy Policy</a> | <a href="https://www.singingbowlvillagenepal.com/terms-and-condition"
                 style="color: #7f8c8d; text-decoration: none; margin: 0 10px;">Terms of Service</a>
         </div>
     </div>

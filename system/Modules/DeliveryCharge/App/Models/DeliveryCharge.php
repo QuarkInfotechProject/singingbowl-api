@@ -15,14 +15,5 @@ class DeliveryCharge extends Model
     protected $fillable = [
         'description',
         'delivery_charge',
-        'additional_charge_per_item',
-        'weight_based_charge',
-        
-        // New fields added to allow Mass Assignment
-        'country',
-        'country_code',
-        'charge_above_20kg',
-        'charge_above_45kg',
-        'charge_above_100kg',
     ];
 }

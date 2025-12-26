@@ -25,17 +25,8 @@ class DeliveryChargeUpdateService
             DB::beginTransaction();
 
             $deliveryCharge->update([
-                'description'                => $data['description'],
-                'delivery_charge'            => $data['deliveryCharge'],
-                'additional_charge_per_item' => $data['additionalChargePerItem'],
-                'weight_based_charge'        => $data['weightBasedCharge'],
-
-                // New fields updated here
-                'country'                    => $data['country'],
-                'country_code'               => $data['countryCode'] ?? null,
-                'charge_above_20kg'          => $data['chargeAbove20kg'] ?? 0,
-                'charge_above_45kg'          => $data['chargeAbove45kg'] ?? 0,
-                'charge_above_100kg'         => $data['chargeAbove100kg'] ?? 0,
+                'description'     => $data['description'],
+                'delivery_charge' => $data['deliveryCharge'] ?? 0,
             ]);
 
             DB::commit();
@@ -51,7 +42,7 @@ class DeliveryChargeUpdateService
 
         Event::dispatch(
             new AdminUserActivityLogEvent(
-                'Delivery charge updated for country: ' . $deliveryCharge->country . ' (' . $deliveryCharge->description . ')',
+                'Delivery charge updated: ' . $deliveryCharge->description,
                 $deliveryCharge->id,
                 ActivityTypeConstant::DELIVERY_CHARGE_UPDATED,
                 $ipAddress

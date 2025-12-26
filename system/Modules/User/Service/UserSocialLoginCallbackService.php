@@ -193,8 +193,8 @@ class UserSocialLoginCallbackService
                     '{FULLNAME}' => $user->full_name,
                     '{EMAIL}' => $user->email
                 ]);
-                $message = "Welcome to ZOLPA STORE! Your account has been successfully created using your {$providerName} account. " . $baseMessage;
-                $subject = "Welcome to ZOLPA STORE - Account Created";
+                $message = "Welcome to Singing Bowl Village! Your account has been successfully created using your {$providerName} account. " . $baseMessage;
+                $subject = "Welcome to Singing Bowl Village - Account Created";
             }
 
             $sendEmailDTO = SendRegisterEmailDTO::from([

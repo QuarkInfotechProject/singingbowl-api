@@ -17,7 +17,7 @@ class UserRegisterRequest extends FormRequest
         return [
             'email' => 'required|email|unique:users,email',
             'fullName' => 'required|string|min:2|max:50',
-            'phoneNumber' => 'required|string|regex:/^9\d{9}$/|unique:users,phone_no',
+            'phoneNumber' => 'required|string|regex:/^\+\d{1,4}\s?\d{7,14}$/|unique:users,phone_no',
             'password' => [
                 'required',
                 'string',
@@ -104,7 +104,7 @@ class UserRegisterRequest extends FormRequest
             // Phone number validation messages
             'phoneNumber.required' => 'Please enter your phone number.',
             'phoneNumber.string' => 'Phone number must be a valid text.',
-            'phoneNumber.regex' => 'Phone number must start with 9 and be exactly 10 digits long.',
+            'phoneNumber.regex' => 'Phone number must be in international format (e.g., +977 9874563210).',
             'phoneNumber.unique' => 'This phone number has already been registered. Please use another phone number.',
 
             // Password validation messages

@@ -29,7 +29,7 @@ class UserForgotPasswordService
         }
 
         $otp = mt_rand(100000, 999999);
-        $minutes = SystemConfig::where('name', 'code_expiration_time')->value('value') ?? 10;
+        $minutes = (int) (SystemConfig::where('name', 'code_expiration_time')->value('value') ?? 10);
 
         try {
             DB::beginTransaction();

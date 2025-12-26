@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <meta name="supported-color-schemes" content="light dark">
-    <title>Reset Your Password - ZOLPA STORE</title>
+    <title>Reset Your Password - Singing Bowl Village</title>
 </head>
 
 <body
@@ -37,7 +37,7 @@
                 color: #999999 !important;
             }
 
-            .zolpa-logo {
+            .sbv-logo {
                 filter: brightness(0) invert(1);
             }
         }
@@ -49,7 +49,7 @@
                     style="background-color: white;border-radius: 12px;box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);width: 100%;border: #e6f3ff 2px solid;max-width: 500px;margin: 30px auto;padding: 30px;text-align: center;">
                     <div style="margin-bottom: 20px;width: 100%;">
                         <img src="https://www.singingbowlvillagenepal.com/assets/logo/logo3.png"
-                            alt="SingingBowl Logo" class="zolpa-logo"
+                            alt="Singing Bowl Village Logo" class="sbv-logo"
                             style="width: auto;height: 80px;display: block;margin: 0 auto;object-fit: contain;">
                     </div>
                     <h1 style="color: #333;font-size: 24px;margin-bottom: 15px;">Password Reset</h1>
@@ -116,68 +116,43 @@
                         you have concerns.
                     </div>
                     <div class="contact-info" style="color: #666;font-size: 14px;margin-top: 20px;">
-                        Need help? Contact us at <a href="mailto:support@zolpastore.com"
-                            style="color: #0066cc;text-decoration: none;">support@zolpastore.com</a>
+                        Need help? Contact us at <a href="mailto:singingbowlvillagenepal@gmail.com"
+                            style="color: #0066cc;text-decoration: none;">singingbowlvillagenepal@gmail.com</a>
+                        <br>Phone: 977 985-1352794
+                        <br>WhatsApp: <a href="https://wa.me/9779851352794" style="color: #0066cc;text-decoration: none;">977 985-1352794</a>
                     </div>
                     <table width="100%" border="0" cellpadding="0" cellspacing="0">
                         <tr>
                             <td align="center" style="margin-top: 20px;">
-                                <a href="https://www.instagram.com/zolpa.storenp/"
+                                <a href="https://www.instagram.com/singingbowlvillage/?igsh=MTkxcDY0YzNvbWQyNg%3D%3D&utm_source=qr"
                                     style="display: inline-block;margin: 0 10px;"><img
                                         src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"
                                         style="width: 24px;height: 24px;"></a>
-                                <a href="https://www.tiktok.com/@zolpa.store"
-                                    style="display: inline-block;margin: 0 10px;"><img
-                                        src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="TikTok"
-                                        style="width: 24px;height: 24px;"></a>
-                                <a href="https://www.facebook.com/share/1LUCsGXkmK/"
+                                <a href="https://www.facebook.com/people/Singing-Bowl/61550698021090/"
                                     style="display: inline-block;margin: 0 10px;"><img
                                         src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" alt="Facebook"
                                         style="width: 24px;height: 24px;"></a>
-                                <a href="https://www.linkedin.com/in/zolpa-store-36097536a"
+                                <a href="https://www.youtube.com/@singingbowlvillage"
                                     style="display: inline-block;margin: 0 10px;"><img
-                                        src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"
+                                        src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube"
+                                        style="width: 24px;height: 24px;"></a>
+                                <a href="https://wa.me/9779851352794"
+                                    style="display: inline-block;margin: 0 10px;"><img
+                                        src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"
                                         style="width: 24px;height: 24px;"></a>
                             </td>
                         </tr>
                     </table>
                     <div style="color: #999;font-size: 12px;margin-top: 30px;">
-                        © {{ now()->year }} ZOLPA STORE. All rights reserved.
+                        © {{ now()->year }} Singing Bowl Village. All rights reserved.
                         <br>
-                        <a href="#" style="color: #999;text-decoration: none;margin: 0 10px;">Privacy Policy</a> | <a
-                            href="#" style="color: #999;text-decoration: none;margin: 0 10px;">Terms of Service</a>
+                        <a href="https://www.singingbowlvillagenepal.com/privacy-policy" style="color: #999;text-decoration: none;margin: 0 10px;">Privacy Policy</a> | <a
+                            href="https://www.singingbowlvillagenepal.com/terms-and-condition" style="color: #999;text-decoration: none;margin: 0 10px;">Terms of Service</a>
                     </div>
                 </div>
             </td>
         </tr>
     </table>
-</body>
-
-</html>
-<a href="#" style="display: inline-block;margin: 0 10px;"><img
-        src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"
-        style="width: 24px;height: 24px;"></a>
-<a href="#" style="display: inline-block;margin: 0 10px;"><img
-        src="https://cdn-icons-png.flaticon.com/512/733/733635.png" alt="Twitter" style="width: 24px;height: 24px;"></a>
-<a href="#" style="display: inline-block;margin: 0 10px;"><img
-        src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" alt="Facebook"
-        style="width: 24px;height: 24px;"></a>
-<a href="#" style="display: inline-block;margin: 0 10px;"><img
-        src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn"
-        style="width: 24px;height: 24px;"></a>
-</td>
-</tr>
-</table>
-<div style="color: #999;font-size: 12px;margin-top: 30px;">
-    &copy; {{ now()->year }} ZOLPA STORE. All rights reserved.
-    <br>
-    <a href="#" style="color: #999;text-decoration: none;margin: 0 10px;">Privacy Policy</a> | <a href="#"
-        style="color: #999;text-decoration: none;margin: 0 10px;">Terms of Service</a>
-</div>
-</div>
-</td>
-</tr>
-</table>
 </body>
 
 </html>

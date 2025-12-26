@@ -14,7 +14,7 @@ class OrderSupportCreateRequest extends FormRequest
         return [
             'name' => 'required|string|min:2|max:255',
             'email' => 'required|email:rfc,dns',
-            'phone' => 'required|string',
+            'phone' => ['required', 'string', 'regex:/^\+?\d{1,4}[\s-]?\d{7,14}$/'],
             'orderId' => 'required|integer',
             'paymentTransactionId' => 'nullable|string|max:100',
             'message' => 'required|string|max:1000',
@@ -34,7 +34,7 @@ class OrderSupportCreateRequest extends FormRequest
             'email.email' => 'This doesn\'t look like a valid email address. Please check and try again.',
 
             'phone.required' => 'Please enter your phone number.',
-            'phone.regex' => 'Please enter a valid phone number.',
+            'phone.regex' => 'Please enter a valid phone number (e.g., +977 9851234567 or 9851234567).',
             'phone.min' => 'Your phone number seems too short. Please check and try again.',
 
             'orderId.required' => 'The order ID is required.',
