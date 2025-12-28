@@ -61,8 +61,8 @@
                     <!-- Contact Information -->
                     <div class="contact-info" style="color: #666;font-size: 14px;margin-top: 20px;">
                         Need help? Contact us at <a href="mailto:singingbowlvillagenepal@gmail.com" style="color: #0066cc;text-decoration: none;">singingbowlvillagenepal@gmail.com</a>
-                        <br>Phone: 977 985-1352794
-                        <br>WhatsApp: <a href="https://wa.me/9779851352794" style="color: #0066cc;text-decoration: none;">977 985-1352794</a>
+                        <br>Phone: +977 985-1352794
+                        <br>WhatsApp: <a href="https://wa.me/9779851352794" style="color: #0066cc;text-decoration: none;">+977 985-1352794</a>
                     </div>
                     
                     <!-- Social Media Links -->

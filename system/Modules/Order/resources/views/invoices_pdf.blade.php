@@ -289,9 +289,9 @@
                                     </div>
                                     <div class="company-text">
                                         <div class="company-details">
-                                            Putalisadak, Kathmandu, Nepal<br>
-                                            Phone: 977 985-1352794<br>
-                                            WhatsApp: 977 985-1352794<br>
+                                            Kwabahal chowk, Thamel-17, Kathmandu, Nepal<br>
+                                            Phone: +977 985-1352794<br>
+                                            WhatsApp: +977 985-1352794<br>
                                             Email: singingbowlvillagenepal@gmail.com<br>
                                             PAN: 123456789
                                         </div>
@@ -414,10 +414,10 @@
                                         </div>
                                     </td>
                                     <td class="text-center">{{ $product['quantity'] }}</td>
-                                    <td class="text-right">Rs
+                                    <td class="text-right">$
                                         {{ number_format($product['lineTotal'] / $product['quantity'], 2) }}
                                     </td>
-                                    <td class="text-right">Rs {{ number_format($product['lineTotal'], 2) }}</td>
+                                    <td class="text-right">$ {{ number_format($product['lineTotal'], 2) }}</td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -426,23 +426,23 @@
                     <table class="totals-table">
                         <tr>
                             <td class="total-label">Subtotal:</td>
-                            <td class="total-value">Rs {{ number_format($orderData['subtotal'], 2) }}</td>
+                            <td class="total-value">$ {{ number_format($orderData['subtotal'], 2) }}</td>
                         </tr>
                         <tr>
                             <td class="total-label">Discount:</td>
-                            <td class="total-value">-Rs {{ number_format($orderData['discount'], 2) }}</td>
+                            <td class="total-value">-$ {{ number_format($orderData['discount'], 2) }}</td>
                         </tr>
                         <tr>
                             <td class="total-label">Shipping Cost:</td>
-                            <td class="total-value">Rs 0.00</td>
+                            <td class="total-value">$ 0.00</td>
                         </tr>
                         <tr>
                             <td class="total-label">Tax (13% VAT):</td>
-                            <td class="total-value">Rs {{ number_format($orderData['total'] * 0.13, 2) }}</td>
+                            <td class="total-value">$ {{ number_format($orderData['total'] * 0.13, 2) }}</td>
                         </tr>
                         <tr>
                             <td class="total-label">Total Amount:</td>
-                            <td class="total-value">Rs {{ number_format($orderData['total'], 2) }}</td>
+                            <td class="total-value">$ {{ number_format($orderData['total'], 2) }}</td>
                         </tr>
                     </table>
 
@@ -514,13 +514,13 @@
 
                     <div class="thank-you">{{ $thankYouMessage }}</div>
                     <div>{{ $footerMessage }}</div>
-                    <div>Phone: 977 985-1352794 | WhatsApp: 977 985-1352794 | Email: singingbowlvillagenepal@gmail.com</div>
+                    <div>Phone: +977 985-1352794 | WhatsApp: +977 985-1352794 | Email: singingbowlvillagenepal@gmail.com</div>
                     <div style="margin-top: 10px;">
-                        <strong style="color: #DB5E18;">Singing Bowl Village</strong> | Putalisadak, Kathmandu, Nepal |
+                        <strong style="color: #DB5E18;">Singing Bowl Village</strong> | Kwabahal chowk, Thamel-17, Kathmandu, Nepal |
                         www.singingbowlvillagenepal.com
                     </div>
                     <div style="margin-top: 15px; font-size: 12px; color: #888;">
-                        All prices are in Nepalese Rupees (Rs). Payment terms as per agreed conditions.
+                        All prices are in Dollar ($). Payment terms as per agreed conditions.
                     </div>
                 </td>
             </tr>

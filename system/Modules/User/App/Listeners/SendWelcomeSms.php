@@ -21,7 +21,7 @@ class SendWelcomeSms
     public function handle(UserRegistered $event): void
     {
         // $user = $event->user;
-        // $message = "Hello {$user->full_name}, Thank you for joining ZOLPA STORE Community. We are happy to have you on board. Call us on 01-5313291 if you need any help.";
+        // $message = "Hello {$user->full_name}, Thank you for joining Singing Bowl Village Nepal Community. We are happy to have you on board. Call us on 01-5313291 if you need any help.";
         // $this->smsService->sendSms($user->phone_no, $message);
     }
 }

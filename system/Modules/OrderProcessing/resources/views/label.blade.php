@@ -37,7 +37,7 @@
                     <tbody>
                     <tr>
                         <td style="padding: 15px; text-align: left;">
-                            <span style="font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 24px; color: #fafafa;">ULTIMA</span>
+                            <span style="font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 24px; color: #fafafa;">SINGINING BOWL VILLAGE NEPAL</span>
                         </td>
                         <td style="padding: 15px; text-align: right;">
                         <span style="font-family: 'Open Sans', sans-serif; font-size: 14px; color: #fafafa;">

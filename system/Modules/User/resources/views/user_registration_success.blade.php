@@ -177,8 +177,8 @@
         <hr>
         <div class="contact-info">
             <p>Need help? Contact us at <a href="mailto:singingbowlvillagenepal@gmail.com">singingbowlvillagenepal@gmail.com</a></p>
-            <p>Phone: 977 985-1352794</p>
-            <p>WhatsApp: <a href="https://wa.me/9779851352794">977 985-1352794</a></p>
+            <p>Phone: +977 985-1352794</p>
+            <p>WhatsApp: <a href="https://wa.me/9779851352794">+977 985-1352794</a></p>
         </div>
         <div class="social-media">
             <a href="https://www.instagram.com/singingbowlvillage/?igsh=MTkxcDY0YzNvbWQyNg%3D%3D&utm_source=qr"><img

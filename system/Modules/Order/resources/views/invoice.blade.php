@@ -158,8 +158,8 @@
         <div style="color: #666; font-size: 14px; margin-top: 20px; padding: 0 20px;">
             <p>Need help? Contact us at <a href="mailto:singingbowlvillagenepal@gmail.com"
                     style="color: #DB5E18; text-decoration: none;">singingbowlvillagenepal@gmail.com</a></p>
-            <p>Phone: 977 985-1352794</p>
-            <p>WhatsApp: <a href="https://wa.me/9779851352794" style="color: #DB5E18; text-decoration: none;">977 985-1352794</a></p>
+            <p>Phone: +977 985-1352794</p>
+            <p>WhatsApp: <a href="https://wa.me/9779851352794" style="color: #DB5E18; text-decoration: none;">+977 985-1352794</a></p>
         </div>
 
         <div style="text-align: center; margin-top: 20px;">

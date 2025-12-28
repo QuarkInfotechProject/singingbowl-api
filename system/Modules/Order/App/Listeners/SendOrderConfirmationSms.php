@@ -22,7 +22,7 @@ class SendOrderConfirmationSms
         // $phoneNumber = $orderData['addressInformation']['mobile'];
         // $orderId = $orderData['id'];
 
-        // $message = "Dear {$name}, Your order #{$orderId} has been placed. Thank you for shopping with ZOLPA STORE.";
+        // $message = "Dear {$name}, Your order #{$orderId} has been placed. Thank you for shopping with Singing Bowl Village Nepal.";
         // $this->smsService->sendSms($phoneNumber, $message);
     }
 }

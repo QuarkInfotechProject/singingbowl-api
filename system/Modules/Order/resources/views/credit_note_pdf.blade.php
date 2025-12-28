@@ -289,11 +289,10 @@
                                     </div>
                                     <div class="company-text">
                                         <div class="company-details">
-                                            Putalisadak, Kathmandu, Nepal<br>
-                                            Phone: 977 985-1352794<br>
-                                            WhatsApp: 977 985-1352794<br>
+                                            Kwabahal chowk, Thamel-17, Kathmandu, Nepal<br>
+                                            Phone: +977 985-1352794<br>
+                                            WhatsApp: +977 985-1352794<br>
                                             Email: singingbowlvillagenepal@gmail.com<br>
-                                            PAN: 123456789
                                         </div>
                                     </div>
                                 </div>
@@ -514,9 +513,9 @@
 
                     <div class="thank-you">{{ $thankYouMessage }}</div>
                     <div>{{ $footerMessage }}</div>
-                    <div>Phone: 977 985-1352794 | WhatsApp: 977 985-1352794 | Email: singingbowlvillagenepal@gmail.com</div>
+                    <div>Phone: +977 985-1352794 | WhatsApp: +977 985-1352794 | Email: singingbowlvillagenepal@gmail.com</div>
                     <div style="margin-top: 10px;">
-                        <strong style="color: #DB5E18;">Singing Bowl Village</strong> | Putalisadak, Kathmandu, Nepal |
+                        <strong style="color: #DB5E18;">Singing Bowl Village</strong> | Kwabahal chowk, Thamel-17, Kathmandu, Nepal |
                         www.singingbowlvillagenepal.com
                     </div>
                     <div style="margin-top: 15px; font-size: 12px; color: #888;">

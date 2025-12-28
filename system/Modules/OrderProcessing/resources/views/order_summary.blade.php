@@ -36,15 +36,15 @@
                             <tbody>
                                 <tr>
                                     <td style="padding: 15px; text-align: left;">
-                                        <img src="https://ultima.com.np/wp-content/uploads/2024/01/logo-black-350x79.png"
+                                        <img src="https://www.singingbowlvillagenepal.com/assets/logo/logo3.png"
                                             alt="image">
                                     </td>
                                     <td style="padding: 15px; text-align: right;">
                                         <span
                                             style="font-family: 'Open Sans', sans-serif; font-size: 14px; color: #fafafa;">
-                                            House 11, Newa Colony<br>
-                                            Tahachal Marg, Kathmandu<br>
-                                            01-5313291
+                                            Kwabahal chowk, Thamel-17,<br>
+                                            Kathmandu<br>
+                                            +977-9851352794
                                         </span>
                                     </td>
                                 </tr>
@@ -243,7 +243,7 @@
                                             </tfoot>
                                         </table>
                                         <p>Customer Note: {{$order->note}}</p>
-                                        <p>Thank you for shopping with Ultima Lifestyle</p>
+                                        <p>Thank you for shopping with Singing Bowl Village Nepal</p>
                                     </td>
                                 </tr>
                             </tbody>
@@ -267,7 +267,7 @@
                                     <tr>
                                         <td style="padding: 15px; text-align: left;">
                                             <span
-                                                style="font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 24px; color: #fafafa;">ULTIMA</span>
+                                                style="font-family: 'Open Sans', sans-serif; font-weight: 600; font-size: 24px; color: #fafafa;">SINGINING BOWL VILLAGE NEPAL</span>
                                         </td>
                                         <td style="padding: 15px; text-align: right;">
                                             <span
