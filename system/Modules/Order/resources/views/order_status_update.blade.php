@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <meta name="supported-color-schemes" content="light dark">
-    <title>{{ $orderInvoice->title ?? 'Order Status Update' }}</title>
+    <title>{{ $orderInvoice['title'] ?? 'Order Status Update' }}</title>
 
     <style>
         body {
@@ -140,17 +140,17 @@
         </div>
 
         <h2 style="font-weight: normal; font-size: 24px; color: #2c3e50; margin-top: 0; padding: 0 20px;">
-            {{ $orderInvoice->title }}
+            {{ $orderInvoice['title'] }}
         </h2>
 
         <div style="font-size: 18px; text-align: left; color: #2c3e50; margin-top: 20px; padding: 0 20px;">
-            {!! $orderInvoice->description !!}
+            {!! $orderInvoice['description'] !!}
         </div>
 
         <div
             style="background-color: #f8f9fa; border-radius: 6px; padding: 15px 20px; margin: 20px 20px; text-align: center; border-left: 4px solid #DB5E18;">
-            <h3 style="color: #2c3e50; margin-top: 0; font-size: 18px;">{{ $orderInvoice->title }}</h3>
-            <p style="color: #5a6268; margin-bottom: 0;">{!! $orderInvoice->message !!}</p>
+            <h3 style="color: #2c3e50; margin-top: 0; font-size: 18px;">{{ $orderInvoice['title'] }}</h3>
+            <p style="color: #5a6268; margin-bottom: 0;">{!! $orderInvoice['message'] !!}</p>
         </div>
 
         <hr style="border: none; height: 1px; background-color: #e9ecef; margin: 20px 20px;">
