@@ -27,7 +27,7 @@ class OrderStatusUpdateMail extends Mailable
     {
         return $this->subject($this->mailData['subject'])
             ->view('order::order_status_update', [
-                'mailData' => $this->mailData
+                'orderInvoice' => $this->mailData
             ]);
     }
 }

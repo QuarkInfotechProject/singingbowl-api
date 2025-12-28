@@ -1,3 +1,4 @@
+
 <?php
 
 namespace Modules\Gallery\App\Http\Controllers\User;
@@ -14,11 +15,21 @@ class GalleryIndexController extends AdminBaseController
 
     public function __invoke()
     {
-        $galleries = $this->galleryIndexService->list();
+        $galleries = $this->galleryIndexService->list(request()->all());
 
         return $this->successResponse(
             'Gallery list fetched successfully.',
-            GalleryResource::collection($galleries)
+            [
+                'data' => GalleryResource::collection($galleries->items()),
+                'pagination' => [
+                    'current_page' => $galleries->currentPage(),
+                    'last_page' => $galleries->lastPage(),
+                    'per_page' => $galleries->perPage(),
+                    'total' => $galleries->total(),
+                    'from' => $galleries->firstItem(),
+                    'to' => $galleries->lastItem(),
+                ]
+            ]
         );
     }
 }

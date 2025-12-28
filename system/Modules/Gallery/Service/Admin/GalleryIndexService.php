@@ -9,7 +9,7 @@ class GalleryIndexService
 {
     public function list(array $filters = []): LengthAwarePaginator
     {
-        $perPage = $filters['perPage'] ?? 15;
+        $perPage = $filters['perPage'] ?? 25;
         $gallery = Gallery::first();
 
         if (!$gallery) {

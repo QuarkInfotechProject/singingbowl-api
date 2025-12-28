@@ -18,7 +18,17 @@ class GalleryIndexController extends AdminBaseController
 
         return $this->successResponse(
             'Gallery list fetched successfully.',
-            GalleryResource::collection($galleries)
+            [
+                'data' => GalleryResource::collection($galleries->items()),
+                'pagination' => [
+                    'current_page' => $galleries->currentPage(),
+                    'last_page' => $galleries->lastPage(),
+                    'per_page' => $galleries->perPage(),
+                    'total' => $galleries->total(),
+                    'from' => $galleries->firstItem(),
+                    'to' => $galleries->lastItem(),
+                ]
+            ]
         );
     }
 }
