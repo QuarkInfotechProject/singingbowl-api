@@ -10,10 +10,6 @@ class GalleryUpdateRequest extends FormRequest
     {
         return [
             'id' => ['required', 'integer', 'exists:galleries,id'],
-            'title' => ['required', 'string', 'max:255'],
-            'slug' => ['nullable', 'string', 'max:255', 'unique:galleries,slug,' . $this->get('id')],
-            'description' => ['nullable', 'string'],
-            'status' => ['nullable', 'boolean'],
             'images' => ['nullable', 'array'],
             'images.*' => ['integer', 'exists:files,id'],
         ];

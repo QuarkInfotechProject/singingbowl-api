@@ -13,14 +13,6 @@ class Gallery extends Model
 
     protected $fillable = [
         'uuid',
-        'title',
-        'slug',
-        'description',
-        'status',
-    ];
-
-    protected $casts = [
-        'status' => 'boolean',
     ];
 
     protected static function boot()
@@ -30,10 +22,6 @@ class Gallery extends Model
         static::creating(function (Gallery $gallery) {
             if (empty($gallery->uuid)) {
                 $gallery->uuid = (string) Str::uuid();
-            }
-
-            if (empty($gallery->slug) && !empty($gallery->title)) {
-                $gallery->slug = Str::slug($gallery->title);
             }
         });
     }

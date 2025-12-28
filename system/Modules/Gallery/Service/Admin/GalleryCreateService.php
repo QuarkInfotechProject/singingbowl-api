@@ -17,10 +17,6 @@ class GalleryCreateService
 
             $gallery = Gallery::create([
                 'uuid' => Str::uuid(),
-                'title' => $data['title'],
-                'slug' => $data['slug'] ?? Str::slug($data['title']),
-                'description' => $data['description'] ?? null,
-                'status' => $data['status'] ?? true,
             ]);
 
             if (!empty($data['images'])) {

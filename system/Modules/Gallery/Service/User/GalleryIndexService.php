@@ -10,7 +10,6 @@ class GalleryIndexService
     public function list(): Collection
     {
         return Gallery::query()
-            ->where('status', true)
             ->with('files')
             ->latest()
             ->get();

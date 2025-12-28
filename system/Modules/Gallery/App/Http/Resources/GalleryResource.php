@@ -11,10 +11,6 @@ class GalleryResource extends JsonResource
         return [
             'id' => $this->id,
             'uuid' => $this->uuid,
-            'title' => $this->title,
-            'slug' => $this->slug,
-            'description' => $this->description,
-            'status' => (bool) $this->status,
             'images' => $this->formatImages(),
             'createdAt' => $this->created_at,
             'updatedAt' => $this->updated_at,

@@ -14,12 +14,8 @@ class GalleryUpdateService
             /** @var Gallery $gallery */
             $gallery = Gallery::findOrFail($data['id']);
 
-            $gallery->fill([
-                'title' => $data['title'],
-                'slug' => $data['slug'] ?? $gallery->slug ?? Str::slug($data['title']),
-                'description' => $data['description'] ?? null,
-                'status' => $data['status'] ?? $gallery->status,
-            ])->save();
+            // Only updating images, so no need to fill other attributes
+            $gallery->touch(); // Update updated_at timestamp
 
             if (array_key_exists('images', $data)) {
                 $gallery->syncFiles(['galleryImage' => $data['images'] ?? []]);
