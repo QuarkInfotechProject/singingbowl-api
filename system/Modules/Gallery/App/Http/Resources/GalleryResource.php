@@ -16,7 +16,6 @@ class GalleryResource extends JsonResource
             'size' => $this->size,
             'width' => $this->width,
             'height' => $this->height,
-            'status' => null, // Maintained for frontend compatibility as per request
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];
