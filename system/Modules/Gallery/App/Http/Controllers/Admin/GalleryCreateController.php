@@ -17,7 +17,7 @@ class GalleryCreateController extends AdminBaseController
     {
         $gallery = $this->galleryCreateService->create($request->validated());
 
-        return $this->successResponse('Gallery created successfully.', new GalleryResource($gallery));
+        return $this->successResponse('Gallery created successfully.', GalleryResource::collection($gallery->files));
     }
 }
 

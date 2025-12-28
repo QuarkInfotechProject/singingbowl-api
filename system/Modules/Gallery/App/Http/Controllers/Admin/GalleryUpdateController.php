@@ -17,7 +17,7 @@ class GalleryUpdateController extends AdminBaseController
     {
         $gallery = $this->galleryUpdateService->update($request->validated());
 
-        return $this->successResponse('Gallery updated successfully.', new GalleryResource($gallery));
+        return $this->successResponse('Gallery updated successfully.', GalleryResource::collection($gallery->files));
     }
 }
 

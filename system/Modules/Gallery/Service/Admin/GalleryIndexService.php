@@ -10,11 +10,13 @@ class GalleryIndexService
     public function list(array $filters = []): LengthAwarePaginator
     {
         $perPage = $filters['perPage'] ?? 15;
+        $gallery = Gallery::first();
 
-        return Gallery::query()
-            ->with('files')
-            ->latest()
-            ->paginate($perPage);
+        if (!$gallery) {
+            return new \Illuminate\Pagination\LengthAwarePaginator([], 0, $perPage);
+        }
+
+        return $gallery->files()->latest()->paginate($perPage);
     }
 }
 

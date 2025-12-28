@@ -16,7 +16,7 @@ class GalleryShowController extends AdminBaseController
     {
         $gallery = $this->galleryShowService->showBySlug($slug);
 
-        return $this->successResponse('Gallery fetched successfully.', new GalleryResource($gallery));
+        return $this->successResponse('Gallery fetched successfully.', GalleryResource::collection($gallery->files));
     }
 }
 

@@ -9,10 +9,13 @@ class GalleryIndexService
 {
     public function list(): Collection
     {
-        return Gallery::query()
-            ->with('files')
-            ->latest()
-            ->get();
+        $gallery = Gallery::first();
+
+        if (!$gallery) {
+            return collect([]);
+        }
+
+        return $gallery->files()->latest()->get();
     }
 }
 
