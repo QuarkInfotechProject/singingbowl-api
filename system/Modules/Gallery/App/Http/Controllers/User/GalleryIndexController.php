@@ -1,4 +1,3 @@
-
 <?php
 
 namespace Modules\Gallery\App\Http\Controllers\User;
@@ -33,4 +32,3 @@ class GalleryIndexController extends AdminBaseController
         );
     }
 }
-

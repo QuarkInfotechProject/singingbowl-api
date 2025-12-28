@@ -32,4 +32,3 @@ class GalleryIndexController extends AdminBaseController
         );
     }
 }
-
