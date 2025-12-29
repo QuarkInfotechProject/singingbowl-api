@@ -30,12 +30,12 @@ class AddressUpdateRequest extends FormRequest
             'mobile' => [
                 'required',
                 'string',
-                'regex:/^\+?[0-9]{7,15}$/',
+                'regex:/^\+?[0-9\s]{7,20}$/',
                 // This tells Laravel: "Check if unique, but ignore the record with this ID"
                 Rule::unique('addresses', 'mobile')->ignore($ignoreId),
             ],
             
-            'backupMobile' => ['nullable', 'string', 'regex:/^\+?[0-9]{7,15}$/', 'different:mobile'],
+            'backupMobile' => ['nullable', 'string', 'regex:/^\+?[0-9\s]{7,20}$/', 'different:mobile'],
 
             'addressLine1' => 'required|string|min:5|max:255',
             'addressLine2' => 'nullable|string|max:255',

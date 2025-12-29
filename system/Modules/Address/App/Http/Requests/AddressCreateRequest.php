@@ -16,8 +16,8 @@ class AddressCreateRequest extends FormRequest
             'lastName' => 'required|string|min:2|max:255|regex:/^[\pL\s\-]+$/u',
             'email' => 'required|email|max:255',
 
-            'mobile' => ['required', 'string', 'regex:/^\+?[0-9]{7,15}$/', 'unique:addresses,mobile'],
-            'backupMobile' => ['nullable', 'string', 'regex:/^\+?[0-9]{7,15}$/', 'different:mobile'],
+            'mobile' => ['required', 'string', 'regex:/^\+?[0-9\s]{7,20}$/', 'unique:addresses,mobile'],
+            'backupMobile' => ['nullable', 'string', 'regex:/^\+?[0-9\s]{7,20}$/', 'different:mobile'],
 
             'addressLine1' => 'required|string|min:5|max:255',
             'addressLine2' => 'nullable|string|max:255',
