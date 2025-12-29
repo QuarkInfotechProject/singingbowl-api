@@ -26,16 +26,16 @@ class AddressUpdateRequest extends FormRequest
             'lastName' => 'required|string|min:2|max:255|regex:/^[\pL\s\-]+$/u',
             'email' => 'required|email|max:255',
 
-            // MOBILE VALIDATION FIX
+            // MOBILE VALIDATION FIX - Accepts international phone numbers with country codes
             'mobile' => [
                 'required',
-                'integer',
-                'digits:10',
+                'string',
+                'regex:/^\+?[0-9]{7,15}$/',
                 // This tells Laravel: "Check if unique, but ignore the record with this ID"
                 Rule::unique('addresses', 'mobile')->ignore($ignoreId),
             ],
             
-            'backupMobile' => 'nullable|integer|digits:10|different:mobile',
+            'backupMobile' => ['nullable', 'string', 'regex:/^\+?[0-9]{7,15}$/', 'different:mobile'],
 
             'addressLine1' => 'required|string|min:5|max:255',
             'addressLine2' => 'nullable|string|max:255',
@@ -74,10 +74,10 @@ class AddressUpdateRequest extends FormRequest
             'email.email' => 'Please provide a valid email address.',
 
             'mobile.required' => 'Please provide your mobile number.',
-            'mobile.digits' => 'Your mobile number must be exactly 10 digits long.',
+            'mobile.regex' => 'Please enter a valid phone number with country code (e.g., +1234567890 or +977-9812345678).',
             'mobile.unique' => 'This mobile number is already registered by another user.',
 
-            'backupMobile.digits' => 'Your backup mobile number must be exactly 10 digits long.',
+            'backupMobile.regex' => 'Please enter a valid backup phone number with country code (e.g., +1234567890 or +977-9812345678).',
             'backupMobile.different' => 'Backup number must be different from primary mobile.',
 
             'addressLine1.required' => 'Please provide your main address (Line 1).',

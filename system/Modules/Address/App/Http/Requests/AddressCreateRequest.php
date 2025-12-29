@@ -16,8 +16,8 @@ class AddressCreateRequest extends FormRequest
             'lastName' => 'required|string|min:2|max:255|regex:/^[\pL\s\-]+$/u',
             'email' => 'required|email|max:255',
 
-            'mobile' => 'required|integer|digits:10|unique:addresses,mobile',
-            'backupMobile' => 'nullable|integer|digits:10|different:mobile',
+            'mobile' => ['required', 'string', 'regex:/^\+?[0-9]{7,15}$/', 'unique:addresses,mobile'],
+            'backupMobile' => ['nullable', 'string', 'regex:/^\+?[0-9]{7,15}$/', 'different:mobile'],
 
             'addressLine1' => 'required|string|min:5|max:255',
             'addressLine2' => 'nullable|string|max:255',
@@ -59,7 +59,7 @@ class AddressCreateRequest extends FormRequest
 
             // Mobile
             'mobile.required' => 'Please provide your mobile number.',
-            'mobile.digits' => 'Your mobile number must be exactly 10 digits long.',
+            'mobile.regex' => 'Please enter a valid phone number with country code (e.g., +1234567890 or +977-9812345678).',
             'mobile.unique' => 'This mobile number is already registered.',
             'backupMobile.different' => 'Backup number must be different from primary mobile.',
 
