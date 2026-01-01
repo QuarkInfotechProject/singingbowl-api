@@ -11,7 +11,7 @@ class ValidPaymentMethod implements ValidationRule
         // 'esewa',
         // 'IMEPay',
         // 'khalti',
-        // 'card',
+        'card',
         'cod',
         'getPay'
     ];
