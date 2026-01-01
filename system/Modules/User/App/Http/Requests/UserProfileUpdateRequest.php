@@ -12,7 +12,7 @@ class UserProfileUpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'phoneNumber' => 'nullable|integer|regex:/^[0-9]{10,15}$/',
+            'phoneNumber' => ['nullable', 'string', 'regex:/^\+?[0-9\s]{7,20}$/'],
             'profilePicture' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:5120',
             'offersNotification' => 'boolean',
             'gender' => 'nullable|in:male,female,other',
@@ -23,8 +23,7 @@ class UserProfileUpdateRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'phoneNumber.integer' => 'Please enter a valid phone number without any spaces or special characters.',
-            'phoneNumber.regex' => 'Your phone number should be between 10 to 15 digits long.',
+            'phoneNumber.regex' => 'Please enter a valid phone number with country code (e.g., +1234567890 or +977-9812345678).',
             'profilePicture.image' => 'Please upload a valid image for your profile picture.',
             'profilePicture.mimes' => 'Your profile picture must be in one of the following formats: jpeg, png, jpg, gif.',
             'profilePicture.max' => 'Your profile picture should not exceed 5MB in size.',
