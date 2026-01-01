@@ -16,14 +16,16 @@ class CouponIndexService
            'type',
             'min_quantity as minQuantity',
             'apply_automatically as applyAutomatically',
-            DB::raw("DATE_FORMAT(end_date, '%M %d, %Y') as expiryDate"),
-            DB::raw("JSON_UNQUOTE(payment_methods) as paymentMethods")
+            'end_date',
+            'payment_methods'
         )
             ->where('is_active', true)
             ->where('is_public', true)
             ->get()
             ->map(function ($coupon) {
-                $coupon->paymentMethods = json_decode($coupon->paymentMethods, true);
+                $coupon->expiryDate = $coupon->end_date ? $coupon->end_date->format('F d, Y') : null;
+                $coupon->paymentMethods = $coupon->payment_methods ?? [];
+                $coupon->makeHidden(['end_date', 'payment_methods']);
                 return $coupon;
             });
     }

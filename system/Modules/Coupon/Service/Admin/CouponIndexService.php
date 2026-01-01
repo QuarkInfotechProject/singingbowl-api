@@ -26,7 +26,7 @@ class CouponIndexService
             'type',
             'used as usage',
             'usage_limit_per_coupon as limit',
-            DB::raw("DATE_FORMAT(end_date, '%M %d, %Y') as expiryDate"),
+            DB::raw("TO_CHAR(end_date, 'Month DD, YYYY') as expiryDate"),
             'is_active as isActive'
         )
             ->latest('created_at')
