@@ -217,7 +217,7 @@ class Coupon extends Model
      */
     public static function findByCode($code)
     {
-        return self::where(DB::raw('BINARY `code`'), $code)
+        return self::where('code', $code)
             ->select(
                 'id',
                 'name',

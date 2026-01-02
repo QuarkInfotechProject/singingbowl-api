@@ -52,26 +52,52 @@ class CartIndexService
             $now = now();
 
             $cartItems = $this->mapCartItemsOptimized($cart, $now);
-            $coupons = $this->getAppliedCouponsOptimized($cart->coupons ?? collect([]));
             $total = $cartItems->sum('lineTotal');
 
-            $totalDiscount = $coupons->sum('discountAmount');
-            $totalDiscount = min($totalDiscount, $total);
-
-            // --- SIMPLIFIED SHIPPING CALCULATION ---
-            $shippingCost = 0;
-            $shippingType = 'No Delivery Charge';
-
-            // Get the first delivery charge from the database
+            // Get original shipping cost before any discounts
+            $originalShippingCost = 0;
             $deliveryCharge = DeliveryCharge::first();
             if ($deliveryCharge) {
-                $shippingCost = (float) $deliveryCharge->delivery_charge;
-                $shippingType = 'Flat Rate';
+                $originalShippingCost = (float) $deliveryCharge->delivery_charge;
             }
+
+            // Process coupons with original shipping cost for free shipping discount display
+            $coupons = $this->getAppliedCouponsOptimized($cart->coupons ?? collect([]), $originalShippingCost);
+
+            // Calculate item discounts (excluding free shipping discount from subtotal calculation)
+            $itemDiscount = $coupons->filter(function ($coupon) {
+                return ($coupon['type'] ?? '') !== 'free_shipping';
+            })->sum('discountAmount');
+            $itemDiscount = min($itemDiscount, $total);
+
+            // --- SIMPLIFIED SHIPPING CALCULATION ---
+            $shippingCost = $originalShippingCost;
+            $shippingType = $originalShippingCost > 0 ? 'Flat Rate' : 'No Delivery Charge';
             // --- END SHIPPING CALCULATION ---
 
-            // Update Grand Total to include shipping
-            $grandTotal = ($total - $totalDiscount) + $shippingCost;
+            // Check for free shipping coupon and apply shipping discount
+            $shippingDiscount = 0;
+            $hasFreeShipping = false;
+            if ($cart->coupons && $cart->coupons->isNotEmpty()) {
+                foreach ($cart->coupons as $coupon) {
+                    if ($coupon->type === 'free_shipping') {
+                        $hasFreeShipping = true;
+                        $shippingDiscount = $originalShippingCost;
+                        break;
+                    }
+                }
+            }
+
+            // If free shipping coupon is applied, zero out shipping cost
+            if ($hasFreeShipping) {
+                $shippingCost = 0;
+            }
+
+            // Total discount includes both item discount and shipping discount for display
+            $totalDiscount = $itemDiscount + $shippingDiscount;
+
+            // Update Grand Total: (subtotal - item discounts) + final shipping
+            $grandTotal = ($total - $itemDiscount) + $shippingCost;
 
             $result = [
                 'items' => $cartItems,
@@ -79,6 +105,7 @@ class CartIndexService
                 'count' => $cartItems->count(),
                 'grand_total' => $grandTotal,
                 'total_discount' => $totalDiscount,
+                'shipping_discount' => $shippingDiscount,
                 'coupons' => $coupons->toArray(),
 
                 // Add Shipping info to response
@@ -330,17 +357,23 @@ class CartIndexService
     /**
      * Optimized coupon processing returning a collection.
      */
-    private function getAppliedCouponsOptimized($coupons)
+    private function getAppliedCouponsOptimized($coupons, $originalShippingCost = 0)
     {
         if (!$coupons || $coupons->isEmpty()) {
             return collect([]);
         }
 
-        return $coupons->map(function ($coupon) {
+        return $coupons->map(function ($coupon) use ($originalShippingCost) {
+            // For free shipping coupons, the discount amount is the original shipping cost
+            $discountAmount = $coupon->type === 'free_shipping' 
+                ? $originalShippingCost 
+                : (float) $coupon->pivot->discount_amount;
+
             return [
                 'code' => $coupon->code,
                 'name' => $coupon->name,
-                'discountAmount' => (float) $coupon->pivot->discount_amount,
+                'type' => $coupon->type,
+                'discountAmount' => $discountAmount,
                 'isAutoApplied' => (bool) $coupon->apply_automatically
             ];
         });
