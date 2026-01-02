@@ -4,6 +4,7 @@ namespace Modules\Cart\Service;
 
 use Modules\Product\App\Models\ProductOptionValue;
 use Modules\Cart\Service\CartRepository;
+use Modules\Cart\Service\AutoApplyCouponService;
 use Modules\Shared\Exception\Exception;
 use Modules\DeliveryCharge\App\Models\DeliveryCharge;
 use Illuminate\Support\Facades\Auth;
@@ -12,7 +13,8 @@ use Illuminate\Support\Facades\Log;
 class CartIndexService
 {
     public function __construct(
-        private CartRepository $cartRepository
+        private CartRepository $cartRepository,
+        private AutoApplyCouponService $autoApplyCouponService
     ) {
     }
 
@@ -40,6 +42,12 @@ class CartIndexService
                     'coupons'
                 ]);
             }
+
+            // Auto-apply eligible coupons before calculating totals
+            $this->autoApplyCouponService->applyEligibleCoupons($cart);
+            
+            // Reload coupons after auto-apply
+            $cart->load('coupons');
 
             $now = now();
 
@@ -332,7 +340,8 @@ class CartIndexService
             return [
                 'code' => $coupon->code,
                 'name' => $coupon->name,
-                'discountAmount' => (float) $coupon->pivot->discount_amount
+                'discountAmount' => (float) $coupon->pivot->discount_amount,
+                'isAutoApplied' => (bool) $coupon->apply_automatically
             ];
         });
     }
