@@ -2,12 +2,8 @@
 
 namespace Modules\Order\Service\User;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Validation\ValidationException;
 use Modules\Order\App\Events\OrderLogEvent;
 use Modules\Order\App\Models\Order;
 use Modules\Payment\Facades\Gateway;
@@ -19,20 +15,23 @@ class OrderCompleteService
     function completeOrder($data)
     {
         try {
-            $userId = Auth::id();
             $paymentMethod = $data['paymentMethod'];
 
-            $order = Order::where('id', $data['orderId'])
-                ->where('user_id', $userId)
-                ->first();
+            // Note: This is called from a public callback route (no auth middleware)
+            // because GetPay redirects to our callback URL without user session.
+            // The orderId is trusted because WE generated the callback URL in GetPayGateway.
+            // Payment verification is done via the GetPay token, not user authentication.
+            $order = Order::where('id', $data['orderId'])->first();
 
             if (!$order) {
                 Log::error('Order not found', [
-                    'user_id' => $userId,
                     'order_id' => $data['orderId'],
                 ]);
                 throw new Exception('Order not found.', ErrorCode::NOT_FOUND);
             }
+
+            // Get user_id from the order itself for logging
+            $userId = $order->user_id;
 
             $gateway = Gateway::get($paymentMethod);
 
