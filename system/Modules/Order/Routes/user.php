@@ -28,9 +28,15 @@ Route::group(['middleware' => ['auth:user', 'cart.auth']], function () {
         Route::post('/create', OrderCreateController::class);
         Route::get('/show/{id}', OrderShowController::class);
         Route::post('/cancel', OrderCancelController::class);
-        Route::match(['get', 'post'], '/payment-fail/{orderId}', OrderPaymentFailController::class);
-        Route::match(['get', 'post'], '/success/{paymentMethod}/{orderId}', OrderCompleteController::class);
     });
+});
+
+// Payment gateway callbacks - these must be PUBLIC (no auth middleware)
+// because GetPay redirects to these URLs without user session/cookies.
+// Payment verification is done via the GetPay token in the request body.
+Route::prefix('orders')->group(function () {
+    Route::match(['get', 'post'], '/payment-fail/{orderId}', OrderPaymentFailController::class);
+    Route::match(['get', 'post'], '/success/{paymentMethod}/{orderId}', OrderCompleteController::class);
 });
 
 Route::post('orders/card-payment/fail', OrderFailWithCardController::class);
