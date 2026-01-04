@@ -2,6 +2,7 @@
 
 namespace Modules\Order\Service\User;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Log;
 use Modules\Order\App\Events\OrderLogEvent;
@@ -14,6 +15,9 @@ class OrderCompleteService
 {
     function completeOrder($data)
     {
+        $userId = null;
+        $paymentMethod = null;
+
         try {
             $paymentMethod = $data['paymentMethod'];
 
@@ -33,40 +37,66 @@ class OrderCompleteService
             // Get user_id from the order itself for logging
             $userId = $order->user_id;
 
-            $gateway = Gateway::get($paymentMethod);
+            // Wrap the entire completion process in a database transaction
+            // so if anything fails, nothing is committed
+            DB::beginTransaction();
 
-            $response = $gateway->complete($order);
+            try {
+                $gateway = Gateway::get($paymentMethod);
+                $response = $gateway->complete($order);
 
-            $order->storeTransaction($response);
+                // Store transaction (this will use its own nested transaction internally)
+                $order->storeTransaction($response);
 
-            $ncellProductExists = $order->orderItems
-                ->contains(function ($item) {
-                    return $item->product->categories->contains(function ($category) {
-                        return $category->name === 'Ncell';
-                    });
-                });
+                // Check for Ncell products - wrapped safely to avoid null reference errors
+                $ncellProductExists = false;
+                try {
+                    $ncellProductExists = $order->orderItems
+                        ->contains(function ($item) {
+                            return $item->product &&
+                                   $item->product->categories &&
+                                   $item->product->categories->contains(function ($category) {
+                                       return $category->name === 'Ncell';
+                                   });
+                        });
+                } catch (\Throwable $e) {
+                    Log::warning('Ncell check failed, continuing anyway', [
+                        'order_id' => $order->id,
+                        'error' => $e->getMessage()
+                    ]);
+                }
 
-            $order->update(['status' => Order::ORDER_PLACED]);
+                // Update order status to ORDER_PLACED
+                $order->update(['status' => Order::ORDER_PLACED]);
 
-            $this->dispatchOrderStatusChangeEvent(Order::PENDING_PAYMENT, Order::ORDER_PLACED, $modifierId ?? null, $order->id);
+                $this->dispatchOrderStatusChangeEvent(Order::PENDING_PAYMENT, Order::ORDER_PLACED, null, $order->id);
 
-            if ($ncellProductExists) {
-                // $order->update(['status' => Order::NCELL_ORDER]);
-                // $this->dispatchOrderStatusChangeEvent(Order::ORDER_PLACED, Order::NCELL_ORDER, $modifierId ?? null, $order->id);
+                if ($ncellProductExists) {
+                    // $order->update(['status' => Order::NCELL_ORDER]);
+                    // $this->dispatchOrderStatusChangeEvent(Order::ORDER_PLACED, Order::NCELL_ORDER, null, $order->id);
+                }
+
+                DB::commit();
+
+                Log::info('Order completed successfully', [
+                    'order_id' => $order->id,
+                    'user_id' => $userId,
+                    'payment_method' => $paymentMethod,
+                ]);
+
+            } catch (\Throwable $innerException) {
+                DB::rollBack();
+                throw $innerException;
             }
 
-            Log::info('Order completed successfully', [
-                'order_id' => $order->id,
-                'user_id' => $userId,
-                'payment_method' => $paymentMethod,
-            ]);
-        } catch (Exception $exception) {
+        } catch (\Throwable $exception) {
             Log::error('Error completing order', [
                 'message' => $exception->getMessage(),
                 'code' => $exception->getCode(),
                 'user_id' => $userId ?? null,
                 'order_id' => $data['orderId'] ?? null,
                 'payment_method' => $paymentMethod ?? null,
+                'trace' => $exception->getTraceAsString(),
             ]);
             throw $exception;
         }
@@ -82,3 +112,4 @@ class OrderCompleteService
         ));
     }
 }
+
