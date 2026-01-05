@@ -39,6 +39,7 @@ use Modules\Shared\Constant\GatewayConstant;
 use Modules\Shared\Exception\Exception;
 use Modules\Shared\StatusCode\ErrorCode;
 use Modules\SystemConfiguration\App\Models\EmailTemplate;
+use Modules\DeliveryCharge\App\Models\DeliveryCharge;
 
 class OrderCreateService
 {
@@ -141,11 +142,25 @@ class OrderCreateService
             $appliedCoupons[] = $coupon;
         }
 
-        $totalAfterDiscount = $cart->subTotal() - $discount;
+        $shippingCost = 0;
+        $deliveryCharge = DeliveryCharge::first();
+        if ($deliveryCharge) {
+            $shippingCost = (float) $deliveryCharge->delivery_charge;
+        }
+
+        foreach ($appliedCoupons as $coupon) {
+            if ($coupon->type === Coupon::TYPE_FREE_SHIPPING) {
+                $shippingCost = 0;
+                break;
+            }
+        }
+
+        $totalAfterDiscount = $cart->subTotal() - $discount + $shippingCost;
 
         return [
             'subtotal' => $subtotal,
             'discount' => $discount,
+            'delivery_charge' => $shippingCost,
             'total' => $totalAfterDiscount,
             'appliedCoupons' => $appliedCoupons,
         ];
@@ -165,6 +180,7 @@ class OrderCreateService
             'user_id' => $userId,
             'subtotal' => $orderData['subtotal'],
             'discount' => $orderData['discount'],
+            'delivery_charge' => $orderData['delivery_charge'],
             'total' => $orderData['total'],
             'note' => $note,
             'payment_method' => $paymentMethod,
