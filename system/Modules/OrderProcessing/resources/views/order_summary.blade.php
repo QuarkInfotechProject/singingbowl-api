@@ -403,7 +403,7 @@
                                                         </td>
                                                         <td
                                                             style="padding: 10px; text-align: right; border: 1px solid #ddd;">
-                                                            {{ $order->transaction ? '0.00 NPR' : $order->total . ' NPR' }}
+                                                            {{ $order->transaction ? '0.00 $' : $order->total . ' $' }}
                                                         </td>
                                                     </tr>
                                                 </tbody>

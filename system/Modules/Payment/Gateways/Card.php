@@ -32,7 +32,7 @@ class Card implements GatewayInterface
                 'transaction_type' => 'sale',
                 'reference_number' => $referenceNumber,
                 'amount' => $order->total,
-                'currency' => 'NPR',
+                'currency' => 'USD',
                 'payment_method' => $order->payment_method,
                 'bill_to_forename' => $order->orderAddress->address->first_name,
                 'bill_to_surname' => $order->orderAddress->address->last_name,

@@ -54,7 +54,8 @@ class GetPayGateway implements GatewayInterface
             'price'           => (float) $order->total,
             'businessName'    => $config['business_name'],
             'imageUrl'        => $config['logo_url'],
-            'currency'        => 'NPR',
+            'currency'        => 'USD',
+            'language'        => 'en',
             'prefill'         => [
                 'name'    => false,
                 'email'   => false,

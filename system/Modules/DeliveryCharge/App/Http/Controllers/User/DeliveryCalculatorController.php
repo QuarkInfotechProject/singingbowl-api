@@ -36,7 +36,7 @@ class DeliveryCalculatorController extends Controller
             'data' => [
                 'delivery_cost' => $result['cost'],
                 'delivery_type' => $result['type'],
-                'currency' => 'NPR'
+                'currency' => '$'
             ]
         ]);
     }
